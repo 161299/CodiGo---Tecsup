@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+
+    <style>
+
+        body{
+            font-family: verdana;
+            color: #5499C7;
+        
+        }
+
+        .table{
+            background-color: greenyellow;
+        }
+
+        .table1{
+            background-color: aquamarine;
+        }
+    </style>
+
+    <body>
+        <header>
+            <h1>Tablas en <code>HTML5</code></h1>
+        </header>   
+        <!--SCOPE se le llama a cada etiqueta padre-->
+        <nav>
+            <h2 style="display: none">Menu Principal</h2>
+            <ul>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Proyectos</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+                <h3>tabla</h3>
+                <article>
+                    <h4>Lista de Frameworks</h4>
+                    <table border="1" class="table">
+                        <thead>
+                            <!-- Para la cabecera de la tabla "la primera fila" tiene que tener la etiqueta th en ves del td-->
+                            <tr>
+                                <th>Numero</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                
+                        <!-- el Signo dolar $ hace genere numeros aleatorios-->
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>Producto 01</td>
+                                <td>1000</td>
+                                <td>S/ 1151.91</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Producto 02</td>
+                                <td>2000</td>
+                                <td>S/ 1252.92</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Producto 03</td>
+                                <td>3000</td>
+                                <td>S/ 1353.93</td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td>TOTAL</td>
+                                <td>TOTAL</td>
+                                <td>TOTAL</td>
+                                <td>TOTAL</td>
+                            </tr>
+                        </tfoot>
+                    </table><br/>
+                    <table border="1" class="table1">
+                        <thead>
+                            <tr>
+                                <td>Prod. No.</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Scene</td>
+                                <td>Take</td>
+                                <td>Roll</td>
+                            </tr>
+                            <tr>
+                                <td>Date</td>
+                                <td>SOUND</td>
+                            </tr>
+                            <tr>
+                                <td>Prod. Co.</td>
+                            </tr>
+                            <tr>
+                                <td>Direction</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Cameraman</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

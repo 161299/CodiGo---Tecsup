@@ -1,0 +1,14 @@
+body{
+    margin: 10;
+    color: #3396FF;
+    font-family: verdana;
+}
+
+.spam{
+    color: #000;
+    font-size: 30px;
+}
+
+.strong{
+    color: #f3f4;
+}

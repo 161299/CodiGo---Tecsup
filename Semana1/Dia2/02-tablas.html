@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIA2</title>
+</head>
+
+<style>
+    body{
+        color:blue;
+        font-family: verdana;
+    }
+
+    .table{
+        background-color: blanchedalmond;
+    }
+
+    .prueba{
+        background-color: greenyellow;
+    }
+
+    .a{
+        background-color: yellow;
+    }
+
+    .b{
+        background-color: yellow;
+    }
+
+    .c{
+        background-color: yellow;
+    }
+
+    .d{
+        background-color: yellow;
+    }
+    .e{
+        background-color: yellow;
+    }
+    .f{
+        background-color: yellow;
+    }
+    .h{
+        background-color: yellow;
+    }
+    .i{
+        background-color: yellow;
+    }
+    .j{
+        background-color: yellow;
+    }
+    .k{
+        background-color: yellow;
+    }
+    .l{
+        background-color: yellow;
+    }
+    .m{
+        background-color: yellow;
+    }
+    .n{
+        background-color: yellow;
+    }
+    .o{
+        background-color: yellow;
+    }
+    .p{
+        background-color: yellow;
+    }
+
+
+</style>
+<body>
+
+    <header>
+        <h1>Celdas Combinadas</h1>
+    </header>
+
+    <nav>
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="#miseccion1">Link 1</a></li>
+            <li><a href="#miseccion3">Link 2</a></li>
+            <li><a href="#miseccion5">Link 3</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="miseccion1">
+            <h3>Celdas Combinadas</h3>
+            <article>
+                <table border="1" class="table">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Fila1, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Fila2, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td colspan ="2">Fila 3, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Fila 4, COLUMNA 1</td>
+                            <td>Fila4, COLUMNA 2</td>
+                        </tr>
+                        <tr>
+                            <td>Fila 5, COLUMNA2</td>
+                        </tr>
+                    </tbody>
+                </table> <br/>
+
+                <table border="1" class="prueba">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Tabla Avanzada</td>
+                            <td  colspan="2">Cabecera Multiples Columnas</td>
+                        </tr>
+                        <tr>
+                            <td>Primera Col. Cab.</td>
+                            <td>Segunda Col. Cab.</td>
+                        </tr>
+                        <tr>
+                            <td>Fila1</td>
+                            <td>Fila1 Columna1</td>
+                            <td>Fila1 Columna2</td>
+                        </tr>
+                        <tr>
+                            <td>Fila2</td>
+                            <td>Fila2 Columna1</td>
+                            <td>Fila2 Columna2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Pie de tabla</td>
+                        </tr>
+                    </tbody>
+                </table> <br/>
+
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Fila1 Columna1</td>
+                            <td colspan="5" rowspan="2">Fila 1 Columna 2,3,4,5,6</td>
+                            <td class="a">Fila1 Columna 7</td>
+                            <td class="b">Fila1 Columna 8</td>
+                            <td class="c">Fila1 Columna 9</td>
+                        </tr>
+                        <tr>
+                           
+                            <td class="d">Fila2 Columna 7</td>
+                            <td class="e">Fila2 Columna 8</td>
+                            <td class="f">Fila2 Columna 9</td>
+                        </tr>
+                        <tr>
+                            <td class="g">Fila3 Columna 1</td>
+                            <td class="h">Fila3 Columna 2</td>
+                            <td class="i">Fila3 Columna 3</td>
+                            <td class="j">Fila3 Columna 4</td>
+                            <td class="k">Fila3 Columna 5</td>
+                            <td class="l">Fila3 Columna 6</td>
+                            <td colspan="3">Fila3 Columna 7,8,9</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2">Fila4 Columna 1</td>
+                            <td colspan="2" class="m">Fila4 Columna 2,3</td>
+                            <td colspan="3" class="n">Fila4 Columna 4,5,6</td>
+                            <td colspan="3" rowspan="2">Fila4 Columna 7,8,9</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="o">Fila5 Columna2,3</td>
+                            <td colspan="3" class="p">Fila5 Columna 4,5,6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <section id="miseccion2">
+            <h3>Celdas Combinadas</h3>
+            <article>
+                <table border="1" class="table">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Fila1, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Fila2, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td colspan ="2">Fila 3, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Fila 4, COLUMNA 1</td>
+                            <td>Fila4, COLUMNA 2</td>
+                        </tr>
+                        <tr>
+                            <td>Fila 5, COLUMNA2</td>
+                        </tr>
+                    </tbody>
+                </table> <br/>
+
+                <table border="1" class="prueba">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Tabla Avanzada</td>
+                            <td  colspan="2">Cabecera Multiples Columnas</td>
+                        </tr>
+                        <tr>
+                            <td>Primera Col. Cab.</td>
+                            <td>Segunda Col. Cab.</td>
+                        </tr>
+                        <tr>
+                            <td>Fila1</td>
+                            <td>Fila1 Columna1</td>
+                            <td>Fila1 Columna2</td>
+                        </tr>
+                        <tr>
+                            <td>Fila2</td>
+                            <td>Fila2 Columna1</td>
+                            <td>Fila2 Columna2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Pie de tabla</td>
+                        </tr>
+                    </tbody>
+                </table> <br/>
+
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Fila1 Columna1</td>
+                            <td colspan="5" rowspan="2">Fila 1 Columna 2,3,4,5,6</td>
+                            <td class="a">Fila1 Columna 7</td>
+                            <td class="b">Fila1 Columna 8</td>
+                            <td class="c">Fila1 Columna 9</td>
+                        </tr>
+                        <tr>
+                           
+                            <td class="d">Fila2 Columna 7</td>
+                            <td class="e">Fila2 Columna 8</td>
+                            <td class="f">Fila2 Columna 9</td>
+                        </tr>
+                        <tr>
+                            <td class="g">Fila3 Columna 1</td>
+                            <td class="h">Fila3 Columna 2</td>
+                            <td class="i">Fila3 Columna 3</td>
+                            <td class="j">Fila3 Columna 4</td>
+                            <td class="k">Fila3 Columna 5</td>
+                            <td class="l">Fila3 Columna 6</td>
+                            <td colspan="3">Fila3 Columna 7,8,9</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2">Fila4 Columna 1</td>
+                            <td colspan="2" class="m">Fila4 Columna 2,3</td>
+                            <td colspan="3" class="n">Fila4 Columna 4,5,6</td>
+                            <td colspan="3" rowspan="2">Fila4 Columna 7,8,9</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="o">Fila5 Columna2,3</td>
+                            <td colspan="3" class="p">Fila5 Columna 4,5,6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <section id="miseccion3">
+            <h3>Celdas Combinadas</h3>
+            <article>
+                <table border="1" class="table">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Fila1, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Fila2, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td colspan ="2">Fila 3, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Fila 4, COLUMNA 1</td>
+                            <td>Fila4, COLUMNA 2</td>
+                        </tr>
+                        <tr>
+                            <td>Fila 5, COLUMNA2</td>
+                        </tr>
+                    </tbody>
+                </table> <br/>
+
+                <table border="1" class="prueba">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Tabla Avanzada</td>
+                            <td  colspan="2">Cabecera Multiples Columnas</td>
+                        </tr>
+                        <tr>
+                            <td>Primera Col. Cab.</td>
+                            <td>Segunda Col. Cab.</td>
+                        </tr>
+                        <tr>
+                            <td>Fila1</td>
+                            <td>Fila1 Columna1</td>
+                            <td>Fila1 Columna2</td>
+                        </tr>
+                        <tr>
+                            <td>Fila2</td>
+                            <td>Fila2 Columna1</td>
+                            <td>Fila2 Columna2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Pie de tabla</td>
+                        </tr>
+                    </tbody>
+                </table> <br/>
+
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Fila1 Columna1</td>
+                            <td colspan="5" rowspan="2">Fila 1 Columna 2,3,4,5,6</td>
+                            <td class="a">Fila1 Columna 7</td>
+                            <td class="b">Fila1 Columna 8</td>
+                            <td class="c">Fila1 Columna 9</td>
+                        </tr>
+                        <tr>
+                           
+                            <td class="d">Fila2 Columna 7</td>
+                            <td class="e">Fila2 Columna 8</td>
+                            <td class="f">Fila2 Columna 9</td>
+                        </tr>
+                        <tr>
+                            <td class="g">Fila3 Columna 1</td>
+                            <td class="h">Fila3 Columna 2</td>
+                            <td class="i">Fila3 Columna 3</td>
+                            <td class="j">Fila3 Columna 4</td>
+                            <td class="k">Fila3 Columna 5</td>
+                            <td class="l">Fila3 Columna 6</td>
+                            <td colspan="3">Fila3 Columna 7,8,9</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2">Fila4 Columna 1</td>
+                            <td colspan="2" class="m">Fila4 Columna 2,3</td>
+                            <td colspan="3" class="n">Fila4 Columna 4,5,6</td>
+                            <td colspan="3" rowspan="2">Fila4 Columna 7,8,9</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="o">Fila5 Columna2,3</td>
+                            <td colspan="3" class="p">Fila5 Columna 4,5,6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <section id="miseccion4">
+            <h3>Celdas Combinadas</h3>
+            <article>
+                <table border="1" class="table">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Fila1, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Fila2, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td colspan ="2">Fila 3, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Fila 4, COLUMNA 1</td>
+                            <td>Fila4, COLUMNA 2</td>
+                        </tr>
+                        <tr>
+                            <td>Fila 5, COLUMNA2</td>
+                        </tr>
+                    </tbody>
+                </table> <br/>
+
+                <table border="1" class="prueba">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Tabla Avanzada</td>
+                            <td  colspan="2">Cabecera Multiples Columnas</td>
+                        </tr>
+                        <tr>
+                            <td>Primera Col. Cab.</td>
+                            <td>Segunda Col. Cab.</td>
+                        </tr>
+                        <tr>
+                            <td>Fila1</td>
+                            <td>Fila1 Columna1</td>
+                            <td>Fila1 Columna2</td>
+                        </tr>
+                        <tr>
+                            <td>Fila2</td>
+                            <td>Fila2 Columna1</td>
+                            <td>Fila2 Columna2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Pie de tabla</td>
+                        </tr>
+                    </tbody>
+                </table> <br/>
+
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Fila1 Columna1</td>
+                            <td colspan="5" rowspan="2">Fila 1 Columna 2,3,4,5,6</td>
+                            <td class="a">Fila1 Columna 7</td>
+                            <td class="b">Fila1 Columna 8</td>
+                            <td class="c">Fila1 Columna 9</td>
+                        </tr>
+                        <tr>
+                           
+                            <td class="d">Fila2 Columna 7</td>
+                            <td class="e">Fila2 Columna 8</td>
+                            <td class="f">Fila2 Columna 9</td>
+                        </tr>
+                        <tr>
+                            <td class="g">Fila3 Columna 1</td>
+                            <td class="h">Fila3 Columna 2</td>
+                            <td class="i">Fila3 Columna 3</td>
+                            <td class="j">Fila3 Columna 4</td>
+                            <td class="k">Fila3 Columna 5</td>
+                            <td class="l">Fila3 Columna 6</td>
+                            <td colspan="3">Fila3 Columna 7,8,9</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2">Fila4 Columna 1</td>
+                            <td colspan="2" class="m">Fila4 Columna 2,3</td>
+                            <td colspan="3" class="n">Fila4 Columna 4,5,6</td>
+                            <td colspan="3" rowspan="2">Fila4 Columna 7,8,9</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="o">Fila5 Columna2,3</td>
+                            <td colspan="3" class="p">Fila5 Columna 4,5,6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <section id="miseccion5">
+            <h3>Celdas Combinadas</h3>
+            <article>
+                <table border="1" class="table">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Fila1, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Fila2, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td colspan ="2">Fila 3, COLUMNA 1 & 2</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Fila 4, COLUMNA 1</td>
+                            <td>Fila4, COLUMNA 2</td>
+                        </tr>
+                        <tr>
+                            <td>Fila 5, COLUMNA2</td>
+                        </tr>
+                    </tbody>
+                </table> <br/>
+
+                <table border="1" class="prueba">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Tabla Avanzada</td>
+                            <td  colspan="2">Cabecera Multiples Columnas</td>
+                        </tr>
+                        <tr>
+                            <td>Primera Col. Cab.</td>
+                            <td>Segunda Col. Cab.</td>
+                        </tr>
+                        <tr>
+                            <td>Fila1</td>
+                            <td>Fila1 Columna1</td>
+                            <td>Fila1 Columna2</td>
+                        </tr>
+                        <tr>
+                            <td>Fila2</td>
+                            <td>Fila2 Columna1</td>
+                            <td>Fila2 Columna2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Pie de tabla</td>
+                        </tr>
+                    </tbody>
+                </table> <br/>
+
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Fila1 Columna1</td>
+                            <td colspan="5" rowspan="2">Fila 1 Columna 2,3,4,5,6</td>
+                            <td class="a">Fila1 Columna 7</td>
+                            <td class="b">Fila1 Columna 8</td>
+                            <td class="c">Fila1 Columna 9</td>
+                        </tr>
+                        <tr>
+                           
+                            <td class="d">Fila2 Columna 7</td>
+                            <td class="e">Fila2 Columna 8</td>
+                            <td class="f">Fila2 Columna 9</td>
+                        </tr>
+                        <tr>
+                            <td class="g">Fila3 Columna 1</td>
+                            <td class="h">Fila3 Columna 2</td>
+                            <td class="i">Fila3 Columna 3</td>
+                            <td class="j">Fila3 Columna 4</td>
+                            <td class="k">Fila3 Columna 5</td>
+                            <td class="l">Fila3 Columna 6</td>
+                            <td colspan="3">Fila3 Columna 7,8,9</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2">Fila4 Columna 1</td>
+                            <td colspan="2" class="m">Fila4 Columna 2,3</td>
+                            <td colspan="3" class="n">Fila4 Columna 4,5,6</td>
+                            <td colspan="3" rowspan="2">Fila4 Columna 7,8,9</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="o">Fila5 Columna2,3</td>
+                            <td colspan="3" class="p">Fila5 Columna 4,5,6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    
+</body>
+</html>
