@@ -8,10 +8,11 @@
   <style>
     body {
       font-family: verdana;
-      background-color: rgba(65, 229, 139,1)
+      background-color: black;
+      color: #fff;
     }
 
-    h1{
+    h1,h2{
         text-align: center;
     }
   </style>
@@ -64,6 +65,38 @@
 
                         <td><label>Seleccionar CV</label></td>
                         <td><input type="file"></td>
+                    </tr>
+
+                    <!--Profe que no explica bien aqui-->
+                    <tr>
+                        <td><label>Describenos quien eres</label></td>
+                        <td><textarea cols="30" rows="10"></textarea> </td>
+                    </tr>
+                    <tr>
+                        <td><label>indicanos tu sexo</label></td>
+                        <!-- para el atributo radio es importante que siga  el atributo name con su mismo valor del cual queremos escojer como se muestra en el siguiente ejemplo-->
+                        <td><input type="radio" name="sexo" valu="M"/>Masculino</td>
+                        <td><input type="radio" name="sexo" value="F"/>Femenino</td>
+                        <td><input type="radio" name="sexo" value="O"/>Otro</td>
+                    </tr>
+                    <tr>
+                        <!--checked permite que el checbox ya aparezca marcado por lo cual nosotros podremos descmarcarlo si es que queremos-->
+                        <td><input type="checkbox" checked>Lunes</td>
+                        <td><input type="checkbox" checked>Martes</td>
+                        <td><input type="checkbox"checked>Miercoles</td>
+                        <td><input type="checkbox" checked>Jueves</td>
+                        <td><input type="checkbox" checked>Viernes</td>
+                        <td><input type="checkbox">Sabado</td>
+                        <td><input type="checkbox">Domingo</td>
+                    </tr>
+                    <tr>
+                        <td><label>En que distrito resides</label></td>
+                        <td><select>
+                            <option value="1">Paucarpata</option>
+                            <option value="2">Jose Luis Bustamente y Rivero</option>
+                            <option value="3">Hunter</option>
+                            <option value="4">Cerro Colorado</option>
+                        </select></td>
                     </tr>
                 </table>
             </fieldset>
