@@ -8,6 +8,7 @@
   <style>
     body {
       font-family: verdana;
+      background-color: rgba(65, 229, 139,1)
     }
 
     h1{
@@ -29,11 +30,40 @@
                 <table>
                     <tr>
                         <td><label>Nombres:</label></td>
-                        <td><input tyoe="text" placeholder="Nombre Completo"></td>
+                        <td><input type="text" placeholder="Nombre Completo" required minlength="6" maxlength="30" tabindex="1"/></td>
                         <td><label>Apellidos:</label></td>
-                        <td><input type="text" placeholder="Apellido Completo"></td>
+                        <td><input type="text" placeholder="Apellido Completo" required tabindex="3" /></td>
                         <td><label>Email:</label></td>
-                        <td><input type="email" placeholder="........@...com"></td>
+                        <td><input type="email" placeholder="........@...com" required tabindex="5" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Contraseña</label></td>
+                        <td><input type="password" required placeholder="password" minlength="6" tabindex="2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title=""Minimo MAYUSCULAS, minisculas, numeros, etc/></td>
+                        
+                        <td><label>Edad</label></td>
+                        <td><input type="number" required tabindex="4" min="18" max="45"/></td>
+                        <td><label>Fecha de Nacimiento</label></td>
+                        <td><input type="date" required tabindex="6"/></td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <input type="submit" value="Enviar Datos">
+                            </td>
+                        </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Datos de la entrevista</legend>
+                <table>
+                    <tr>
+                        <td><label>Hora de Entrevista</label></td>
+                        <td><input type="time"/></td>
+
+                        <td><label>Color Favorito</label></td>
+                        <td><input type="color" value="#ff000"></td>
+
+                        <td><label>Seleccionar CV</label></td>
+                        <td><input type="file"></td>
                     </tr>
                 </table>
             </fieldset>
