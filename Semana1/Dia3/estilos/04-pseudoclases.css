@@ -1,0 +1,25 @@
+/* Numero de posicion de hijo */
+
+p:nth-child(3){
+    color: blue
+}
+
+p:first-child{
+    color: red;
+}
+
+p:last-child{
+    color: greenyellow;
+}
+
+tr:nth-child(odd){
+    background-color: bisque;
+}
+
+tr:nth-child(even){
+    background-color: aquamarine;
+}
+
+thead tr:nth-child(1){
+    background-color: blue;
+}
