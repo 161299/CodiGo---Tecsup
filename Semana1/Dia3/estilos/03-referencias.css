@@ -1,0 +1,43 @@
+/* body{
+    font-family: 'Roboto', sans-serif;
+} */
+
+/* Todas las etiquetas 'li' y las etiquetas 'a' */
+li,a{
+    color: mediumaquamarine;
+}
+
+/* Todos los h2 que sean hijos a cualquier nivel de un elemento section osea padre */
+section h2{
+    color: red;
+}
+
+/* Todos los h2 hijos directos de un elemento section */
+section > h2, .aqua{
+    color: blue;
+}
+
+/* Todos los label hijos directos del elemento form */
+form>label{
+    border: 1px solid royalblue;
+}
+
+#verde label{
+    border: 1px solid greenyellow !important;
+}
+
+#verde>label>span{
+    color: red;
+}
+
+.texto_grande{
+    font-size: 55px;
+}
+
+h1.texto_grande{
+    font-family: helvetica; 
+}
+
+h2.texto_grande{
+    font-family: 'Courier New', Courier, monospace;
+}
