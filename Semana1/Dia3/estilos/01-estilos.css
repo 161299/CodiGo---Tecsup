@@ -1,0 +1,17 @@
+body{
+    background-color: greenyellow;
+    font-family: Verdana;
+}
+
+header{
+    text-align: center;
+}
+
+p{
+    color: blue;
+}
+
+a{
+    color: red;
+    text-decoration: none;
+}

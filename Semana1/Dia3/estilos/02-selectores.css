@@ -1,0 +1,37 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+     
+
+}
+
+/* Selector de etiquetas */
+h2{
+    color: brown; 
+    background-color: red;
+    padding: 20px;
+    margin: 20px; 
+    width: 50%;  
+}
+
+section{
+    color: blue !important;
+}
+p{
+    color: grey;
+}
+article{
+    color: violet;
+}
+
+/* Selectores de Clase */
+/* Todos los elementos que tengan la clase 'mapa' */
+.mapa a{
+    text-decoration: none;
+    color: aquamarine;
+}
+
+/* Selectores de Id */
+#contacto{
+    background-color: red;
+}
