@@ -25,3 +25,28 @@ code{
 .c-font{
     font: oblique bold 20px verdana;
 }
+
+.c-text-align{
+    text-align: center;
+}
+
+.c-text-align-last{
+    text-align-last: center;
+}
+
+/* Letter-spacing significa la separacion de cada caracter en este caso son 10 px  de espacio entre cada caracter */
+.c-letter-spacing{
+    letter-spacing: 10px;
+}
+
+.c-word-spacing{
+    word-spacing: 20px;
+}
+
+.c-line-height{
+    line-height: 40px;
+}
+
+img{
+    vertical-align: middle;
+}
