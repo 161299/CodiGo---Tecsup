@@ -41,3 +41,19 @@ h1.texto_grande{
 h2.texto_grande{
     font-family: 'Courier New', Courier, monospace;
 }
+
+/* Selectores de etiquetas con atributos */
+/* Todos los parrafos que tengan el atributo name */
+p[name] {
+    background-color: indigo;
+    margin: 0px;
+}
+
+p[name="parrafo2"]{
+    background-color: brown;
+}
+
+/* Aqui nos permite entrar a todos los input que tengan el atributo type con valor email */
+input[type="email"]{
+    color: brown;
+}
