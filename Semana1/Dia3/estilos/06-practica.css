@@ -1,0 +1,64 @@
+body{
+    color: #fff;
+    font-family: verdana;
+    background: linear-gradient(to right, #005aa7, #fffde4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.content-master{
+    background-color: #0F4249;
+    width: 22%;
+    padding: 30px;
+    justify-content: center;
+}
+
+article{
+    display: flex;
+    justify-content: space-around;
+}
+
+.sign{
+  display: flex;  
+  text-align: center;
+  background-color: #05CD7E;
+  padding: 10px;
+  border: none;
+}
+
+.in{
+    display: flex;
+    text-align: center;
+    background-color: #7F8382;
+    padding: 10px;
+    border: none;
+}
+
+.union{
+    display:flex;
+}
+
+
+h2{
+    text-align: center;
+}
+
+.c-border{
+    border-radius: 3px;
+    width: 100%;
+    background: transparent;
+}
+
+.get{
+    text-align: center;
+    background-color: #05CD7E;
+    padding: 10px;
+}
+
+.sub{
+    background-color: #05CD7E;
+    width:100%;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    color: #fff;
+}
