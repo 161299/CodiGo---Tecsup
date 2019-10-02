@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01 Formulario</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        font-family: verdana;
+        color:#1A5276;
+    }
+    .header{
+        margin-top: 0px;
+        padding: 0px;
+        text-align: left;
+        background-color: #41CD00;
+    }
+    .fieldset{
+        width: 80%;
+        text-align: left;
+    }
+</style>
+
+<body>
+
+    <header class="header">
+        <h1>Formulario Personal</h1>
+    </header>
+
+    <form action="insertar_estudiante.js" method="post">
+        <fieldset class="fieldset">
+            <legend>Datos Personales</legend>
+            <label>Nombre:
+                <input type="text" size="30" name="Fnombres" placeholder="Escriba su nombre aqui"
+                    pattern="[A-Z a-z]{3,20}" autofocus required />
+            </label>
+            <label>Apellidos :
+                <input type="text" name="Fapellidos" placeholder="Escriba sus Apellidos aqui" pattern="[A-Z a-z]{3,20}"
+                    required>
+            </label><br />
+            <label>Genero :
+                <input type="radio" name="Fsexo" value="F">Femenino
+                <input type="radio" name="Fsexo" value="M">Masculino
+            </label><br />
+            <label>Días de Investigación :
+                <input type="number" min="5" max="15" required>
+            </label><br />
+            <label>Telefono :
+                <input type="tel" name="Ftelefono" placeholder="ej; 982 240 796" pattern="[0-9 ]{0,11}">
+            </label><br />
+            <label>Email :
+                <input type="email" placeholder="ej; usuario@dominio.com"/>
+            </label><br />
+            <label>Ciudad :
+                <input type="text" name="Fciudad" placeholder="Escriba o Seleccione" list="sucursales">
+                    <datalist id="sucursales">
+                        <option value="Arequipa">
+                        <option value="Lima">
+                        <option value="Trujillo">
+                        <option value="Puno">
+                        <option value="Cuszo">
+                        <option value="Iquitos">
+                    </datalist>
+            </label><br/>
+            <label>Fecha de Ingreso :
+                <input type="date" name="Fingreso" min="1999-01-01" max="2020-01-01" required>
+            </label><br>
+            <label>Dirección :<textarea name="Fdireccion"  cols="25" rows="5" maxlength="120" placeholder="Ingrese también su barrio" required></textarea>
+            </label><br/>
+            <label>Sitio Web :
+                <input type="url" name="Fweb" placeholder="www.ejemplo.com" maxlength="80" />
+            </label><br/>
+            <label>Autoriza contactarlo directamente :
+                <input type="checkbox" name="Fautorizar">
+            </label>
+
+            <br/>
+            <input type="submit" name="Femail" value="Enviar" size="40" required />
+        </fieldset>
+    </form>
+
+
+</body>
+
+</html>
