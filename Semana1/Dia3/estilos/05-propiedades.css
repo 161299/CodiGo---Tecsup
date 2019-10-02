@@ -1,10 +1,28 @@
 table{
-    border: 1px solid blueviolet;
+    border: 1px solid #CB005C;
 }
 
 code{
-    color: blue;
+    color: #6A00AB;
 }
+
+h1{
+    font-size: 35px;
+    color: greenyellow;
+}
+
+.red{
+    color: red;
+    background-color: greenyellow;
+}
+
+/* table{
+    width: 50%;
+} */
+
+
+
+/* estilos a clases */
 
 .c-font-family{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -47,6 +65,58 @@ code{
     line-height: 40px;
 }
 
+/* Al utilizar la propiedad vertical-align, siempre correspondera a un img. que hace que la imagen se mueva depende al valor que le dieramos */
 img{
     vertical-align: middle;
+}
+
+
+.c-parrafo{
+    border: 1px dashed #000;
+    /* dashed => Linea punteada */
+    /* solid => Linea entera lineal */
+    /* none => Sin border, sin linea */
+    width: 50%;
+    height: 50px;
+    overflow-x: hidden;
+}
+
+.c-width{
+    width: 30%;
+}
+
+.c-pborder{
+    border: 1px solid blue;
+}
+
+.c-height{
+    height: 3em;
+    /* overflow: scroll; */
+    overflow: scroll;
+}
+
+.c-overflow{
+    overflow: scroll;
+}
+
+.c-overflow-x{
+    overflow-x: hidden;
+}
+
+.c-overflow-y{
+    overflow-y: hidden;
+    
+}
+
+.c-paf{
+    width: 50%;
+    background-color: #cc05d4;
+    font-size: 20px;
+    border: 2px dashed #8dda98;
+    text-align: center;
+    font-family: courier;
+    height: 50px;
+    overflow-x: hidden;
+
+
 }
