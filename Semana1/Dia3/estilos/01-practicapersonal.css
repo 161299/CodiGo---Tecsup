@@ -28,7 +28,7 @@ header{
 
 .container_form{
     margin: 0px;
-    background-color: #6BFFA1;
+    background: transparent;
     width: 360px;
     padding: 20px;
     border: 2px solid #fff;
