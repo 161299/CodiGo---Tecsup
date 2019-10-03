@@ -1,6 +1,6 @@
-/* Numero de posicion de hijo */
+/* Numero de posicion de hijo  */
 
-p:nth-child(3){
+ p:nth-child(3){
     color: blue
 }
 
