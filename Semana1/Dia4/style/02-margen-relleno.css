@@ -1,0 +1,22 @@
+
+
+header{
+    border: 2px solid #000;
+    height: 300px;;
+}
+
+div{
+    border: 1px solid blue;
+}
+
+div:nth-child(2){
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+div:nth-child(1){
+    margin: 10px;
+    padding: 2px 20px 30px 60px;
+    background-color: aqua;
+    display: inline;
+}

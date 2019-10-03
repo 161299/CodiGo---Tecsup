@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+    font-family: verdana;
+}
+
+/* ------------------------- */
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: #E3E9E7;
+    padding: 40px;
+}
+
+.container_main{
+    width: 600px;
+    height: 800px;
+    background-color: #fff;
+    margin: auto;
+}
+
+.img{
+    width: 600px;
+    height: 400px;
+}
+
+.imgs{
+    background-image: url('./../images/aqui.jpg');
+    width: 600px;
+    height: 400px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.dentro{
+    background-color: #fff;
+    padding: 10px;
+    margin: 150px;
+    text-align: center;
+    background: transparent;
+    border: 5px solid #fff;
+}
+
+.head{
+    margin: 30px;
+}
+
+.left{
+    padding: 1px 360px 1px 0px;
+}
+
+.adidas{
+    padding: 20px;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+.t{
+    width: 5px;
+    height: 5px;
+    border: 10px solid #000;
+    border-radius: 50%;
+    margin: 0px 5px 0px 0px
+}
