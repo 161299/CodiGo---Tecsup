@@ -1,0 +1,23 @@
+*{
+    /* margin:0; */
+}
+
+html, body{
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ------------------------------------------ */
+
+section{
+    background-color: blueviolet;
+    overflow: auto;
+}
+section>img{
+    float: right;
+    margin: 0px 10px;
+}
+
+.clearflotar{
+    clear: both;
+}

@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* ----------------------- */
+
+#cajapadre{
+    width: 700px;
+    border: 1px solid;
+    position: relative;
+    z-index: 5;
+}
+
+#caja1{
+    z-index: -1;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    float: left;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: chartreuse;
+
+}
+#caja2{
+    z-index: -2;
+    position: absolute;
+    top: 15px;
+    left: 12px; 
+    float: left;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: blue;
+}
+#caja3{
+    position: absolute;
+    z-index:1;
+    float: right;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: red;
+}
+#caja4{
+    position: absolute;
+    z-index: -1;
+    float: right;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: aqua;
+}
+
+.restaurar{
+    clear: both;
+}

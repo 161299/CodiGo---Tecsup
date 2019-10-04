@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+/* ------------------------------ */
+
+.conteiner{
+    height: 500px;
+    width: 50%;
+    background-color: peru;
+    display: inline-block;
+}
+
+span{
+    background-color: violet;
+    display: block;
+}
+
+.cabecera{
+    background-color: blue;
+    width: 800px;
+}
+.texto{
+    background-color: red;
+    display: inline-block;
+    width: 400px;
+}
+
+.aquamarina{
+    background-color: blueviolet;
+    height: 500px;
+    width: 30%;
+    display: inline-block;
+}

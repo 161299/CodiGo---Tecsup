@@ -1,0 +1,10 @@
+#noticias{
+    width: 500px;
+    padding: 10px;
+    border: 1px solid black;
+    column-count: 3;
+    column-gap: 20px;
+    column-rule-style: dotted;
+    column-rule-color: blue;
+    column-rule
+}
