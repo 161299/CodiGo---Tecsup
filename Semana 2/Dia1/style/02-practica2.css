@@ -1,0 +1,76 @@
+.caja2{
+    margin-top: 300px;
+    background-image: url(./../images/fondo_este.jpg);
+    height: 1150px;
+    padding-top: 40px;
+}
+
+.logos{
+    margin-top: 30px;
+  
+}
+
+.logos h2{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+.letras{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.letras img{
+    margin-right: 50px;
+}
+
+.letras img:nth-child(3){
+
+}
+
+
+
+
+
+/* ------------------------------ */
+.images{
+    
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+}
+
+.images_div img:nth-child(1){
+    width: 500px;
+    height: 390px;
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    z-index: 0;
+    top: 100px;
+    border-radius: 10px;
+
+}
+
+.images_div_1 img:nth-child(1){
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    left: 500px;
+    border-radius: 10px;
+    box-shadow: #fff 33px, 13px, 11px;
+}
+
+.images_div_2 img:nth-child(1){
+    width: 450px;
+    height: 390px;
+    position: absolute;
+    top: 100px;
+    left: 1400px;
+    z-index: 5;
+    border-radius: 10px;
+}
+
+/* ----------------------- */

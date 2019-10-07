@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+/* --------------------------------- */
+
+nav{
+    width: 100%;
+    height: 123px;
+    position: relative;
+    border-bottom: 1px solid #f1f1f1; 
+}
+
+.pintar{
+    float: right;
+    height: 50px;
+    width: 400px;
+    background-color: #f1f1f1;
+}
+
+.header_container_general{
+    margin: 0px 311.5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_logo{
+    margin-top: 5px;
+}
+
+.nav_ul{
+    width: 50%;
+    list-style: none;
+    display: flex;  
+    padding-top: 16px;
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 30px;
+}
+
+.nav_ul a{
+    text-decoration: none;
+    color: #88888C;
+}
+
+.sesion_viajes_ayuda{
+    list-style: none;
+    display: flex;
+}
+
+.sesion_viajes_ayuda li{
+    padding-right:50px;
+}   
+.sesion_viajes_ayuda li a{
+    color: #88888C;
+    text-decoration: none;
+}
+
+
+
+.header_container_secundario{
+    margin: 0px 311.5px;
+}
+
+.header_container_secundario ul{
+    display: flex;
+    padding-top:40px; 
+    margin-left: 0px;
+}
+
+
+
+.header_container_secundario ul li{
+    padding-right: 35px; 
+    list-style: none;
+}
+
+.header_container_secundario ul li a{
+    text-decoration: none;
+    color: #88888C;
+}
+
+/* -------------------------------------- */
+
+
+
+
+/* ---------------------------------------- */
+
+.container_img1{
+    position: absolute;
+    left: 380px;
+    top:60px;
+}
+
+.container_img2{
+    position: absolute;
+    left: 481px;
+    top:60px;
+    width: 30px;
+}
+.container_img3{
+    position: absolute;
+    left: 566px;
+    top:60px;
+    width: 30px;
+}
+.container_img4{
+    position: absolute;
+    left: 662px;
+    top:60px;
+    width: 30px;
+}
+.container_img5{
+    position: absolute;
+    left: 762px;
+    top:60px;
+    width: 30px;
+}
+.container_img6{
+    position: absolute;
+    left: 870px;
+    top:60px;
+    width: 30px;
+}
+.container_img7{
+    position: absolute;
+    left: 965px;
+    top:60px;
+    width: 30px;
+}
+.container_img8{
+    position: absolute;
+    left: 1040px;
+    top:60px;
+    width: 30px;
+}
+.container_img9{
+    position: absolute;
+    left: 1125px;
+    top:60px;
+    width: 30px;
+}
+.container_img0{
+    position: absolute;
+    left: 1215px;
+    top:60px;
+    width: 30px;
+}
+.container_img10{
+    position: absolute;
+    left: 1100px;
+    top:13px;
+    width: 25px;
+}
+.container_img11{
+    position: absolute;
+    left: 1233px;
+    top:13px;
+    width: 25px;
+}
+.container_img12{
+    position: absolute;
+    left: 1353px;
+    top:13px;
+    width: 25px;
+}
+.container_img13{
+    position: absolute;
+    left: 880px;
+    top:15px;
+    width: 25px;
+    height: 20px;
+}

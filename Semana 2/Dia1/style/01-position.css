@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+/* ----------------------------------------------- */
+
+.section1{
+    border: 1px solid red;
+    height: 2000px;
+    position: relative;
+    top: 100px;
+}
+
+.article1{
+    border: 1px solid blue;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    /* left: calc(50% - 50px); */
+    /* Se desplaza desde la izquierda, el 50%  del ancho del CONTENEDOR */
+    left: 50%;
+    /* Se desplaza -50% del ancho del ELEMENTO en el eje X */
+    transform: translate(-59px,0px);
+}
+
+.article2{
+    border: 1px solid greenyellow;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.article3{
+    height: 100px;
+    width: 100px;
+    border: 1px solid violet;
+}
+
+.article4{
+    height: 100px;
+    width: 100px;
+    border: 1px solid  black;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.article4:hover{
+    transform: scale(1.2,1.2);
+    background-color: black;
+}
