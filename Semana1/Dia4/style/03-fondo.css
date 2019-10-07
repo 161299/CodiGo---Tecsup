@@ -1,0 +1,57 @@
+
+/* FUNCIONES DE RESETEO */
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+}
+/* ----------------------------------------- */
+
+body{
+    /* background-color: violet; */
+}
+
+header{
+    background-color: greenyellow;
+    height: 90px;
+}
+
+/* .section1{
+    height: 400px;
+    /* background-image: url('./../images/logo.png');
+    background-repeat: repeat-x; */
+    /* background-color: blueviolet;
+} */ 
+    /* background-size: 100%; */
+    /* background-size: cover -> significa igual que el 100%  */
+    /* background-size: contain ->se agranda si pasarse de su elemento padre. sin distorcionarse */
+    /* background-position: center -> para mover la imagen */
+
+
+.section1{
+    height: 400px;
+    background-color: aqua;
+    background-image: url('./../images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section2{
+    height: 200px;
+    background-image: url('./../images/Captura.PNG')
+}
+
+.section3{
+    height: 500px;
+    background-image: url('./../images/wall.jpg');
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+
+
+.section4{
+    height: 1000px;
+}

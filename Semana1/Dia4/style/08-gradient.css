@@ -1,0 +1,43 @@
+html, body{
+    height: 100%;
+    font-family: verdana;
+    color: white;
+}
+
+*{
+    margin: 0;
+}
+/* .-----------------------------------. */
+
+#lineal{
+    height: 80px;
+    background: -webkit-linear-gradient(top right, red, green, violet);
+    text-align: center;
+    border: 1px solid blue;
+}
+
+.circular{
+    background: -webkit-radial-gradient(center, black, white);
+    height: 80px;
+    text-align: center;
+}
+
+p{
+    filter: blur(5px);
+}
+
+img:hover{
+    filter: grayscale(0,1);
+    filter: sepia(1);
+    /* filter: brightness(10); */
+    filter: contrast(5);
+    filter: invert(1);
+    transform: scale(1,1);
+    transform: rotate(90deg);
+    transform: skew(45deg);
+    transform: translate(600px,50px);
+}
+
+div>p{
+    transform: rotate(90deg)
+}

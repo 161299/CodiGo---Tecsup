@@ -1,0 +1,33 @@
+.container_footer_1{
+
+    width: 930px;
+    height: 500px;
+    margin: auto;
+    margin-top: 250px !important;
+}
+
+.container_footer_1 h2{
+    background-color: #FFC40C;
+    text-align: center;
+    padding: 10px;
+    color: #273C44;
+    font-size: 16px;
+}
+
+.column_article{
+    margin: 24px 0px;
+    border-top: 1px solid #FFC40C;
+    padding-top: 20px;
+    color: #273C44;
+}
+
+.column_1 a{
+    font-size: 20px;
+}
+
+.column_div{
+    width: 100px;
+    padding-top: 100px;
+}
+
+

@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+    background-color: #16F2BB; 
+}
+/* ------------------------------------------ */
+
+.circulo{
+    background-color: #114CEB;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    animation-name: cambiarcolores;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cambiarcolores{
+    0%{
+        background-color: #11EB84;
+    }
+
+    50%{
+        background-color: #11EBD6;
+        transform: scale(1,5) translate(30px, 60px)
+    }
+    100%{
+        background-color: #114CEB;
+    }
+}

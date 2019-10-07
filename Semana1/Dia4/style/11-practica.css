@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;;
+}
+
+.avion{
+    width: 300px;
+    animation-name: avion;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes avion{
+    0%{
+    }
+
+    15%{
+        transform: rotate(45deg)
+    }
+
+    25%{
+        transform: translate(500px,0px) rotate(45deg)
+    }
+
+    30%{
+        transform: translate(500px,0px) rotate(130deg) 
+    }
+
+    40%{
+        transform: translate(500px,500px) rotate(130deg)
+    }
+
+    50%{
+        transform: translate(500px,500px) rotate(220deg)
+    }
+
+    60%{
+        transform: translate(0px,500px) rotate(225deg)
+    }
+
+    75%{
+        transform: translate(0px,500px) rotate(225deg)
+    }
+
+    80%{
+        transform: translate(500px,500px) rotate(90deg)
+    }
+
+    100%{
+        transform: translate(500px,500px) rotate(90deg)
+    }
+}

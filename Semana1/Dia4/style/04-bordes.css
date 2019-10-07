@@ -1,0 +1,47 @@
+/* REGLAS PRINCIPALES */
+body, html{
+    height: 100%;
+}
+
+*{
+    margin: 0;
+}
+
+h1{
+    margin: auto;
+}
+
+div{
+    width: 400px;
+    margin: auto;
+    border: 1px solid red;
+}
+
+.section1{
+    height: 300px;
+    border-top: 2px solid blue;
+    border-bottom: 3px solid blue;
+}
+
+.section2{
+    height: 200px;
+    border: 2px solid orange;
+    border-radius: 20px;
+}
+
+.section3{
+    height: 300px;
+    width: 300px;
+    border: 2px solid blue;
+    border-radius: 50%;
+}
+
+.section4{
+    height: 200px;
+    width: 200px;
+    border: 2px solid red;
+    border-top-left-radius: 50px;  
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px; 
+    margin: auto;
+}

@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ---------HEADER------------------------ */
+
+header{
+    height: 62px;
+    width: 100%;
+    background-color: #FFC40C;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header_img{
+    margin: 13px;
+    font-weight: 900;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+header nav{
+    z-index: 1000;
+    max-width: 1000px;
+    margin-top: 13px;
+}
+
+.nav_despegable{
+    display: inline-block;
+    font-size: 13px;
+    padding-right: 40px;
+}
+
+.nav_despegable a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav_despegable img{
+    cursor: pointer;
+}
+
+header nav li{
+    display: inline-block;
+    font-size: 13px;
+}
+
+header nav li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding-right: 40px;
+    
+}
+
+.sign_up{
+    padding-right:25px;
+    color: #273C44; 
+}
+
+/* ------hover-------------- */
+.nav_hover:hover{
+    color: #273C44;
+}
+
+.sign_up:hover{
+    color: #fff;
+}
+
+/* -------------1ra section---------------- */
+
+.container_master{
+    display: flex;
+    justify-content: center;
+}
+
+
+.container_main{
+    text-align: center;
+    margin: 0px;
+    padding: 1px 0px;
+    width: 940px;
+    height: 542px;
+}
+
+.main_img{
+    margin: 60px 0px;
+}
+
+section div h2{
+    font-size: 45px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: inherit;
+    color: #273C48;
+    margin-bottom: 20px;
+}
+
+section div p{
+    padding-top: 41px;
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+
+.main_section div{
+    margin-top: 20px;
+}
+
+section div .estea{
+    text-decoration: none;
+    border: 2px solid #273C44;
+    font-size: 13px;
+    padding: 15px 90px;
+    color: #273C44;
+}
+
+    /* ---------hover 1ra section--------------  */
+
+.main_section div a:hover{
+    background-color: #273C48;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+

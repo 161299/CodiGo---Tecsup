@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+}
+/* -------------------- */
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: #11EBA6;
+}
+
+/* ------------------ */
+
+#cajapadre{
+    position: relative;
+    width: 365px;
+    height: 274px;
+    overflow: hidden;
+}
+
+#contenedor{
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    width: 365px;
+    height: 324px;
+    transition: top 0.5s ease-in-out 0s;
+}
+
+#contenedor_superior{
+    width: 365px;
+    height: 274px;
+}
+
+#contenedor_inferior{
+    width: 365px;
+    height: 35px;
+    padding-top: 15px;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+#contenedor:hover{
+    top: -50px;
+}
