@@ -1,0 +1,165 @@
+*{ margin: 0;} html, body{ height: 100%; font-family: 'Fira Sans', sans-serif;}/* ------------------------------- */ .header_container{ height: 130px; width: 100%;background-color: #1B0088; } .header_top{width: 100%; height: 40px; display: flex;background-color: #150067; justify-content: center; align-items: center;
+}
+
+.enlace1 a{
+    color: #00B5AD;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    border-right: 1px solid #9692A7;
+}
+
+.enlace2 a{
+    color: #9692A7;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 15px;
+  
+}
+
+.enlace_con_linea{
+    border-right: 1px solid #9692A7;
+}
+
+.enlace3 .promo{
+    color: #9692A7;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+
+}
+
+.rojo{
+    background-color: #C91435;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.rojo:hover{
+    background-color: #FC153F;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ----------------------------------- */
+
+.nav_bottom{
+    margin: 0px 25%;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1B0088;
+}
+
+.nav_bottom nav{
+    width: 700px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li{
+    list-style: none;
+    
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li a:hover{
+
+    -moz-text-decoration-line: inherit;
+}
+/* ---------------------------------------- */
+
+
+.container_caja_fondo{
+    background-image: url(./../images/playa.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.container_table{
+    margin-top: 300px;
+    width: 900px;
+    height: 350px;
+    background-color: #1B0088;
+    
+}
+
+.container_table table{
+    width: 100%;
+}
+
+.busca_vuelo{
+    margin-top:25px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+.busca_vuelo a{
+    background-color: #FC153F;
+    padding: 15px 100px;
+    width: 200px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.busca_vuelo a:hover{
+    background-color: #C91435;
+}
+
+/* ------------------------------ */
+table tr td a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.pintar{
+    background-color: #fff;
+}
+.pintar a{
+    color: #1B0088;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.pintareste span{
+    color: #fff;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.ancho{
+    width: 300px;
+}
+
+td{
+    height: 40px;
+}
+
+td:nth-child(2):hover{
+  border: 1px solid #15FCB6;
+}
+
+td:nth-child(3):hover{
+    border: 1px solid #15FCB6;
+}
