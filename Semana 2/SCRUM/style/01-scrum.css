@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+/* ---------------------------- */
+
+.c_header{
+    display: flex;
+    justify-content: center;
+}
+.c_caja_img{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.c_header_img{
+    border-radius: 20px;
+    box-shadow: #f1f1f1 (1 1 10px);
+}
+
+.c_caja_img div{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.c_caja_img a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+.c_logo{
+    position: absolute;
+    right: 0;
+    padding: 40px 100px;
+}
+
+/* -----------nav---------------- */
+.container_nav{
+    width: 100%;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 20px;
+}
+
+.container_nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container_nav ul li{
+    list-style: none;
+}
+
+.container_nav ul a{
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+    padding-right: 60px;
+    border-right: 3px solid #000;
+}
+
+.c_enlace_eliminar{
+    border: none;
+}
+
+@media (max-width: 700px){
+    .container_nav{
+        display: none;
+    }
+
+
+    
+}
+
+.p_eliminar{
+    display: none;
+}
+
+/* --------erick----------- */
+table{
+    width: 60%;
+
+}
+tr:nth-child(odd){
+    background-color: #8f8af2;
+} 
+tr:nth-child(even){
+    background-color: #f57ad0;
+}
+.ecabecera{
+    background-color: #f5b669;
+    text-align: left;
+    width: 100%;
+}
+.econtenido-cabecera{
+    margin-left:10px;
+}
+.esectiontabla{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.eimg{
+    margin-left: 10%;
+}
+.eimgc{
+    width: 5%;
+}
+
+/* ----------z---------------- */
+.zcontenedor1{
+    margin-top: 5%;
+    height: 50%;
+    padding-left: 5%;
+    padding-right: 3%;
+    display: flex;
+    flex-direction: column;
+
+}
+.zparrafo1{
+    flex: 1;
+    
+    
+}
+.zparrafo2{
+    flex: 3;
+    display: flex;
+    
+}
+.zint1{
+    flex: 2;
+    color: red;
+    
+}
+.zint2{
+    flex: 1;
+    
+}
+
+.ztxt{
+    width: 100%;
+    
+    margin-top: 10%;
+}
+
+.ztxt h3{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+.zvideo{
+    width: 60%;
+        height: 60%;
+    margin-top: 10%;
+}
+
+
+/* ---------miguel--------------- */
+footer {  
+    margin-top: 5%;  
+    height: 150px;
+    display: flex;
+    border-color:1px solid #100E17;
+    width: 100%;    
+}
+
+.m_navegador {
+    display: flex;
+    flex: 1;
+}
+
+footer ul{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 100px;
+}
+
+.navegador ul li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer li{ 
+    display: flex;       
+    font-size: 1.5rem;
+    margin: 20px 100px;    
+}
+
+.m_navegador a{
+    text-decoration: none;    
+}
+
+.m_img_footer{
+    height: 100px;
+    width: 250px;
+    margin-top: -40px;
+}
+.m_col_negro{
+    border-color:1px solid black;
+}
+
+
+@media(max-width: 1280px){   
+
+    .m_eliminar_li{
+        display:none;
+    }    
+}
