@@ -18,15 +18,17 @@ header{
 
 .css{
     margin-top:25px ;
+   
 }
 .css a{
   
     display: flex;
     align-items: center;
-    font-size: 35px;
+    font-size: 22px;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
+    flex:2;
 }
 
 .naranja{
@@ -35,6 +37,7 @@ header{
 
 nav{
     margin-top: 25px;
+    flex: 4;
 }
 
 nav ul{
@@ -204,7 +207,8 @@ nav ul li a{
 
 @media (max-width: 720px){
     header{
-        display: block;
+        flex-direction: column;
+        justify-content: center;
         height: 55%;
     }
 
