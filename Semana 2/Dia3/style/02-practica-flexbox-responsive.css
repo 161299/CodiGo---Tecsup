@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* ------------------------------------------ */
+header{
+    height: 10%;
+    background-color: #201C29;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10000;
+}
+
+.css{
+    margin-top:25px ;
+}
+.css a{
+  
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.naranja{
+    color: #FCA943;
+}
+
+nav{
+    margin-top: 25px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.buscador{
+    flex: 3;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+
+}
+
+.formulario-buscar{
+    display: flex;
+}
+
+.formulario-buscar button{
+    background: linear-gradient(to right, #f12711, #f5af19); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-left: 0;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    color: #ddd;
+    outline: none;
+}
+
+.formulario-buscar input{
+    background-color: #201C29;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 0;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    color: #ddd;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 0px 20px;
+}
+
+
+
+.container_master{
+    background: linear-gradient(#833ab4, #fd1d1d, #fcb045);
+    height: 70%;
+    z-index: 1;
+}
+
+.container{
+    background-image: url(./../images/sea-1101168_960_720.jpg);
+    background-size: 100%;
+    border-bottom-right-radius: 300px;
+    height: 95%;
+
+ 
+}
+
+.container_main{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+.div1{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 50%;
+}
+
+.div1 h2{
+    font-size: 60px;
+}
+.span{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.article1{
+    width: 60%;
+    display: inline-block;
+}
+.div1 h2, article p{
+    color: #fff;
+}
+
+.circle{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background: linear-gradient(#833ab4, #fd1d1d, #fcb045);
+    /* position: relative;
+    top: -200px;
+    overflow: hidden; */
+    
+    
+    
+}
+
+.container_ultimo{
+    height: 2%;
+    
+   
+}
+
+.ultimo{
+    margin-left: 13%;
+    width: 30%;
+    height: 200px;
+    border-radius: 20px;
+    background-color: black;
+    padding: 30px 20px;
+    display: flex;
+}
+
+.ultimo p, h3, article{
+    color: #fff;
+}
+.letra{
+    margin: 40px 10px;
+}
+
+
+@media (max-width: 1280px){
+    .formulario-buscar input{
+        display: none;
+    }
+
+    .formulario-buscar button{
+        border: none;
+        background: none;
+    }
+  
+    .circle{
+        display: none;
+    }
+
+    .css a{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 720px){
+    header{
+        display: block;
+        height: 55%;
+    }
+
+    .buscador{
+        order:2;
+        display: flex;
+    }
+
+    .formulario-buscar input{
+        display: inline;
+        border: 1px solid #fff;
+        border-radius: 20px;
+      
+    }
+
+  
+    .css{
+        order: 1;
+    }
+    .css a{
+        display: block;
+        text-align: center;
+        font-size: 35px;  
+    }
+    nav ul{
+        display: block;
+        text-align: center;  
+        order: 2;     
+    }
+    .nav{
+        order: 3;
+    }
+    
+    nav ul li a{
+        display: block;
+        margin-bottom: 20px;
+        order: 2;
+    }
+    .container_ultimo{
+        display: none;
+    }
+}
+
+
