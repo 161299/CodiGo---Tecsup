@@ -7,18 +7,18 @@ for(let i=0; i<cantidad; i++){
 
     if(cantidad>0){
         var m=+prompt("Ingrese numero")
-        menor=m;
-        igual=m;
-        mayor=m;
+            menor=m;
+            igual=m;
+            mayor=m;
         switch(true){
             case igual=== 0:
-                console.log(`Igual a cero son : ${m}`);
+                console.log(`Igual a cero son los valores : ${m}`);
                 break;
             case mayor>0:
-                console.log(`Mayor a cero son ${m}`)
+                console.log(`Mayor a cero son los valores : ${m}`)
                 break;
             default:
-                    console.log(`Menor a cero son ${m}`)
+                    console.log(`Menor a cero son valores : ${m}`)
         }
     }
 }
