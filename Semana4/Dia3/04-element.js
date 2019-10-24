@@ -46,4 +46,6 @@ setInterval(()=>{
 // innerHTML => Declara o devuelve el contenido de un elemento
 // <elemento>SOY SU CONTENIDO</elemento>
 console.log(div1.innerHTML);
-div1.innerHTML = "<p>AHORA YO SOY EL TEXTO</p>"
+div1.innerHTML = "<p>AHORA YO SOY EL TEXTO</p>" //=> crhome lo reconoce como una etiqueta html 
+div1.innerText = "<p>AHORA YO SOY EL TEXTO</p>" //=> crhome lo reconoce como un texto 
+

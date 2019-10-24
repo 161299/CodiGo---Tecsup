@@ -6,9 +6,13 @@ parrafo.style.color = "Blue";
 // Para agregarlo a nuestro documento HTML, primero debemos indicar donde lo vamos a poner una vez que tengamos donde lo queremos usamos el metodo principal.appendChild(parrafo)
 // Agregar a su nuevo hijo al final de todos sus hijos
 principal.appendChild(parrafo);
+
+//NOTA:
+// Tambien existe la funcion prepend(), ==> analoga a appendChild, inserta un nodo hijo, pero al inicio de todos sus hijos
+
 for (let i = 0; i < 5; i++) {
     let miParrafo = document.createElement("p");
-    miParrafo.innerHTML = `Soy el Parrafo ${i+1} creado en JavaScript`;
+    miParrafo.innerText = `Soy el Parrafo ${i+1} creado en JavaScript`;
     miParrafo.style.color = "black"
     principal.appendChild(miParrafo)
 }
@@ -34,7 +38,7 @@ var table = document.createElement("table");
 var cabeceraText= ["Nro","Cantidad","Descripcion","P.Unitario","Total"]
 var cabecera = document.createElement("tr")
 // var descripcion = prompt("Ingrese descripcion");
-var Nro = [+prompt("Ingrese nro")]
+var Nro = +prompt("Ingrese nro")
 var nrofila = document.createElement("tr")
 var arrayNro = [Nro]
 
@@ -46,17 +50,13 @@ for (let i = 0; i < cabeceraText.length; i++) {
     th.innerHTML=cabeceraText[i];
     cabecera.appendChild(th);
     table.appendChild(cabecera)
-    
-    var td= document.createElement("td");
-    td.innerHTML=arrayNro
-    nrofila.appendChild(td)
-    table.appendChild(nrofila)
-
-    
 }
 principal.appendChild(table)
 
-
+// var td= document.createElement("td");
+// td.innerHTML=arrayNro
+// nrofila.appendChild(td)
+// table.appendChild(nrofila)
 
 
 
