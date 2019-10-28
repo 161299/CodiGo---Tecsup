@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* ----------------------------- */
+
+.header_container{
+    text-align: center;
+    height: 10%;
+    padding: 20px;
+    background-color: greenyellow ;
+}
+
+.header_container h1{
+    font-family: 'Roboto', sans-serif;
+}
+
+.tarea{
+    margin-top: 18%;
+    display: flex;
+    justify-content: center;
+}
+
+.div1{
+    display: flex;
+    /* flex-direction: column; */
+    /* padding: 30px; */
+}
+
+#botoncito{
+    width: 220px;
+    height: 20px;
+    margin-top: 10px;
+}
+
