@@ -1,7 +1,7 @@
 class Producto():
     def __init__(self,fechaCaducidad,nroModelo):
-        self.fechaCaducidad = fechaCaducidad
-        self.nroModelo = nroModelo
+        self.__fechaCaducidad = fechaCaducidad
+        self.__nroModelo = nroModelo
     
     def description(self):
         print("fecha de Caducidad: ", self.fechaCaducidad,"\nNro de Modelo", self.nroModelo)
@@ -18,5 +18,5 @@ class Frescos(Producto):
 producto = Producto("24 de octubre del 2019","ET322")
 producto.description()
 
-# fresco = Frescos("12.10.19","Peru","24 de octubre del 2019","ET322")
-# fresco.description()
+fresco = Frescos("12.10.19","Peru","24 de octubre del 2019","ET322")
+fresco.description()

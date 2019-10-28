@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+        html, body{ height: 100%; }
+        *{margin: 0;}
+        body{display: flex;justify-content: center; align-items: center;background-color: #3c5780}
+        form{flex:1;display: flex;justify-content:center; flex-wrap: wrap;}
+        input{background-color: #f1f1f1;height: 60px;width: 50%;border-radius: 50px;font-size: 1.5rem;padding: 0 1rem; border: none;outline: none;}
+        .input-focus{
+            border-bottom-style: solid;
+            /* border-bottom-color: #c9e7ff; */
+            border-bottom-width: 7px;
+            box-shadow: #000 1px 1px 3px;
+        }
+        div{
+            background-color: #f1f1f1;height: 60px;width: 50%;border-radius: 50px;font-size: 1.5rem;padding: 0 1rem; margin: 10px;box-shadow: #000 1px 4px 6px;
+        }
+    </style>
+</head>
+<body id="body">
+    <!-- autocomplete => en off es para que no salga la lista de autocompletar -->
+    <form autocomplete="off">
+        <input type="text" id="inputNombre" placeholder="Ingrese su nombre: " maxlength="20">
+        <div id="div">
+
+        </div>
+    </form>
+    
+
+    <script src="./../js/02-eventos.js"></script>
+</body>
+</html>
