@@ -1,0 +1,126 @@
+aside{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    /* padding-top: 100px; */
+    height: 10%;
+    flex-wrap: wrap;
+}
+#btnAgregarElemento{
+    font-family: 'Roboto', sans-serif;
+    border-radius: 20px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    background-color: #1ECFCF;
+    font-size: 10px;
+    transition: 500ms;
+    /* color: #fff; */
+    margin: 10px;
+}
+#btnGuardarElemento{
+    font-family: 'Roboto', sans-serif;
+    border-radius: 20px;
+    /* flex-grow: 2; */
+    height: 30px;
+    width: 200px;
+    border: none;
+    background-color: #1ECFCF;
+    font-size: 10px;
+    transition: 500ms;
+    /* color: #fff; */
+}
+
+#btnAgregarElemento:hover{
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transform: scale(1.1,1.1);
+    box-shadow: black 1px 2px 3px;
+    transition: 500ms;
+    font-size: 13px;
+    color: #fff;
+    background-color: #00B2B2; 
+}
+
+#btnGuardarElemento:hover{
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transform: scale(1.1,1.1);
+    box-shadow: black 1px 2px 3px;
+    transition: 500ms;
+    font-size: 13px;
+    background-color: #00B2B2;
+    color: #fff
+}
+
+table{
+    cursor: pointer;
+    border: none;
+};
+table thead{
+    display: flex;
+    flex-direction: row;
+    outline: none;
+    background: transparent;
+    
+}
+table thead tr th{
+    
+    border: none;
+    border-radius: 2px ;
+    text-align: center;
+    background-color: #127E93;
+    color: #ffff;
+    
+}
+table thead tr th:hover{
+    background-color: #37D3C2;
+    transition: 400ms;
+}
+
+table tbody tr input{
+    outline: none;
+    background: transparent;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    /* box-shadow: #1A4A73 0px 2px 3px; */
+    cursor: pointer;
+    color: #fff;
+}
+table tbody tr input:hover{
+    background-color: #127E93;
+    border-radius: 20px;
+    transform: scale(0.99);
+    transition: 400ms;
+}
+section{
+    display: flex;
+}
+
+#btnTema{
+    height: 50px;
+    background: transparent;
+    justify-content: center;
+    align-content: center;
+    background-color: #0A5174;
+    border: none;
+    color: #fff;
+    font-size: 25px ;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#btnTema:hover{
+    background-color: #2069AA;
+    box-shadow: #f1f1f1 1px 2px 2px ;
+}
+
+#num{
+    color: #fff;
+}
