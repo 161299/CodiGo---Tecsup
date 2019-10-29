@@ -1,0 +1,49 @@
+DATO
+un Dato es una palabra y numeros que no tienen significado
+ejemplo => Soltero: false
+
+COMPONENTE DE UNA BD
+Campo: Area de  almacenamiento en el cual se guarda un tipo especifico.
+Registro: Coleccion de datos iguales o diferentes que estan relacionados.
+Archivo: Coleccion de varios Registros relacionados siguiendo una estructura hemogenea.
+
+Dos archivos diferentes pero que a la vez estan relacionados, tenemos una Base de Datos.
+id perona_id descripcion
+1     1      Porsor BackEnd
+2     1      Prosor Scrum
+3     2      Prosor FrontEn
+
+
+id nombre telefono fecha_nacimiento
+F
+B
+
+MODELO DE BASE DE DATOS
+Conjuntos de ideas para presentar la estructuda de la BD
+Modelo relacional: permite visualizar la estructura de la bD y sus relaciones entre las tablas
+DIagrama entidad: relacion herramienta para modelar nuestra basede datos y analizarla
+DIAGRMA ENTIDAD RELACION
+Atributo:
+Atributo principal:
+Llave primaria (primary key): unica y toda entidad debe tener .id_producto, id_cliente
+Atributo Foraneo:
+Clave secundaria: identifica una entidad externa en otra
+Cardinalidad o Mapeo
+uno a Uno              Uno a muchos / Muchos a uno       Muchos a Muchos
+Persona->alumno        proveedor ->productos           Producto -> Boleta
+
+REGLAS DE NEGOCIO
+Describe las politicas, normas, operaciones, definiciones y restricciones presentes en una organizacion y que son de vital importancia para alcanzar los objetivos misionales
+Ejemplos de relgas de negocio: "Un cliente al que facturamos mas de 10.000 al año es un cliente de tipo A , A los clientes de tipo A les aplicamos un descuento del 10% en pedidos superiores a 3.000"
+
+
+
+
+
+
+
+
+
+
+
+
