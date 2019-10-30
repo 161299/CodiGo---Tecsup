@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css"  media="screen,projection"/>
+    <style>
+    
+    .fondo-claro{
+        background-color: peru;
+    }
+    .fondo-oscuro{
+        background-color: saddlebrown;
+    }
+    
+    </style>
+</head>
+<body>
+    
+        <div class="container-fluid">
+            <h3>  offset- </h3>
+            <h5> nos dice que el peso de 6 ira primero y despues el recien ocupara el espacio que le pondremos al offset</h5>
+            <div class="row">
+                <div class="col s12 fondo-oscuro"><span class="flow-text">12</span></div>
+                <div class="col s6 offset-s6 fondo-claro"><span class="flow-text">6</span></div>
+            </div>
+            <hr/>
+            <h3>  Push and Pull </h3>
+            <h5> Push nos permite recorrer y dejar el peso 5 vacio  para que otro elemento pueda ocupar ese espacio en este caso el pull</h5>
+           <div class="row">
+               <div class="col s7 push-s5 fondo-claro">Columna 1</div>
+               <div class="col s5 pull-s7 fondo-oscuro">Columna 2</div>
+           </div>
+        </div>
+
+
+
+
+        <script type="text/javascript" src="./js/materialize.min.js"></script>
+</body>
+</html>

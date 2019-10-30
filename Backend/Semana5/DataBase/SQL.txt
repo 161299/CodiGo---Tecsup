@@ -1,0 +1,15 @@
+SQL
+Lenguaje estructura de consulta
+TIPOS:
+DDL: Lenguaje de definicion de Datos. Dar estructura a nuestra base de datos (creato,Drop)
+DML: Lenguaaje de Manipulacion de DATOS. Modificar nuestros Datos (insert,select)
+Modelo Relacional
+El diagrama de entidad Relacion en SQL se llama Modelo Relacional
+Entidad -> Tablas
+Atributo -> Campos
+Registro -> Tuplas
+Cardinalidad -> Relaciones
+
+DBMS
+Database Management System
+Coleccion de datos interrelacionados y un conjunto de programas 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- boostrap -->
+    <link rel="stylesheet" href="./../css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+    
+        .altura-300{height: 300px;}
+        .altura-100{height: 100px;}    
+        .fondo-oscuro{background-color: peru;}
+        .fondo-claro{background-color: orangered;}
+        .fondo-fila{background-color: orchid;}
+
+    </style>
+</head>
+<body>
+
+    <section class="container-fluid">
+        <div class="row altura-300 fondo-fila align-items-start">
+            <div class="col-md-4 altura-100 fondo-claro">columna 1</div>
+            <div class="col-md-4 altura-100 fondo-oscuro">columna 2</div>
+            <div class="col-md-4 altura-100 fondo-claro">columna 3</div>
+        </div>
+        <hr/>
+        <div class="row altura-300 fondo-fila align-items-center">
+            <div class="col-md-4 altura-100 fondo-claro">columna 1</div>
+            <div class="col-md-4 altura-100 fondo-oscuro">columna 2</div>
+            <div class="col-md-4 altura-100 fondo-claro">columna 3</div>
+        </div>
+        <hr/>
+        <div class="row altura-300 fondo-fila align-items-end">
+            <div class="col-md-4 altura-100 fondo-claro">columna 1</div>
+            <div class="col-md-4 altura-100 fondo-oscuro">columna 2</div>
+            <div class="col-md-4 altura-100 fondo-claro">columna 3</div>
+        </div>
+        <hr/>
+        <!-- align-self-start|center|end  => sirve personalizar nuestras col -->
+        <div class="row altura-300 fondo-fila">
+            <div class="col-md-4 altura-100 fondo-claro align-self-start">columna 1</div>
+            <div class="col-md-4 altura-100 fondo-oscuro align-self-center">columna 2</div>
+            <div class="col-md-4 altura-100 fondo-claro align-self-end">columna 3</div>
+        </div>
+        
+    </section>
+
+    
+    
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/popper.min.js"></script>
+    <script src="./../js/bootstrap.min.js"></script>
+</body>
+</html>

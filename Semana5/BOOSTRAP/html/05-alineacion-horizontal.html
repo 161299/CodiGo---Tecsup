@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- boostrap -->
+    <link rel="stylesheet" href="./../css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+    
+            .altura-300{height: 300px;}
+            .altura-100{height: 100px;}    
+            .fondo-oscuro{background-color: peru;}
+            .fondo-claro{background-color: orangered;}
+            .fondo-fila{background-color: orchid;}
+    
+    </style>
+</head>
+<body>
+
+    <section class="container-fluid">
+        <section class="row fondo-fila justify-content-start">
+            <div class="col-md-4 fondo-oscuro altura-100">Columna 1</div>
+            <div class="col-md-4 fondo-claro altura-100">Columna 2</div>
+        </section>
+        <hr>
+        <section class="row fondo-fila justify-content-center">
+            <div class="col-md-4 fondo-oscuro altura-100">Columna 1</div>
+            <div class="col-md-4 fondo-claro altura-100">Columna 2</div>
+        </section>
+        <hr>
+        <section class="row fondo-fila justify-content-end">
+            <div class="col-md-4 fondo-oscuro altura-100">Columna 1</div>
+            <div class="col-md-4 fondo-claro altura-100">Columna 2</div>
+        </section>
+    </section>
+    
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/popper.min.js"></script>
+    <script src="./../js/bootstrap.min.js"></script>
+</body>
+</html>
