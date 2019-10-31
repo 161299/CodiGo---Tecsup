@@ -1,0 +1,54 @@
+.secundario{
+   height: 900px;
+   background-color: brown; 
+}
+
+.secundario-co-1{
+    height: 100%;
+    background-color: cyan;
+}
+.secundario-co-2{
+    height: 100%;
+    background-color: blue;
+}
+.secundario-co-3{
+    height: 100%;
+    background-color: orange;
+}
+
+/* --------------tercero_---------------------- */
+.tercero{
+    height: 1000px;
+    background-color: brown; 
+ }
+ 
+ .tercero-co-1{
+     height: 100%;
+     background-color: blue;
+ }
+ .tercero-co-2{
+     height: 100%;
+     background-color: red;
+ }
+ .tercero-co-3{
+     height: 100%;
+     background-color: black;
+ }
+ /* ------------cuarto--------------------------- */
+.cuarto{
+    height: 1000px;
+    background-color: brown; 
+ }
+ 
+ .cuarto-co-1{
+     height: 100%;
+     background-color: #f1f1f1;
+ }
+ .cuarto-co-2{
+     height: 100%;
+     background-color: black;
+ }
+ .cuarto-co-3{
+     height: 100%;
+     background-color: red;
+ }

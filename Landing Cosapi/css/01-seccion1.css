@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    box-sizing: content-box;
+}
+
+html, body{
+    height: 100%;
+}
+/* ===============HEADER======================= */
+
+.header{
+    background-color: blue;
+    height: 50px;
+}
+
+.main{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: burlywood;
+
+}
+
+/* -------------row primario--------------------------- */
+.primario{
+    padding-top: 10%;
+    width: 100%;
+    height: 950px;
+    background-image: url(./../img/chicago-690364_1920.jpg);
+}
+
+.primario-container{
+    background-color: chartreuse;
+    height: 70%;
+}
+
+
+
+/* ---------------------row secundario-------------------------- */
+
+
+.row-secundario{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.secundario-raton{
+    width: 10px;
+    height: 10px;
+    background-color: cornflowerblue;
+}
+
