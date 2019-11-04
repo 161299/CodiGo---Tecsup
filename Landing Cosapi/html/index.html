@@ -8,27 +8,378 @@
     <link rel="stylesheet" href="./../css/02-seccion2.css">
     <link rel="stylesheet" href="./../css/03-seccion3.css">
     <link rel="stylesheet" href="./../css/04-footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 
     <link rel='stylesheet' href='./../css/bootstrap.min.css'>
-    <link rel='icon' type='image/' href='' />
+    <!-- <link rel='icon' type='image/' href='' /> -->
     <title></title>
+    <style>
+        body {
+            /* background-color: darkblue; */
+        }
+
+        .d_title {
+            color: white;
+            font-size: 80px;
+            font-weight: bold;
+        }
+
+        .d_descripcionProyecto {
+            background-color: white;
+            color: #6E6E6E;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            display: block;
+            width: 190px;
+            margin-top: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .d_round {
+
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: white;
+            text-align: center;
+
+
+        }
+
+        .d_round img{
+            width: 90px;
+            transition: 1s;
+        }
+        .d_round img:hover{
+            transform: scale(1.2);
+        }
+
+
+        .tooltip-inner {
+            width: 500px;
+            opacity: 1 !important;
+            
+            color: black;
+                       
+            background-color: white !important;
+            border: 1px solid white
+            
+         
+        }
+
+        .nav-item {
+            border-left: none;
+        }
+
+        .nav-tabs .nav-item.show .nav-link,
+        .nav-tabs .nav-link.active {
+            color: #019CDb;
+            background-color: white;
+            border-color: #019CDB #019cdb white;
+            border-bottom: none;
+        }
+
+
+        .nav-tabs .d_uno {
+            border: 1px solid transparent;
+            border-left: none;
+            border-top-left-radius: .25rem;
+            border-top-right-radius: .25rem;
+            border-bottom: 1px solid #019cdb;
+            color: grey;
+        }
+
+        .nav-tabs .d_dos {
+            border: 1px solid transparent;
+            border-bottom: 1px solid #019cdb;
+            border-right: none;        
+            outline: none;
+            margin-left: -30px;
+            color: grey;
+        }
+
+
+        .nav-link {
+            padding: 20px 30px;
+        }
+
+        .d_color{
+            color: #019CDB;
+            font-weight: 450;
+            font-size: 16px;
+        }
+        .fa-500px{
+            font-size: 23px;
+        }
+
+        .scontainer {
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 25px 35px;
+            box-sizing: border-box;
+            border-radius: 12px;
+            background-color: black;
+            color: #fff;
+            opacity: 0.3;
+        }
+        
+        #sinput,
+        #sselect,
+        #stextarea {
+            background-color: transparent !important;
+            color: white;
+        }
+        
+         ::placeholder {
+            color: white !important;
+        }
+
+        .mibody {
+            background-color: rgb(199, 199, 199);
+            height: 100%;
+        }
+
+        .e_navp {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .color {
+            color: white !important;
+        }
+
+        .barras {
+            color: white !important;
+            display: none;
+        }
+
+        .color1 {
+            color: black !important;
+        }
+
+        .eee {
+            height: 3000px;
+        }
+        @media(max-width:1010px) {
+            .color {
+                display: none;
+            }
+
+            .barras {
+                color: white !important;
+                display: flex;
+            }
+
+            .e_navp {
+                justify-content: space-between;
+                display: flex;
+            }
+
+        }
+
+        @media(max-width:600px) {
+            nav{
+                background-color: white !important; 
+            }
+            .barras {
+                color: blue !important;
+            }
+            .e_logo{
+                order: 2;
+                margin-right:35%;
+            }
+            .e_nav{
+            order: 1;
+            }
+        }
+
+    </style>
 </head>
 <body id="miBody">
     
-    <header class="container-fluid header">
-
-    </header>
+    <!-- <header class="container-fluid header"> -->
+    <!-- </header> -->
 
     <main data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example main">
-
+        
         <section class="container-fluid primario" id="list-item-1">
+                <nav class="navbar navbar-expand-sm navbar-light e_navp sticky-top" id="barra">
+                        <div class="e_logo">
+                            <a class="navbar-brand" href="#"><img src="./../img/descarga.png" height="40px" class="small-logo aea"></a>
+                        </div>
+                
+                        <div class="e_nav">
+                            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                                <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="e">
+                                    <li class="nav-item active">
+                                        <a class="nav-link color" id="color1" href="#">Inicio<span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link color" id="color2" href="#">Proyectos <span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link color" id="color3" href="#">Conócenos <span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link color" id="color4" href="#">Convenios y beneficios <span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link color" id="color5" href="#">Servicio al cliente <span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link color" id="color6" href="#">Contactanos <span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link color" id="color7" href="#"><i class="fab fa-instagram"></i><span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link color" id="color8" href="#"><i class="fab fa-youtube"></i><span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link color" id="color9" href="#"><i class="fab fa-facebook-f"></i><span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link color" id="color10" href="#"><i class="fab fa-linkedin-in"></i><span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link barras" id="color11" href="#"><i class="fas fa-bars"></i><span
+                                                class="sr-only">(current)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="espacio">
+                
+                            </div>
+                        </div>
+                    </nav>
             <div class="container primario-container">
                 <div class="row row-primero">
                     <div class="col-md-6 col-sm-12 primario-left">
-                        asd
+                        <div class="container">
+                            <h1 class="d_title">Vive en <br>confianza</h1>
+                            <span class="d_descripcionProyecto ">Nuestros Proyectos</span>
+                            <div class="row" style="width: 60%;">
+                                <div class="col-md-4 mt-4">
+                                    <div class="d_round">
+                                        <img class="img-responsive"
+                                            src="http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png" alt=""
+                                            data-toggle="tooltip" data-placement="bottom" data-html="true"
+                                            title="<div class='row' style='background-color:white !important'><div class='col-md-6'><img class='img-responsive' src='http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png' alt='' width='40'></div><div><strong>Distrito:</strong><br>Pueblo Libre <br><strong>Estado:</strong><br>En proceso </div></div>">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mt-4 ">
+                                    <div class="d_round">
+                                        <img class="img-responsive"
+                                            src="http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png" alt=""
+                                            data-toggle="tooltip" data-placement="bottom" data-html="true"
+                                            title="<div class='row' style='background-color:white !important'><div class='col-md-6'><img class='img-responsive' src='http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png' alt='' width='40'></div><div><strong>Distrito:</strong><br>Pueblo Libre <br><strong>Estado:</strong><br>En proceso </div></div>">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mt-4 ">
+                                    <div class="d_round">
+                                        <img class="img-responsive"
+                                            src="http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png" alt=""
+                                            data-toggle="tooltip" data-placement="bottom" data-html="true"
+                                            title="<div class='row' style='background-color:white !important'><div class='col-md-6'><img class='img-responsive' src='http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png' alt='' width='40'></div><div><strong>Distrito:</strong><br>Pueblo Libre <br><strong>Estado:</strong><br>En proceso </div></div>">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mt-4">
+                                    <div class="d_round">
+                                        <img class="img-responsive"
+                                            src="http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png" alt=""
+                                            data-toggle="tooltip" data-placement="bottom" data-html="true"
+                                            title="<div class='row' style='background-color:white !important'><div class='col-md-6'><img class='img-responsive' src='http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png' alt='' width='40'></div><div><strong>Distrito:</strong><br>Pueblo Libre <br><strong>Estado:</strong><br>En proceso </div></div>">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mt-4 ">
+                                    <div class="d_round">
+                                        <img class="img-responsive"
+                                            src="http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png" alt=""
+                                            data-toggle="tooltip" data-placement="bottom" data-html="true"
+                                            title="<div class='row' style='background-color:white !important'><div class='col-md-6'><img class='img-responsive' src='http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png' alt='' width='40'></div><div><strong>Distrito:</strong><br>Pueblo Libre <br><strong>Estado:</strong><br>En proceso </div></div>">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mt-4 ">
+                                    <div class="d_round">
+                                        <img class="img-responsive"
+                                            src="http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png" alt=""
+                                            data-toggle="tooltip" data-placement="bottom" data-html="true"
+                                            title="<div class='row' style='background-color:white !important'><div class='col-md-6'><img class='img-responsive' src='http://www.eatlogos.com/all_free_logos/png/vector_jewellery_shop_logo.png' alt='' width='40'></div><div><strong>Distrito:</strong><br>Pueblo Libre <br><strong>Estado:</strong><br>En proceso </div></div>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6  col-sm-0 primario-rigth">
-                        sada
+                        <div class="container scontainer">
+                            <div class="row justify-content-center">
+                                <h2>Deja tus datos y entérate de más</h2>
+                                <div class="col-8 m-2">
+                                    <form>
+                                        <div class="form-group row">
+                                            <div class=" col-6">
+                                                <input id="sinput" type="text" name="" id="" class="form-control" placeholder="Nombres" aria-describedby="helpId">
+                                            </div>
+                                            <div class=" col-6">
+                                                <input id="sinput" type="text" name="" id="" class="form-control" placeholder="Apellidos" aria-describedby="helpId">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="sinput" type="phone" name="" id="" class="form-control" placeholder="Telefono" aria-describedby="helpId">
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="sinput" type="email" name="" id="" class="form-control" placeholder="Correo" aria-describedby="helpId">
+                                        </div>
+                                        <div class="form-group">
+                                            <select id="sselect" name="Proyecto" class="form-control">
+                                                <option value="" disable slected hidden>Seleccione un Proyecto...</option>
+                                                <option value="0">Parana</option>
+                                                <option value="1">Dulpo</option>
+                                                <option value="2">Nesta</option>
+                                                <option value="3">Épique</option>
+                                                <option value="4">Sente</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select id="sselect" name="Proyecto" class="form-control">
+                                                <option value="" disable slected hidden>Escoje un motivo...</option>
+                                                <option value="0">Primera Vivienda</option>
+                                                <option value="1">Incersión</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea id="stextarea" class="form-control" id="" cols="2" rows="2" placeholder="Mensaje..."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox">
+                                            <middle id="helpId" class="text-muted-ligth">Acepto las <a class="text-light" href="">Politicas de privacidad.</a></middle>
+                                        </div>
+                                        <div class="form-group text-center">
+                                            <button class="btn btn-outline-light ">
+                                                Enviar
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -51,10 +402,77 @@
                         </div>
                 </div>
                 <div class="col secundario-co-2">
+                    <div class="container mt-5" style="width: 700px;">
+
+
+                        <ul class="nav nav-tabs row" id="myTab" role="tablist">
                 
+                            <li class="nav-item col-sm">
+                                <a class="nav-link active d_uno" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                    aria-controls="home" aria-selected="true">Atributos</a>
+                            </li>
+                            <li class="nav-item col-sm">
+                                <a class="nav-link d_dos" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                    aria-controls="profile" aria-selected="false">Areas comunes</a>
+                            </li>
+                
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                
+                                <div class="row d_color">
+                                    <div class="col-sm-3 m-3">
+                                        <i class="fa fa-500px display-2" aria-hidden="true"></i> Vista privilegiada
+                                    </div>
+                                    <div class="col-sm-3 m-3">
+                                         <i class="fa fa-500px" aria-hidden="true"></i> Vista privilegiada
+                                    </div>
+                                    <div class="col-sm-4 m-3">
+                                         <i class="fa fa-500px" aria-hidden="true"></i> Vista privilegiada
+                                    </div>
+                                    <div class="col-sm-3 m-3">
+                                         <i class="fa fa-500px" aria-hidden="true"></i> Vista privilegiada
+                                    </div>
+                                    <div class="col-sm-3 m-3">
+                                         <i class="fa fa-500px" aria-hidden="true"></i> Vista privilegiada
+                                    </div>
+                                    <div class="col-sm-4 m-3">
+                                         <i class="fa fa-500px" aria-hidden="true"></i> Vista privilegiada
+                                    </div>
+                
+                                </div>
+                
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="row d_color">
+                                            <div class="col-sm-3 m-3">
+                                                <i class="fa fa-star" aria-hidden="true"></i> Vista privilegiada
+                                            </div>
+                                            <div class="col-sm-3 m-3">
+                                                <i class="fa fa-star" aria-hidden="true"></i> Vista privilegiada
+                                            </div>
+                                            <div class="col-sm-4 m-3">
+                                                <i class="fa fa-star" aria-hidden="true"></i> Vista privilegiada
+                                            </div>
+                                            <div class="col-sm-3 m-3">
+                                                <i class="fa fa-star" aria-hidden="true"></i> Vista privilegiada
+                                            </div>
+                                            <div class="col-sm-3 m-3">
+                                                <i class="fa fa-star" aria-hidden="true"></i> Vista privilegiada
+                                            </div>
+                                            <div class="col-sm-4 m-3">
+                                                <i class="fa fa-star" aria-hidden="true"></i> Vista privilegiada
+                                            </div>
+                        
+                                        </div>
+                            </div>
+                        </div>
+                        <hr style="background-color: #019CDB;">
+                
+                    </div>
                 </div>
                 <div class="col secundario-co-3">
-                
+                    <img src="https://cdn.pixabay.com/photo/2019/10/31/06/24/boxer-shorts-4591082_960_720.jpg" alt="">
                 </div>
             </div>
         </section>

@@ -9,8 +9,8 @@ html, body{
 /* ===============HEADER======================= */
 
 .header{
-    background-color: blue;
-    height: 50px;
+    /* background-color: ; */
+    height: 70px;
 }
 
 .main{
@@ -18,7 +18,7 @@ html, body{
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: burlywood;
+    /* background-color: burlywood; */
 
 }
 
@@ -31,7 +31,7 @@ html, body{
 }
 
 .primario-container{
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     height: 70%;
 }
 
@@ -49,6 +49,6 @@ html, body{
 .secundario-raton{
     width: 10px;
     height: 10px;
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
 }
 

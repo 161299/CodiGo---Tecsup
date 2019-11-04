@@ -1,36 +1,36 @@
 .quinto{
     height: 1000px;
-     background-color: brown; 
+     /* background-color: brown;  */
  }
  
  .quinto-co-1{
      height: 100%;
-     background-color: #6b181818;
+     /* background-color: #6b181818; */
  }
  .quinto-co-2{
      height: 100%;
-     background-color: red;
+     /* background-color: red; */
  }
  .quinto-co-3{
      height: 100%;
-     background-color: black;
+     /* background-color: black; */
  }
  
  /* ----------sexto----------------- */
      .sexto{
          height: 1000px;
-         background-color: brown; 
+         /* background-color: brown;  */
       }
       
       .sexto-co-1{
           height: 100%;
-          background-color: #2abd4f18;
+          /* background-color: #2abd4f18; */
       }
       .sexto-co-2{
           height: 100%;
-          background-color: rgb(255, 238, 0);
+          /* background-color: rgb(255, 238, 0); */
       }
       .sexto-co-3{
           height: 100%;
-          background-color: #f1f1f1;
+          /* background-color: #f1f1f1; */
       }

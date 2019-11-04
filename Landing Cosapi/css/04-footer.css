@@ -1,16 +1,16 @@
 .footer-container{
     height: 200px;
     width: 100%;
-    background-color: #019CDB;
+    /* background-color: #019CDB; */
 }
 
 .row-fila1{
     height: 170px;
-    background-color: #019CDB;
+    /* background-color: #019CDB; */
 }
 .row-fila2{
     height: 30px;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 
@@ -19,7 +19,7 @@
 .bolita{
     height: 15px;
     width: 15px;
-    background-color: #ffff;
+    /* background-color: #ffff; */
     border: 1px solid #019CDB;
     border-radius: 50%;
 }
