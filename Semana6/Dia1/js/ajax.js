@@ -4,10 +4,56 @@ window.onload = () =>{
 
   if(ruta.indexOf("post") >=0) {
     console.log("estoy en POST ");
- let inputPostTitle= document.getElementById("inputPostTitle")
- let inputPostBody= document.getElementById("inputPostBody")
- let selectUserId= document.getElementById("selectUserId")
- let btnSumit= document.getElementById("btnSumit")
+ let inputPostTitle= document.getElementById("inputPostTitle");
+ let inputPostBody= document.getElementById("inputPostBody");
+ let selectUserId= document.getElementById("selectUserId");
+ let btnSumit= document.getElementById("btnSumit");
+
+ btnSumit.onclick = (event) => {
+     event.preventDefault()
+
+    // paso (1) => Armar el JSON para enviar al servidor
+    // al armar este paso se convierte en nuestro body donde mandaremos a send
+    let objPub = {
+        title : inputPostTitle.value,
+        body: inputPostBody.value,
+        userId: selectUserId.value
+    };
+    
+    // console.log(objPub);
+
+    let ajax = new XMLHttpRequest();
+    // paso(2) => establecemos el tiempo de espera al servidor
+    ajax.timeout = 4000;
+    // paso(3) => ontimeout => Funcion que se ejecuta cuando el servidor no responde en el tiempo establecido
+    ajax.ontimeout = () =>{
+        console.log("El servidor no responde");
+        
+    }
+
+    // paso(4) => configurando el evento para cuando llegue la respuesta
+    ajax.onreadystatechange =() =>{
+        if(ajax.readyState == 4){
+            // Llegó la data
+            console.log(ajax.responseText);
+            // imprimiendo el codigo de estado
+            console.log(ajax.status);
+        };
+    }
+
+    // paso(5) => configurar el método y la URL
+    ajax.open("POST","https://jsonplaceholder.typicode.com/posts");
+
+    // paso(6) => establecer los header o el tipo de contenido que se enviara al servidor
+    // ajax.setRequestHeader("tipoDeHeader","contenido")
+    ajax.setRequestHeader("Content-type","application/json");
+    // paso(7) => configurar los datos a enviar al servidor
+    
+    ajax.send(JSON.stringify(objPub));
+
+
+ }
+
     
   }
   if(ruta.indexOf("get") >=0){
@@ -15,6 +61,7 @@ window.onload = () =>{
     let btnTraerDatos = document.getElementById("btnTraerDatos");
     let tbody = document.getElementById("tbody")
     let dibujarTabla = (usuario) =>{
+        // Limpiar la tabla por si ya habia contenido
         tbody.innerHTML = "";
         // usuario.forEach((element) => {
         //     let fila = document.createElement("tr");
