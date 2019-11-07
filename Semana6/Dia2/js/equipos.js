@@ -42,6 +42,7 @@ window.onload = () =>{
             ajax.send(null);
         }
 
+        // delete
         btnDel.onclick=()=>{
             var postman = new XMLHttpRequest();
             let inputDelId = document.getElementById("inputDelId");
