@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary grey darken-4">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+    </nav>
+    
+    <hr>
+    <br>
+
+
+      <!-- Modal Trigger -->
+  <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Registro de Vehiculos</h4>
+       <div class="form-group">
+         <label for="inputMarca">Marca de Vehiculo</label>
+         <input type="text" name="" id="inputMarca" class="form-control" placeholder="" aria-describedby="helpId">
+       </div>
+       <div class="form-group">
+         <label for="inputModelo">Modelo de Vehiculo</label>
+         <input type="text" name="" id="inputModelo" class="form-control" placeholder="" aria-describedby="helpId">
+       </div>
+       <div class="form-group">
+         <label for="inputAnio">Año del Vehiculo</label>
+         <input type="number" name="" id="inputAnio" class="form-control" placeholder="" aria-describedby="helpId">
+       </div>
+       <div class="form-group">
+         <label for="inputPlaca">Placa del Vehiculo</label>
+         <input type="text" name="" id="inputPlaca" class="form-control" placeholder="" aria-describedby="helpId">
+       </div>
+       <div class="form-group">
+         <label for="inputMotor">Motor del Vehiculo</label>
+         <input type="text" name="" id="inputMotor" class="form-control" placeholder="" aria-describedby="helpId">
+       </div>
+       <div class="form-group">
+         <label for="inputPeso">Peso del Vehiculo</label>
+         <input type="text" name="" id="inputPeso" class="form-control" placeholder="" aria-describedby="helpId">
+       </div>
+       <div class="form-group">
+         <label for="inputAsientos">Nro de Asientos del Vehiculo</label>
+         <input type="number" name="" id="inputAsientos" class="form-control" placeholder="" aria-describedby="helpId">
+       </div>
+       <div class="form-group">
+         <label for="inputColor">Color del Vehiculo</label>
+         <input type="text" name="" id="inputColor" class="form-control" placeholder="" aria-describedby="helpId">
+       </div>
+    </div>
+    <div class="modal-footer">
+      <button  class="btn" id="btnSubmit">Agregar</button>
+      <button class="modal-close waves-effect waves-green btn-flat lime accent-3 " id="btnSubtmit">Cerrar</button>
+    </div>
+  </div>
+  <!-- .--------------------------------------------------------------------. -->
+
+  <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h4>Registro de Vehiculos</h4>
+        <div class="form-group">
+            <label for="inputId">ID</label>
+            <input type="text" id="inputId">
+            <button class="btn " id="btnBuscarId">
+                    !Buscar Id!
+            </button>
+        </div>
+         <div class="form-group">
+           <label for="inputMarca2">Marca de Vehiculo</label>
+           <input type="text" name="" id="inputMarca2" class="form-control" placeholder="" aria-describedby="helpId">
+         </div>
+         <div class="form-group">
+           <label for="inputModelo2">Modelo de Vehiculo</label>
+           <input type="text" name="" id="inputModelo2" class="form-control" placeholder="" aria-describedby="helpId">
+         </div>
+         <div class="form-group">
+           <label for="inputAnio2">Año del Vehiculo</label>
+           <input type="number" name="" id="inputAnio2" class="form-control" placeholder="" aria-describedby="helpId">
+         </div>
+         <div class="form-group">
+           <label for="inputPlaca2">Placa del Vehiculo</label>
+           <input type="text" name="" id="inputPlaca2" class="form-control" placeholder="" aria-describedby="helpId">
+         </div>
+         <div class="form-group">
+           <label for="inputMotor2">Motor del Vehiculo</label>
+           <input type="text" name="" id="inputMotor2" class="form-control" placeholder="" aria-describedby="helpId">
+         </div>
+         <div class="form-group">
+           <label for="inputPeso2">Peso del Vehiculo</label>
+           <input type="text" name="" id="inputPeso2" class="form-control" placeholder="" aria-describedby="helpId">
+         </div>
+         <div class="form-group">
+           <label for="inputAsientos2">Nro de Asientos del Vehiculo</label>
+           <input type="number" name="" id="inputAsientos2" class="form-control" placeholder="" aria-describedby="helpId">
+         </div>
+         <div class="form-group">
+           <label for="inputColor2">Color del Vehiculo</label>
+           <input type="text" name="" id="inputColor2" class="form-control" placeholder="" aria-describedby="helpId">
+         </div>
+      </div>
+      <div class="modal-footer">
+        <button  class="btn" id="btnActualizar">Actualizar</button>
+        <button class="modal-close waves-effect waves-green btn-flat lime accent-3 ">Cerrar</button>
+      </div>
+    </div>
+  
+  
+    <main class="container">
+        <section class="row">
+            <div class="col s3">
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                      <h4>Registro de Vehiculos</h4>
+                       <div class="form-group">
+                         <label for="inputMarca">Marca de Vehiculo</label>
+                         <input type="text" name="" id="inputMarca" class="form-control" placeholder="" aria-describedby="helpId">
+                       </div>
+                       <div class="form-group">
+                         <label for="inputModelo">Modelo de Vehiculo</label>
+                         <input type="text" name="" id="inputModelo" class="form-control" placeholder="" aria-describedby="helpId">
+                       </div>
+                       <div class="form-group">
+                         <label for="inputAnio">Año del Vehiculo</label>
+                         <input type="number" name="" id="inputAnio" class="form-control" placeholder="" aria-describedby="helpId">
+                       </div>
+                       <div class="form-group">
+                         <label for="inputPlaca">Placa del Vehiculo</label>
+                         <input type="text" name="" id="inputPlaca" class="form-control" placeholder="" aria-describedby="helpId">
+                       </div>
+                       <div class="form-group">
+                         <label for="inputMotor">Motor del Vehiculo</label>
+                         <input type="text" name="" id="inputMotor" class="form-control" placeholder="" aria-describedby="helpId">
+                       </div>
+                       <div class="form-group">
+                         <label for="inputPeso">Peso del Vehiculo</label>
+                         <input type="text" name="" id="inputPeso" class="form-control" placeholder="" aria-describedby="helpId">
+                       </div>
+                       <div class="form-group">
+                         <label for="inputAsientos">Nro de Asientos del Vehiculo</label>
+                         <input type="number" name="" id="inputAsientos" class="form-control" placeholder="" aria-describedby="helpId">
+                       </div>
+                       <div class="form-group">
+                         <label for="inputColor">Color del Vehiculo</label>
+                         <input type="text" name="" id="inputColor" class="form-control" placeholder="" aria-describedby="helpId">
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="modal-close waves-effect waves-green btn-flat lime accent-3 ">Agregar</button>
+                    </div>
+                  </div>
+              <a data-target="modal1" class="btn  btn-floating waves-effect waves-light modal-trigger btn-large" id="AgregarDatos"><i class="material-icons">add</i></a>
+            </div>
+              <a data-target="modal2" class="btn  btn-floating waves-effect waves-light modal-trigger btn-large" id="AgregarDatos"><i class="material-icons">add</i></a>
+            </div>
+            <section class="col s9 ">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="https://ichef.bbci.co.uk/news/660/cpsprodpb/E4CA/production/_99507585_mediaitem99501693.jpg">
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator grey-text text-darken-4" id="btnTraerDatos">Mostrar Lista de Vehiculos<i class="material-icons right">more_vert</i></span>
+                      <p><a href="#" >This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Lista de Vehiculos<i class="material-icons right">close</i></span>
+                      <article id="articleLoading" hidden="hidden">
+                          <div class="alert alert-info text-center" role="alert">
+                              <h4 class="alert-heading">Cargando...</h4>
+                              <p>
+                                  <i class="fa fa-refresh fa-spin fa-3x"></i>
+                              </p>
+                          </div>
+                      </article>
+                      <!-- FIN ARTICLE LOADING -->
+                      <!-- ARTICLE SAD -->
+                      <article id="articleLoading" hidden="hidden">
+                          <div class="alert alert-info text-center" role="alert">
+                              <h4 class="alert-heading">No se encontro el ID</h4>
+                              <p>
+                                  <i class="fas fa-sad-cry"></i>
+                              </p>
+                          </div>
+                      </article>
+                      <!-- FIN ARTICLE SAD -->
+                      <!-- ARTICLE TABLA DE PRODUCTOS -->
+                      <article id="articleTabla" > <!--hidden="hidden"-->
+                          <table class="table table-bordered centered highlight responsive-table">
+                              <thead>
+                                  <tr>
+                                      <th>Id</th>
+                                      <th>Marca</th>
+                                      <th>Modelo</th>
+                                      <th>Año</th>
+                                      <th>Placa</th>
+                                      <th>Nro de Asientos</th>
+                                      <th>Peso</th>
+                                      <th>Motor</th>
+                                      <th>Color</th>
+                                  </tr>
+                              </thead>
+                              <tbody id="cuerpoTabla">
+
+                              </tbody>
+                          </table>
+                      </article>
+                    </div>
+                  </div>
+            </section>
+        </section>
+    </main>
+ 
+
+
+  <script   src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+        <script src='./01-Jquery-ajax.js'></script>
+</body>
+</html>

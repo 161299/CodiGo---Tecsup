@@ -54,7 +54,6 @@ $(document).ready(function(){
     // let btnSubmit  = $("#btnSubmit")
     let inputModelo = document.getElementById("inputModelo")
     let inputMarca = document.getElementById("inputMarca")
-    let inputAño = document.getElementById("inputAño")
     let inputPlaca = document.getElementById("inputPlaca")
     let inputMotor = document.getElementById("inputMotor")
     let inputPeso = document.getElementById("inputPeso")
@@ -81,9 +80,9 @@ $(document).ready(function(){
                 url: 'https://5dc1953d6ca10a0014d5d97d.mockapi.io/lrnt/vehiculo',
                 timeout: 4000,
                 /* AQUI SE MANDA UN JSON en string (stringify)*/
-                data:objVehiculo,
+                data: objVehiculo,
             
-                success: function(respuesta){
+                success: function(respuesta){   
                     console.log(respuesta);
                     
 
