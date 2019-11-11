@@ -274,3 +274,4 @@ $("#btnActualizar").click((evento) =>{
     
         })
 });
+
