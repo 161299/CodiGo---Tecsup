@@ -58,13 +58,6 @@ window.onload = () =>{
     // let areaTotal = aTri + aRec
     // console.log(`èl area total es: ${areaTotal}`);
 
-    // ejercicio 2.6
-    let H = +prompt("Ingrese hipotenusa del triangulo")
-    let R = +prompt("Ingrese cateto del triangulo")
-
-    let C = (H*2)-(R*2)
-    Math.sqrt(C)
-    console.log(C);
     
     
     
