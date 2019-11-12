@@ -8,6 +8,7 @@ app.config['MYSQL_USER']='root'
 app.config['MYSQL_PASSWORD']='root'
 app.config['MYSQL_DB']='apiflask'
 
+# Alter user 'username'@'ur' IDENTIFIED WITH mysql_native_password
 # Creamos una variabel de tipo MySQL y le mandamos la configuracion
 mysql = MySQL(app)
 
@@ -73,6 +74,22 @@ def buscar_cliente(palabra):
     data = cur.fetchall()
     cur.close()
     return jsonify(data)
+
+
+@app.route('/clientesuper/agregar/<string:id>')
+def agregar_cliente_super(id):
+    data = request.get_json()
+    if(data.__contains__('id_cliente') and data.__contains__('id_super')):
+         cur = mysql.connection.cursor()
+         cur.execute("INSERT INTO SUPER_CLIENTE (id_cliente, id_super VALUES (%s,%s)",(data['id_cliente'],data['id_super']))
+         mysql.connection.commit()
+         cur.close()
+         return jsonify(
+            'message': 'Se creo la relacion Cliente con supermercado con exito',
+            'content':data
+        )
+    else:
+        return jsonify({'message':'Error! no se puede votar por segunda vez'})    
 
 
 # el puerto x defaul de flask es 5000
