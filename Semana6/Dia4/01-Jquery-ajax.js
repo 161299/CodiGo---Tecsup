@@ -249,29 +249,38 @@ $("#btnActualizar").click((evento) =>{
       color: $("#inputColor2").val(),
 }
 
-        $.ajax({
-            type: 'PUT', 
-            url: `https://5dc1953d6ca10a0014d5d97d.mockapi.io/lrnt/vehiculo/${inputId.value}`,
-            timeout: 4000,
-            /* AQUI SE MANDA UN JSON en string (stringify)*/
-            data: objVehiculo,
-        
-            success: function(respuesta){   
-                console.log(respuesta);
-                
+  
 
-                        
-                // equivale a un readyState 4 en pocas palabras la data ya llegó en el objeto respuesta          
-                
-            },
-            error: function(error){
-                console.log(error);
-                
-            },
-            beforeSend: function (){
-                // Aquí podriamos configurar un GIF de carga
-            }
+
+      $.ajax({
+        type: 'PUT', 
+        url: `https://5dc1953d6ca10a0014d5d97d.mockapi.io/lrnt/vehiculo/${inputId.value}`,
+        timeout: 4000,
+        /* AQUI SE MANDA UN JSON en string (stringify)*/
+        data: objVehiculo,
     
+<<<<<<< HEAD
         })
 });
 
+=======
+        success: function(respuesta){   
+            console.log(respuesta);
+            
+
+                    
+            // equivale a un readyState 4 en pocas palabras la data ya llegó en el objeto respuesta          
+            
+        },
+        error: function(error){
+            console.log(error);
+            
+        },
+        beforeSend: function (){
+            // Aquí podriamos configurar un GIF de carga
+        }
+
+    })
+
+});
+>>>>>>> 980dd0f49b525a2443ff6780d5e8c5ad5ef56e8d

@@ -4,6 +4,7 @@ console.log(hoy)
 
 // Enero tiene el valor de '0'
 // Diciembre '11'
+
 let navidad = new Date(2019,11, 25);
 console.log("Navidad")
 console.log(navidad)
