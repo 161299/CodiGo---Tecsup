@@ -1,25 +1,34 @@
-from flask import Flask , request
-from flask_restful import Api, Resource
-# PARA IMPORTA LA BASE DE DATOS
-from flask_mysqldb import MySQL
-
-app= Flask(__name__)
-api = Api(app)
-# Conexion MySQL REMOTA DE LA PAGINA REMOTEMYSQL.COM
-app.config['MYSQL_HOST']="remotemysql.com"
-app.config['MYSQL_USER']="1i0cfL0Hvx"
-app.config['MYSQL_PASSWORD']="Q67qODkmiR"
-app.config['MYSQL_DB']="1i0cfL0Hvx"
-
-# app.config['MYSQL_HOST']="localhost"
-# app.config['MYSQL_USER']="root"
-# app.config['MYSQL_PASSWORD']="root"
-# app.config['MYSQL_DB']="flaskrestful"
-# ==============CONFIGURACION MYSQL======================
-mysql = MySQL(app)
-# ==================================================
+from base_de_datos import mysql
+from flask_restful import Resource, Api
+from flask import request
+from app import app
 
 
+
+class Almacen(Resource):
+    def get(self):
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * ALMACEN")
+        data = cur.fetchall()
+        cur.close()
+        return {'almacenes' : data}
+    def post(self):
+        cur = mysql.connection.cursor()
+        data = request.get_json()
+        cur.execute(f"INSERT INTO ALMACEN (alma_desc)=({data['nombre']})")
+        cur = mysql.connection.commit()
+        cur.close()
+        return {
+            'message' : 'Almacen Creado Exitosamente'},201
+    def put(self, alma_id):
+        cur = mysql.connection.cursor()
+        data = request.get_json()
+        cur.execute(f"UPDATE INTO ALMACE SET ALMA_DESC = {data['nombre']} WHERE ALMA_ID={alma_id}")
+        mysql.connection.commit()
+        cur.close()
+        return {'message' : 'Almacen actualizado con exito'},201
+    def delete(self):
+        pass
 class Producto(Resource):
     def get(self):
         cur = mysql.connection.cursor()
@@ -54,6 +63,7 @@ class Producto(Resource):
         cur = mysql.connection.cursor()
         cur.execute("INSERT INTO PRODUCTO (prod_desc, prod_precio,prod_disponible) VALUES ('{}',{},{})".format(producto['descripcion'],producto['precio'],producto['disponibilidad']))
         mysql.connection.commit()
+        cur.close()
         return {
             'message':'Producto creado exitosamente', 
             'producto':producto
@@ -79,11 +89,6 @@ class Producto(Resource):
         return {
             'message' : 'Producto  inhabilitado exitosamente'
         }
-
+api = Api(app)
+api.add_resource(Almacen,'/almacen')
 api.add_resource(Producto,'/producto','/producto/<string:id_producto>','/producto/eliminar/<string:id_prod>')
-
-
-
-# esta condicion se va a ejecutar si nuestro programa esta en la parte principal de nuestro documento
-if(__name__=='__main__'):
-    app.run(debug=True)
