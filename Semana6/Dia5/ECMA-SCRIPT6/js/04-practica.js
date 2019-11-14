@@ -43,7 +43,8 @@ window.onload = () => {
 
         for (let i = 0; i < list.length; i++) {
           let dia1 = new Date(list[i].dt * 1000);
-
+          console.log(dia1);
+          
           if (dia1.getDate() == dia) {
             console.log("hola");
 
