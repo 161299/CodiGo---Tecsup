@@ -15,8 +15,8 @@ def inicializar_tablas():
     crear_tablas= """ create table if not exists t_playa(
 	                    playa_id int not null auto_increment primary key,
                         playa_nombre varchar(45),
-                        playa_lat decimal(10,7),
-                        playa_lng decimal(10,7),
+                        playa_lat varchar(30),
+                        playa_lng varchar(30),
                         playa_dir varchar(45)
                     );
 
@@ -31,7 +31,7 @@ def inicializar_tablas():
                     create table if not exists t_tipovehiculo(
                         tipo_id int not null auto_increment primary key,
                         tipo_nombre varchar(45),
-                        tipo_precio decimal(3,2)
+                        tipo_precio varchar(30)
                     );
 
                     create table if not exists t_usuario(
@@ -50,7 +50,7 @@ def inicializar_tablas():
                         res_fechin datetime,
                         res_fechfin datetime,
                         res_est boolean,
-                        res_monto decimal(5,2),
+                        res_monto varchar(30),
                         res_placa varchar(10),
                         usu_id int,
                         slot_id int,

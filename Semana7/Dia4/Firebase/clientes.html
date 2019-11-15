@@ -48,35 +48,35 @@
                         <div class="form-group">
                             <div class="col-md-12">
                                 <label for="inputIp">Ip</label>
-                                <input type="text" placeholder="Ingrese Id" class="form-control" id="inputIp">
+                                <input type="text" placeholder="Ingrese Id" class="form-control" id="inputIp" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
                                 <label for="inputNombre">Nombres</label>
-                                <input type="text" placeholder="Ingrese Nombres" class="form-control" id="inputNombre">
+                                <input type="text" placeholder="Ingrese Nombres" class="form-control" id="inputNombre" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
                                     <label for="inputDireccion">Direccion</label>
-                                    <input type="text" placeholder="Ingrese Direccion" class="form-control" id="inputDireccion">
+                                    <input type="text" placeholder="Ingrese Direccion" class="form-control" id="inputDireccion" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
                                     <label for="inputSaldo">Saldo</label>
-                                    <input type="text" placeholder="Ingrese Saldo" class="form-control" id="inputSaldo">
+                                    <input type="text" placeholder="Ingrese Saldo" class="form-control" id="inputSaldo" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-6">
                                     <label for="inputPago">Fecha de Pago</label>
-                                    <input type="text" placeholder="Ingrese fecha de Pago" class="form-control" id="inputPago">
+                                    <input type="text" placeholder="Ingrese fecha de Pago" class="form-control" id="inputPago" required>
                             </div>
                             <div class="col-md-6">
                                     <label for="inputCaducidad">Fecha de Caducidad</label>
-                                    <input type="text" placeholder="Ingrese Saldo" class="form-control" id="inputCaducidad">
+                                    <input type="text" placeholder="Ingrese Saldo" class="form-control" id="inputCaducidad" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -126,6 +126,14 @@
                 <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
        
+        <section class="row">
+            <h1 class="display-4">Registro de Clientes</h1>
+            <div class="col-12 mt-3">
+                <table id="tablitaClientes" class="display  table table-striped  table-bordered">
+                    
+                </table>
+            </div>
+    </section>
     </main>
 
 
@@ -139,12 +147,25 @@
     <!-- Firebase Realtime Database -->
     <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-database.js"></script>
 
-    <!-- jquery  -->
-    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>
+    <!-- jquery 
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script> -->
+       <!-- JQUERY -->
+       <script
+       src="https://code.jquery.com/jquery-3.4.1.min.js"
+       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+       crossorigin="anonymous"></script> 
     <!-- pooper -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'></script>
     <!-- boostrap -->
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'></script>
+    <!-- cdn sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- DATATBLESJS -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <!-- DATATABLES JQUERY -->
+    <script src='https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js'></script>
+    <!-- DATATABLESBOOSTRAP -->
+    <script src='https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js'></script>
     <!-- si vamos a usar importaciones y eportacion siempre usar type="module" -->
     <script src='./js/main.js' type="module"></script>
 

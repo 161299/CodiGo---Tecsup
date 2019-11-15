@@ -1,17 +1,40 @@
 from flask_restful import Resource, Api, reqparse
 from bd import mysql, app
+from flask_cors import CORS
 import bcrypt
 
 api = Api(app)
+CORS(app)
+
+cors = CORS(app,resouce={"/api/*":{"origins":"*"}})
 
 class Reservas(Resource):
-    def get(self):
+    def get(self,idplaya,fecha):
         cursor = mysql.connection.cursor()
-        query = "SELECT * FROM T_RESERVA"
+        query = f"SELECT * FROM T_RESERVA INNER JOIN T_SLOTPLAYA ON T_RESERVA.SLOT_ID = T_SLOTPLAYA.SLOT_ID WHERE T_SLOTPLAYA.PLAYA_ID = {idplaya} AND T_RESERVA.RES_FECHIN = {fecha}"
         cursor.execute(query)
         resultado = cursor.fetchall()
         cursor.close()
         return {'Reservas' : resultado}
+    def post(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument('fechainicio',type=str,required=True, help='Falta ingresar la Fecha de Inicio')
+        parser.add_argument('fechafin',type=str,required=True, help='Falta ingresar la Fecha de Final')
+        parser.add_argument('placa',type=str,required=True, help='Falta ingresar la Placa')
+        parser.add_argument('usuario',type=str,required=True, help='Falta ingresar la usuario')
+        parser.add_argument('slot',type=str,required=True, help='Falta ingresar la Slot')
+        parser.add_argument('vehiculo',type=str,required=True, help='Falta ingresar la Vehiculo')
+        data = parser.parse_args()
+        cur = mysql.connection.cursor()
+        cur.execute(f"INSERT INTO t_reserva (res_fechin, res_fechfin, res_est, res_placa , usu_id, slot_id, tipo_id) VALUES ('{data['fechainicio']}','{data['fechafin']}','1','{data['placa']}','{data['usuario']}','{data['slot']}','{data['vehiculo']}')")
+        mysql.connection.commit()
+        cur.close()
+
+        # update stlot_tabla set estado ="1" where id = data['slot']
+        # insert Usuario
+        
+        return {'message' : 'Reserva creado exitosamente'}
+    def put(self):
 
 class Usuario(Resource):
         # Para hacer un filtro de lo que nos esta pasando el usuario
@@ -38,7 +61,7 @@ class Usuario(Resource):
         mysql.connection.commit()
         cur.close()
         return {'message':'Usuario creado exitosamente'}
-
+        
 class Login(Resource):
     def post(self):
         parser = reqparse.RequestParser()
@@ -65,10 +88,45 @@ class Login(Resource):
         else:
             return {'message':'Usuario o contraseña incorrectos'},405
 
-@app.route('/')
-def inicio():
-    return "todo funciona bien"
+class Playa(Resource):
+    def get(self):
+        cursor = mysql.connection.cursor()
+        query = "SELECT * FROM T_PLAYA"
+        cursor.execute(query)
+        rpta = cursor.fetchall() 
+        cursor.close()
+        return {'playa': rpta}
+    def post(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument('nombre',type=str,required=True, help='Falta ingresar el nombre de a playa')
+        parser.add_argument('lat',type=str,required=True, help='Falta ingresar la latitud de la playa')
+        parser.add_argument('lng',type=str,required=True, help='Falta ingresar la longitud de a playa')
+        parser.add_argument('direccion',type=str,required=True, help='Falta ingresar la direccion de a playa')
+        data = parser.parse_args()
+        cur = mysql.connection.cursor()
+        cur.execute(f"INSERT INTO t_playa (playa_nombre, playa_lat, playa_lng, playa_dir) VALUES ('{data['nombre']}','{data['lat']}','{data['lng']}','{data['direccion']}')")
+        mysql.connection.commit()
+        cur.close()
+        return {'message' : 'Playa creada Exitosamente'},201        
+    def put(self, playa_id):
+        parser = reqparse.RequestParser()
+        parser.add_argument('nombre',type=str,required=True, help='Falta ingresar el nombre de a playa')
+        parser.add_argument('lat',type=str,required=True, help='Falta ingresar la latitud de la playa')
+        parser.add_argument('lng',type=str,required=True, help='Falta ingresar la longitud de a playa')
+        parser.add_argument('direccion',type=str,required=True, help='Falta ingresar la direccion de a playa') 
+        data = parser.parse_args()
+        cur = mysql.connection.cursor()
+        cur.execute(f"UPDATE INTO t_playa SET (playa_nombre, playa_lat, playa_lng, playa_dir) VALUES ('{data['nombre']}','{data['lat']}','{data['lng']}','{data['direccion']}' WHERE PLAYA_ID ={playa_id})")
+        mysql.connection.commit()
+        cur.close()
+        return {'message' : 'Playa actualizada con exito'},201
 
-api.add_resource(Reservas,'/reservas')
+
+class Slot(Resource):
+    def put(self,id):
+        cambiarestaod
+
+api.add_resource(Reservas,'/reservas','/reservas/<string:idplaya>/<string:fecha>')
 api.add_resource(Usuario,'/usuario/add')
 api.add_resource(Login,'/usuario/login')
+api.add_resource(Playa,'/playa','/playa/<string:playa_id>')
