@@ -1,0 +1,16 @@
+{
+// Vea https://go.microsoft.com/fwlink/?LinkId=733558 
+    // para la documentación acerca del formato tasks.json
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "install",
+            "path": "Semana6/Dia3/js/",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
