@@ -23,7 +23,7 @@ class Almacen(Resource):
     def put(self, alma_id):
         cur = mysql.connection.cursor()
         data = request.get_json()
-        cur.execute(f"UPDATE INTO ALMACEN SET ALMA_DESC = {data['nombre']} WHERE ALMA_ID={alma_id}")
+        cur.execute(f"UPDATE INTO ALMACE SET ALMA_DESC = {data['nombre']} WHERE ALMA_ID={alma_id}")
         mysql.connection.commit()
         cur.close()
         return {'message' : 'Almacen actualizado con exito'},201

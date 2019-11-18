@@ -2,7 +2,7 @@ var map;
 // iniciando el mapa
 let initMap =()=>{
     mapaGoogle = new google.maps.Map(document.getElementById('mapa'), {
-      center: {lat: -14.39745, lng: 90.644453},
+      center: {lat: -34.397, lng: 150.644},
       zoom: 8,
       styles: [
             {
@@ -303,15 +303,21 @@ let initMap =()=>{
       
     });
     // imprime las coordenadas
-    let path = [];
     mapaGoogle.addListener("click", function(event){
         // console.log(event.latLng.lat());  
         // console.log(event.latLng.lng());  
         // console.log(event.latLng);  
         console.log(event);  
-        path.push({ lat: event.latLng.lat(), lng : event.latLng.lng()})
+        // path = [];
+        let coordenadas = [{ lat: event.latLng.lat(), lng : event.latLng.lng()}]
+        console.log(coordenadas);
+      for (let i = 0; i <= coordenadas.length; i++) {
+        // let path = coordenadas;
+        path.push(coordenadas)
+        console.log(path);
+      }
     
-    let linea = new google.maps.Polyline(
+    linea = new google.maps.Polyline(
           {
               path:path, 
               strokeColor: 'blue',
@@ -325,7 +331,6 @@ let initMap =()=>{
         // getCurrentPosition -> procesa la ubicacion obtenido, a tiempo real no fake
         // watchPosition -> ubicacion en tiempo real
     })
-
 } 
 
 initMap();
@@ -775,51 +780,53 @@ agregarMarcador.onclick=()=>{
 
 
 
-// let ubicacionActual = async (nombre)=>{
-//   let url = `http://api.openweathermap.org/data/2.5/weather?q=${nombre}&appid=1b629fdbc12f5239767c4f6f4ddf2d63`
-//   let response =  await fetch(url);
-//   let miJson = await response.json()
-//   return miJson
-// }        
+let ubicacionActual = async (nombre)=>{
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${nombre}&appid=1b629fdbc12f5239767c4f6f4ddf2d63`
+  let response =  await fetch(url);
+  let miJson = await response.json()
+  return miJson
+}        
   // Intentando acceder a la ubicacion del dispositivo
+let obtenerUbicacion = ()=>{
+  navigator.geolocation.getCurrentPosition((c)=>{
+          console.log("El usuario me dio permiso");
+          console.log(c);
+ 
+      let gps = "Arequipa,pe"
+      ubicacionActual(gps).then((json)=>{
 
-
-  let obtenerUbicacion = ()=>{
-    navigator.geolocation.getCurrentPosition((c)=>{
-            console.log("El usuario me dio permiso");
-            console.log(c);
-   
-        // let gps = "Arequi"
-        // ubicacionActual(gps).then((json)=>{
-  
-              let lat = c.coords.latitude
-              let lon = c.coords.longitude
-              let ruta = new google.maps.Marker(
-                {position: 
-                  {lat: c.coords.latitude, 
-                    lng: c.coords.longitude
-                  },
-                map:mapaGoogle,
-                icon: './img/map.png'
-              })
-                ruta.setMap(mapaGoogle)
-          
-              mapaGoogle.setCenter({
-                  lat : lat,
-                  lng : lon
-                  
-              });
-              mapaGoogle.setZoom(11)
-  
-          
-      // })
-  
-  
-    },()=>{
-        console.log("El usuario no acepto que accedieramos a la ubicación");
         
-    },{
-        enableHighAccuracy : true
+        if(json.cod == 200){
+            let lat = json.coord.lat
+            let lon = json.coord.lon
+            let ruta = new google.maps.Marker(
+              {position: 
+                {lat: c.coords.latitude, 
+                  lng: c.coords.longitude
+                },
+              map:mapaGoogle,
+              icon: './img/map.png'
+            })
+              ruta.setMap(mapaGoogle)
+        
+            mapaGoogle.setCenter({
+                lat : lat,
+                lng : lon
+                
+            });
+            mapaGoogle.setZoom(11)
+        }
+
+        
     })
-    }
-    obtenerUbicacion();
+
+
+  },()=>{
+      console.log("El usuario no acepto que accedieramos a la ubicación");
+      
+  },{
+      enableHighAccuracy : true
+  })
+  }
+  obtenerUbicacion();
+

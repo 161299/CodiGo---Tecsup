@@ -69,6 +69,7 @@ $(document).ready(function() {
     ];
 
 
+
     $("#myTableJs").DataTable({
             language : configuracion.language,
             data: datos,
