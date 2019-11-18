@@ -4,7 +4,9 @@ firebase.initializeApp(firebaseConfig);
 // Instanciar la base de datos
 // firebase.databse() => hace referencia a clientes en la pagina firebase
 let database = firebase.database();
+let updateCliente = (objCliente)=>{
 
+}
 let postCliente = cliente => {
   // console.log(cliente);
   // database.ref("clientes/xyz")
@@ -58,8 +60,30 @@ if (document.location.href.indexOf("clientes.html") != -1) {
     postCliente(objCliente);
   });
 
+  $("#frmEditarCliente").submit(function(event){
+    event.preventDefault();
+    let objCliente = {
+      ip: $("#inputIp").val(),
+      nombre: $("#inputNombre").val(),
+      direccion: $("#inputDireccion").val(),
+      saldo: $("#inputSaldo").val(),
+      pago: $("#inputPago").val(),
+      caducidad: $("#inputCaducidad").val()
+    };
+
+    console.log("SE EJECUTO FRM SUB");
+    
+    $("#btnEliminarCliente").click(function(event){
+      console.log("SE EJECUTO ELIMINAR");
+      
+    })
+    $("#btnEditarPost").click(function(event){
+      console.log("SE EJECUT EDITAR");     
+    })
+  })
+
   let dibujarTabla = (e)=>{  
-    $("#tablitaClientes").DataTable({
+     var tabla = $("#tablitaClientes").DataTable({
         data: e,
         // destroy, para reinicilizar el datable cada vez que se llame a la funcion nuevamente
         destroy: true,
@@ -70,10 +94,29 @@ if (document.location.href.indexOf("clientes.html") != -1) {
           { title: "Direccion", data: "direccion" },
           { title: "Saldo", data: "saldo" },
           { title: "Pago", data: "pago" },
-          { title: "Caducidad", data: "caducidad" }
+          { title: "Caducidad", data: "caducidad" },
+          { title: "Acciones", defaultContent: '<button class= "btn btn-secondary">Acciones</button>'}
         ]
       });
+      // console.log(tabla.rows().data());
+      // console.log(tabla);
+      //                        evento elementohtml y funcion
+      $("#tablitaClientes").on('click','button',function(){
+        let data = tabla.row($(this).parents('tr')).data()
+        console.log(data);
+        $("#idCliente").text(data.id);
+        $("#modalEditarCliente").modal("show");
+        $("#EditinputIp").val(data.ip)
+        $("#EditinputNombre").val(data.nombre)
+        $("#EditinputDireccion").val(data.direccion)
+        $("#EditinputSaldo").val(data.saldo)
+        $("#EditinputPago").val(data.pago)
+        $("#EditinputCaducidad").val(data.caducidad)
 
+        
+        
+      })
+      
   }
   let traerDatos = () => {
     // dataSnapshot => captura de datos
