@@ -11,7 +11,7 @@ class LocalModel(bd.Model):
     fono = bd.Column("loc_fono",bd.String(15))
     # ----------------
     canchitas = bd.relationship('CanchitaModel', lazy=True,backref="cancha")
-    opcion = bd.relationship('OpcionesModel',lazy=True,backref="opciones")
+    # opcion = bd.relationship('OpcionesModel',lazy=True,backref="opciones")
 
     def __init__(self,nombre,latitud,longitud,direccion,fono):
         self.nombre = nombre

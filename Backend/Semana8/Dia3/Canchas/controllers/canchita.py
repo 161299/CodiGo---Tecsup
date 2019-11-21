@@ -15,9 +15,12 @@ class CanchitaController(Resource):
         # except:
         #     return {'message':'Hubo un error al guardar en la base de Datos'}
         return canchita.retornar_json()
-    def get(self,nombre):
-        resultado = CanchitaModel.query.filter.by(id = id).first()
-
+    def get(self,id):
+        resultado = CanchitaModel.query.filter_by(id = id).first()
+        if resultado:
+            return resultado.retornar_json()
+        else:
+            return {'message': 'No se encuentra una cancha con ese id'}
 
 class CanchitasControllers(Resource):
     def get(self):

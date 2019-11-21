@@ -17,6 +17,14 @@ class TipoModel(bd.Model):
             'descripcion': self.descripcion
         }
 
+    def retornar_json_con_nombre_local(self):
+        locales = []
+        for canchita in self.canchitas:
+            locales.append(canchita.locales.retornar_yisun())
+        return {
+            'descripcion': self.descripcion,
+            'nombres': locales
+        }
     def guarda_en_la_bd(self):
         bd.session.add(self)
         bd.session.commit()
