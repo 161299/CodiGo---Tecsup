@@ -5,7 +5,7 @@ class CanchitaModel(bd.Model):
 
     id = bd.Column("can_id",bd.Integer, primary_key = True)
     tamanio = bd.Column("can_tamanio",bd.String(45))
-    foto = bd.Column("can_foto",bd.Integer)
+    foto = bd.Column("can_foto",bd.Text)
 
     # relaciones
     local = bd.Column("loc_id",bd.Integer,bd.ForeignKey('t_local.loc_id'),nullable=False)
@@ -23,10 +23,11 @@ class CanchitaModel(bd.Model):
     def retornar_json(self):
         return{
             'id': self.id,
+            'tipo': self.tiposi.descripcion,
             'tamanio' : self.tamanio,
             'foto': self.foto,
-            'local': self.locales.nombre,
-            'tipo': self.tiposi.descripcion
+            'local': self.locales.retornar_yisun(), 
+            
         }
 
     def guarda_en_la_bd(self):

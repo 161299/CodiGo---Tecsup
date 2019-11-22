@@ -12,8 +12,8 @@ class ReservaModel(bd.Model):
     user = bd.Column("usu_id",bd.Integer,bd.ForeignKey('t_usuario.usu_id'), nullable=False)
     cancha = bd.Column("pc_id",bd.Integer,bd.ForeignKey('t_precioCancha.pc_id'),nullable=False)
 
-    # usuarios = bd.relationship('UsuarioModel')
-    # precio = bd.relationship('PrecioCanchaModel')
+    usuarios = bd.relationship('UsuarioModel', lazy=True)
+    precio = bd.relationship('PrecioCanchaModel')
     valoraciones = bd.relationship('ValoracionesModel',lazy=True,backref="valoracion")
 
     def __init__(self,fechainit,fechaend,monto,adelanto,user,cancha):
@@ -23,6 +23,18 @@ class ReservaModel(bd.Model):
         self.adelanto = adelanto
         self.user = user
         self.cancha = cancha
+
+
+    def retornar_json(self):
+        return{
+            'id': self.id,
+            'fechainit': self.fechainit,
+            'fechaend': self.fechaend,
+            'monto': self.monto,
+            'adelanto': self.adelanto,
+            'user': self.user,
+            'cancha': self.cancha
+        }
 
     def guarda_en_la_bd(self):
         bd.session.add(self)

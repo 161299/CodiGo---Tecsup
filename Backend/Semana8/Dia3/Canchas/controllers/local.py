@@ -16,3 +16,28 @@ class LocalControllers(Resource):
         except:
             return {'message': 'Hubo un error al guardar en la base de datos'}
         return local.retornar_yisun()
+
+    def get(self, nombre):
+
+        respuesta = LocalModel.query.filter_by(nombre=nombre).all()
+        # print(respuesta)
+        if respuesta:
+            arrayNew = []
+            for item in respuesta:
+                arrayNew.append(item.retornar_yisun())
+            
+            return arrayNew
+        else:
+            return {'message': 'No hay ningun local con ese nombre'},404
+
+class LocalesControllers(Resource):
+    def get(self):
+        resultado = LocalModel.query.all()
+        if resultado:
+            resultadoArray = []
+            for i in resultado:
+                resultadoArray.append(i.retornar_yisun())
+
+            return resultadoArray
+        else:
+            return {'message': 'No hay ningun local'}

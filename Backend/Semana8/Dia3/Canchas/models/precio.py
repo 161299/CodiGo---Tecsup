@@ -9,7 +9,7 @@ class PrecioCanchaModel(bd.Model):
     disponible = bd.Column("pc_disponibilidad",bd.Boolean)
 
     canchita = bd.Column("can_id",bd.Integer,bd.ForeignKey('t_canchita.can_id'),nullable=False)
-    # cancha = bd.relationship("CanchitaModel")
+    cancha = bd.relationship("CanchitaModel" ,lazy=True)
     reservas = bd.relationship("ReservaModel",lazy=True,backref="reserva")
 
     def __init__(self,descripcion,monto,disponibilidad,canchita):
@@ -17,6 +17,16 @@ class PrecioCanchaModel(bd.Model):
         self.monto = monto
         self.disponible = disponibilidad
         self.canchita = canchita
+
+    def retornar_yisus(self):
+        return {
+            'id': self.id,
+            'descripcion': self.descripcion,
+            'monto' : str(self.monto),
+            'disponible': self.disponible,
+            'canchita': self.canchita
+        }
+
 
     def guarda_en_la_bd(self):
         bd.session.add(self)
