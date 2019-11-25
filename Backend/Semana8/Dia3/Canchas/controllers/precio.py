@@ -19,7 +19,7 @@ class PrecioController(Resource):
     def get(self,descripcion):
         resultado = PrecioCanchaModel.query.filter_by(descripcion = descripcion).first()
         if resultado:
-            return resultado.retornar_yisus(),200
+            return {resultado.retornar_yisus(),200}
         else:
             return {'message': 'No se encuentra la descripcion definida'},404
 

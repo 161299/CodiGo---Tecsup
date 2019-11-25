@@ -9,8 +9,9 @@ class LocalControllers(Resource):
         parser.add_argument('longitud', type=float,required=True,help='Falta ingresar el longitud')
         parser.add_argument('direccion', type=str,required=True,help='Falta ingresar el direccion')
         parser.add_argument('fono', type=str,required=True,help='Falta ingresar el fono')
+        parser.add_argument('usu_id', type=int,required=True,help='Falta ingresar el id de Usuario')
         data = parser.parse_args()
-        local = LocalModel(data['nombre'],data['latitud'],data['longitud'],data['direccion'],data['fono'])
+        local = LocalModel(data['nombre'],data['latitud'],data['longitud'],data['direccion'],data['fono'],data['usu_id'])
         try:
             local.guardar_na_bd()
         except:

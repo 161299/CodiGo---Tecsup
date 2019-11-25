@@ -9,16 +9,19 @@ class LocalModel(bd.Model):
     longitud = bd.Column("loc_lng",bd.DECIMAL(10,8))
     direccion = bd.Column("loc_direccion",bd.String(45))
     fono = bd.Column("loc_fono",bd.String(15))
+
+    usuario = bd.Column("usu_id",bd.Integer,bd.ForeignKey('t_usuario.usu_id'),nullable=False)
     # ----------------
     canchitas = bd.relationship('CanchitaModel', lazy=True,backref="cancha")
     # opcion = bd.relationship('OpcionesModel',lazy=True,backref="opciones")
 
-    def __init__(self,nombre,latitud,longitud,direccion,fono):
+    def __init__(self,nombre,latitud,longitud,direccion,fono,usu_id):
         self.nombre = nombre
         self.latitud = latitud
         self.longitud = longitud
         self.direccion = direccion
         self.fono = fono
+        self.usuario = usu_id
 
     def retornar_yisun(self):
         return {

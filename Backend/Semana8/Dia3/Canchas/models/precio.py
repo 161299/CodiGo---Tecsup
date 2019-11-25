@@ -23,11 +23,15 @@ class PrecioCanchaModel(bd.Model):
             'id': self.id,
             'descripcion': self.descripcion,
             'monto' : str(self.monto),
-            'disponible': self.disponible,
+            # 'disponible': self.disponible,
             'canchita': self.canchita
         }
 
 
     def guarda_en_la_bd(self):
         bd.session.add(self)
+        bd.session.commit()
+
+    def actualizar_estado(self,nuevo_estado):
+        self.disponible=nuevo_estado
         bd.session.commit()
