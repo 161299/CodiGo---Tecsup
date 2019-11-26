@@ -1,0 +1,7 @@
+1.-  nos dirigimos a  -> Este Equipo 
+2.- Propiedades
+3.-  Cambiar Configuracion
+4.- Opciones Avanzadas
+5.- Variables de Entorno
+6.- Double Click -> Path 
+7.- si hay doble direccion eliminarlo y volverlo a añadir desde la ruta donde se encuentra en este caso el paquete npm roaming

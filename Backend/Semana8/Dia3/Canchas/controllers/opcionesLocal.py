@@ -1,5 +1,6 @@
 from flask_restful import Resource , reqparse
 from models.opciones import OpcionesModel
+from flask_jwt import jwt_required
 
 class OpcionesLocalController(Resource):
     def get(self,nombre):
@@ -23,6 +24,7 @@ class OpcionesLocalController(Resource):
                 'content': ingreso.retornar_yisun()}
 
 class OpcionesLocalTodosController(Resource):
+    @jwt_required()
     def get(self):
         resultado = OpcionesModel.query.all()
         if resultado:

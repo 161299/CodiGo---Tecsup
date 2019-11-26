@@ -28,12 +28,14 @@ class ReservaModel(bd.Model):
     def retornar_json(self):
         return{
             'id': self.id,
-            'fechainit': self.fechainit,
-            'fechaend': self.fechaend,
-            'monto': self.monto,
-            'adelanto': self.adelanto,
-            'user': self.user,
-            'cancha': self.cancha
+            'descripcion':{
+                'fechainit': self.fechainit,
+                'fechaend': self.fechaend,
+                # 'monto': self.monto,
+                # 'adelanto': self.adelanto,
+                # 'user': self.user,
+                # 'cancha': self.cancha
+            }
         }
 
     def guarda_en_la_bd(self):

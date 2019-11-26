@@ -1,0 +1,11 @@
+tienda de node js su paquete de colecciones es => npm
+
+comando para instalar paquetes  =>      npm install [modo] nombre_del_paquete
+
+*cuando no se coloca el modo, el paquete es instalado localmente /en la carpeta en la que se ejecuta el comando)
+
+*modo   "-g"  el paquete se instala para TODO el ordenador (global)
+
+===============================
+
+*Todo paquete que se instala, se agrega en una carpeta llamada "node_modules" sea local o global 

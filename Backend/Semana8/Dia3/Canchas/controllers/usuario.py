@@ -8,7 +8,7 @@ class UsuarioController(Resource):
         parser.add_argument('apellido', type=str,required=True, help='Falta ingresar el apellido')
         parser.add_argument('password', type=str,required=True, help='Falta ingresar el password')
         parser.add_argument('tipo', type=str,required=True, help='Falta ingresar el tipo')
-        parser.add_argument('dni', type=str,required=True, help='Falta ingresar el dni')
+        parser.add_argument('telefono', type=str,required=True, help='Falta ingresar el telefono')
         parser.add_argument('correo', type=str,required=True, help='Falta ingresar el correo')
         data = parser.parse_args()
         consulta = UsuarioModel.query.filter_by(correo= data['correo']).first()

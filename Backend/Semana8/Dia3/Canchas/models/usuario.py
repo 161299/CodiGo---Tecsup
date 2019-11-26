@@ -11,12 +11,14 @@ class UsuarioModel(bd.Model):
     hashedi = bd.Column("usu_hash",bd.Text)
     saltstr = bd.Column("usu_salt",bd.Text)
     tipo = bd.Column("usu_tipo",bd.String(20))
-    dni = bd.Column("usu_dni",bd.String(10))
+    telefono = bd.Column("usu_fono",bd.String(15))
     correo = bd.Column("usu_mail",bd.Text)
 
     reserva = bd.relationship('ReservaModel',lazy=True, backref='reservas')
+    local = bd.relationship('LocalModel',lazy=True, backref='locales')
 
-    def __init__(self,nombre,apellido,password,tipo,dni,correo):
+
+    def __init__(self,nombre,apellido,password,tipo,telefono,correo):
         self.nombre = nombre
         self.apellido = apellido
         self.tipo = tipo
@@ -28,9 +30,10 @@ class UsuarioModel(bd.Model):
         hashed = hashed.decode('utf-8')
         # terminando de encriptar el password
         self.saltstr = salt
-        self.hasedhi = hashed
-        self.dni = dni
+        self.hashedi = hashed
+        self.telefono = telefono
         self.correo = correo
+        # print(self.ha)
 
     def retornar_yisun_user(self):
         return{
@@ -38,7 +41,7 @@ class UsuarioModel(bd.Model):
             'nombre': self.nombre,
             'apellido': self.apellido,
             'tipo': self.tipo,
-            'dni':self.dni,
+            'dni':self.telefono,
             'email': self.correo
             
         }
