@@ -30,7 +30,7 @@ class LocalModel(bd.Model):
             'latitud': str(self.latitud),
             'longitud': str(self.longitud),
             'direccion': self.direccion,
-            'fono': self.fono
+            'fono': self.fono,
         }
 
 
