@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ngclass.component.css']
 })
 export class NgclassComponent implements OnInit {
-  alerta:[string] = ["alert","alert-danger"];
+  alerta:string[] = ["alert","alert-danger"];
   inventario: number = 0;
   constructor() { }
 
