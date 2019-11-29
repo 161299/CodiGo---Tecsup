@@ -2,15 +2,15 @@
 
     <div class="row">
         <div class="col-12">
-            <table class="table">
-                <thead>
+            <table class="table" *ngIf="cargado">
+                <thead *ngIf="listaCanchas.length > 0">
                     <tr>
                         <th>Id</th>
                         <th>Nombre</th>
                         <th>Direccion</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody *ngIf="listaCanchas.length > 0">
                     <tr *ngFor="let i of listaCanchas">
                         <td>{{i.id}}</td>
                         <td>{{i.nombre}}</td>
@@ -18,6 +18,13 @@
                     </tr>
                 </tbody>
             </table>
+                    <div class="alert alert-warning" *ngIf="listaCanchas.length === 0 && cargado">
+                        <i class="fas fa-sad-cry "></i>
+                        No tenemos canchitas en la base de datos
+                    </div>
+                    <div class="alert alert-info Text-center" *ngIf="!cargado">
+                        Cargando...
+                    </div>
         </div>
     </div>
 
