@@ -21,13 +21,14 @@ class CanchitaModel(bd.Model):
         self.tipo = tipo
 
     def retornar_json(self):
+
         return{
             'id': self.id,
             'tipo': self.tiposi.descripcion,
             'tamanio' : self.tamanio,
             'foto': self.foto,
             'local': self.locales.retornar_yisun(), 
-            
+           
         }
 
     def guarda_en_la_bd(self):

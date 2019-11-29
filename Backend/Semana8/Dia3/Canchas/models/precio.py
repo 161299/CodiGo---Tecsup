@@ -24,7 +24,6 @@ class PrecioCanchaModel(bd.Model):
             'descripcion': self.descripcion,
             'monto' : str(self.monto),
             # 'disponible': self.disponible,
-            'canchita': self.canchita
         }
 
 

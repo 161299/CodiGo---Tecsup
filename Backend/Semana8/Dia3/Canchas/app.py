@@ -17,15 +17,17 @@ from controllers.reservas import ReservaController
 from controllers.localOpciones import LocalOpcionesController
 # from models.localOpcionesLocal import LocalOpcionesLocalModels
 from controllers.opcionesLocal import OpcionesLocalController, OpcionesLocalTodosController
-from models.valoraciones import ValoracionesModel
+# from models.valoraciones import ValoracionesModel
+from controllers.valoraciones import ValoracionesController
 
 # Librerias para el JWT
 from flask_jwt import JWT
 from seguridad import autenticacion, identificador
-
+from flask_cors import CORS
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']= "mysql://root:root@localhost/canchas"
+CORS(app)
+app.config['SQLALCHEMY_DATABASE_URI']= "mysql://juoITpgWNb:CQpe7ld72P@remotemysql.com/juoITpgWNb"
 # asi se almacena la contraseña para nuestro JWT
 app.config['SECRET_KEY'] = 'secret_key'
 app.config['JWT_AUTH_URL_RULE']='/usuario/login'
@@ -41,7 +43,7 @@ def iniciar_bd():
     # Para reiniciar toda la base de Datos (Se va a perder toda la informacion)
     # Para iniciar la aplicacion de Sql AlCHEMY
     bd.init_app(app)
-    # bd.drop_all(app=app)
+    bd.drop_all(app=app)
     # Para crear todas las tabalas
     bd.create_all(app=app)
 
@@ -51,7 +53,7 @@ api.add_resource(TipoController, '/tipo/buscar/<string:nombre>','/tipo/add')
 api.add_resource(CanchitaController, '/canchita/buscar/<int:id>','/canchita/add')  
 api.add_resource(CanchitasControllers, '/canchitas/all')  
 
-api.add_resource(PrecioController,'/precio/buscar/<string:descripcion>' ,'/precio/add')  
+api.add_resource(PrecioController,'/precio/buscar/<string:descripcion>' ,'/precio/add','/precio/actualizar/<int:id>')  
 api.add_resource(PreciosController,'/precios/all')  
 
 api.add_resource(LocalControllers, '/local/buscar/<string:nombre>','/local/add')  
@@ -63,6 +65,10 @@ api.add_resource(OpcionesLocalTodosController, '/opcioneslocales/all')
 api.add_resource(UsuarioController,'/usuario/add')  
 
 api.add_resource(ReservaController,'/reserva/add')  
+
+api.add_resource(ValoracionesController,'/valoraciones/buscar/<int:id_local>')  
+
+
 
   
   
