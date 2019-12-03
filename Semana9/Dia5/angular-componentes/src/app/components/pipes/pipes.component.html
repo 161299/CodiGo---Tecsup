@@ -1,0 +1,123 @@
+<main class="container mt-4">
+ <h2>Pipes en Agular</h2>
+ <hr>
+ <table class="table bg-dark text-white">
+     <thead>
+           <tr>
+              <th>Variable</th>
+              <th>Nombre del Pipe</th>
+              <th>Aplicación</th>
+              <th>Resultado</th>
+              <th>Descripción</th>
+           </tr>
+     </thead>
+     <tbody>
+        <tr>
+            <td>{{nombre}}</td>
+            <td> <code>uppercase</code></td>
+            <td>{{  <code>   variable | uppercase</code>  }}</td>
+            <td>{{ nombre | uppercase}}</td>
+            <td>Transforma una <code> variable: string </code> en Mayusculas</td>
+        </tr>
+        <tr>
+            <td>{{nombre}}</td>
+            <td> <code>lowercase</code></td>
+            <td>{{  <code>variable | lowercase</code>   }}</td>
+            <td>{{ nombre | lowercase}}</td>
+            <td>Transforma una <code> variable: string </code> en Minisculas</td>
+        </tr>
+        <tr>
+            <td>{{nombre}}</td>
+            <td> <code>slice</code></td>
+            <td>{{  <code>variable | slice:3</code>   }}</td>
+            <td>{{ nombre | slice:3 }}</td>
+            <td>Devuelve la cadena desde la <code>posición 3</code> </td>
+        </tr>
+        <tr>
+            <td>{{nombre}}</td>
+            <td> <code>slice</code></td>
+            <td>{{  <code>variable | slice:3:7</code>   }}</td>
+            <td>{{ nombre | slice:3:7 }}</td>
+            <td>Devuelve la cadena desde la <code>posición 3</code> hasta la <code>posición 7 </code> sin contar está ultima </td>
+        </tr>
+        <tr>
+            <td>{{dias}}</td>
+            <td> <code>slice</code></td>
+            <td>{{ <code> variable | slice:2:5 </code>  }}</td>
+            <td>{{ dias| slice:2:5 }}</td>
+            <td>Devuelve los valores del <code> Array - string</code> desde la <code>posición 3</code> hasta la <code>posición 7 </code> sin contar está ultima </td>
+        </tr>
+        <tr>
+            <td>{{PI}}</td>
+            <td> <code> number </code></td>
+            <td>{{  <code> variable number | number:'3.0-0'</code>   }}</td>
+            <td>{{ PI| number:'3.0-0' }}</td>
+            <td>Devuelve los 3 primeros números de la parte entera y de cero decimales</td>
+        </tr>
+        <tr>
+            <td>{{PI}}</td>
+            <td> <code> number </code></td>
+            <td>{{  <code> variable number | number:'3.2-4'</code>   }}</td>
+            <td>{{ PI| number:'3.2-4' }}</td>
+            <td>Devuelve los 3 primeros números de la parte entera y mínimo 2 décimales, y máximo 4 decimales</td>
+        </tr>
+        <tr>
+            <td>{{igv}}</td>
+            <td> <code> percent </code></td>
+            <td>{{  <code> variable number | percent </code>   }}</td>
+            <td>{{ igv| percent }}</td>
+            <td>Multiplica un número por 100 y le agrega el símbolo del porcentaje</td>
+        </tr>
+        <tr>
+            <td>{{igv}}</td>
+            <td> <code> percent </code></td>
+            <td>{{  <code> variable number | percent:'3.2-2' </code>   }}</td>
+            <td>{{ igv| percent:'3.2-2' }}</td>
+            <td>Multiplica un número por 100 y le agrega el símbolo del porcentaje, además, le agrega dos decimales como mínimo y los decimales como máximo</td>
+        </tr>
+        <tr>
+            <td>{{ sueldo }}</td>
+            <td> <code> currency </code></td>
+            <td>{{  <code> variable number | currency:'EUR' </code>   }}</td>
+            <td>{{  sueldo | currency:'EUR' }}</td>
+            <td>Formatea el número y le agrega el símbolo de la moneda</td>
+        </tr>
+        <tr>
+            <td>{{ sueldo }}</td>
+            <td> <code> currency </code></td>
+            <td>{{  <code> variable number | currency:'PEN':'S/. ':'4.2-2'  </code>   }}</td>
+            <td>{{  sueldo | currency:'PEN':'S/. ':'4.2-2' }}</td>
+            <td>Devuelve un string con un formato customizado</td>
+        </tr>
+        <tr>
+            <td>{{ hoy }}</td>
+            <td> <code> date </code></td>
+            <td>{{  <code> variable date | date  </code>   }}</td>
+            <td>{{  hoy | date }}</td>
+            <td>Formatea la fecha en formato de mes, fecha y año</td>
+        </tr>
+        <tr>
+            <td>{{ hoy }}</td>
+            <td> <code> date: 'medium' </code></td>
+            <td>{{  <code> variable date | date :'medium'  </code>   }}</td>
+            <td>{{  hoy | date: 'medium' }}</td>
+            <td>Formatea la fecha en formato de mes, fecha, año y hora</td>
+        </tr>
+        <tr>
+            <td>{{ hoy }}</td>
+            <td> <code> date: 'dd - MM - yyy' </code></td>
+            <td>{{  <code> variable date | date : 'dd - MM - yyyy'  </code>   }}</td>
+            <td>{{  hoy | date: 'dd - MM - yyyy' }}</td>
+            <td>Formatea la fecha en el formato que nosotros quedramos</td>
+        </tr>
+        <tr>
+            <td>{{ persona }}</td>
+            <td> <code> json </code></td>
+            <td>{{  <code> <pre class="text-white"> {{ persona | json}}  </pre>  </code>   }}</td>
+            <td>{{ persona | json }}</td>
+            <td>Formatea un objeto JSON y lo imprime literal. Se recomienda usar la etiqueta pre para que lo formatee y se vea visualmente atractivo</td>
+        </tr>
+
+     </tbody>
+ </table>
+</main>

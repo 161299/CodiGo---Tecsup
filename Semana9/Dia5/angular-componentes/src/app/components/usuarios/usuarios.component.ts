@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class UsuariosComponent implements OnInit {
   cargado: boolean = false;
   listaUsuarios: Array<iUsuario>;
+  usuarioSeleccionado:any;
   constructor(public _sUsuarios: UsuariosService) { }
 
   ngOnInit() {
@@ -20,10 +21,19 @@ export class UsuariosComponent implements OnInit {
       console.log(json.data);
       this.listaUsuarios = json.data
       
-    })
+    });
+
     // console.log("asjkal");
     
     // console.log(this.listaUsuarios)
+  }
+  recibirUsuario(usuEntrada){
+
+    this.usuarioSeleccionado = usuEntrada;
+
+    console.log("Estoy recibiendo un usuario de mi hijo");
+    console.log(usuEntrada.first_name);
+          
   }
 
 }

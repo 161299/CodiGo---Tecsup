@@ -7,6 +7,11 @@
             <p><strong>Apellido:</strong>{{objUsuario.last_name}}</p>
             <p><strong>Email:</strong>{{objUsuario.email}}</p>
         </div>
+        <div class="card-footer">
+            <button class="btn btn-outline-danger btn-block" (click)="seleccionarUsuario(objUsuario)">
+                Seleccionar Usuario
+            </button>
+        </div>
     </div>
 
             <!-- /Columna y Card de Usuarios -->
