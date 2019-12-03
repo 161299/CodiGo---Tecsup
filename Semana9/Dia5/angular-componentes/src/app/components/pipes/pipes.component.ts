@@ -17,7 +17,8 @@ export class PipesComponent implements OnInit {
     nombre: 'Cristhian',
     apellido: 'Laurente',
     edad: 19
-  }
+  };
+  texto:string = "creando un pipe en angular";
   constructor() { }
 
   ngOnInit() {

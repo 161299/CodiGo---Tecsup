@@ -12,6 +12,7 @@ import { CanchaComponent } from './components/canchas/cancha.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { UsuarioComponent } from './components/usuarios/usuario.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { PipesComponent } from './components/pipes/pipes.component';
     CanchaComponent,
     UsuariosComponent,
     UsuarioComponent,
-    PipesComponent
+    PipesComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,

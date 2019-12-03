@@ -27,7 +27,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI']= "mysql://juoITpgWNb:CQpe7ld72P@remotemysql.com/juoITpgWNb"
+app.config['SQLALCHEMY_DATABASE_URI']= "mysql://root:root@localhost/canchas"
 # asi se almacena la contraseña para nuestro JWT
 app.config['SECRET_KEY'] = 'secret_key'
 app.config['JWT_AUTH_URL_RULE']='/usuario/login'
