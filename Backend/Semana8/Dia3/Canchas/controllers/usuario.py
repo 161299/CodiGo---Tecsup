@@ -12,13 +12,11 @@ class UsuarioController(Resource):
         parser.add_argument('correo', type=str,required=True, help='Falta ingresar el correo')
         data = parser.parse_args()
         consulta = UsuarioModel.query.filter_by(correo= data['correo']).first()
-        print(consulta)
-        if not consulta:#  is None:
+        if not consulta:
             try:
-                UsuarioModel(data['nombre'],data['apellido'],data['password'],data['tipo'],data['telefono'],data['correo']).guardar_en_la_bd()
-            except:
+                UsuarioModel(data['nombre'],data['apellido'],data['password'],data['tipo'],data['dni'],data['correo']).guardar_en_la_bd()
+           except:
                 return {'message': 'Hubo un error al guardar el Usuario en la Base de Datos'},500
-            return {'message': 'Usuario creado con exito'},201
         return {'message': 'Ya hay un usuario registrado con ese correo'},418
 
 
