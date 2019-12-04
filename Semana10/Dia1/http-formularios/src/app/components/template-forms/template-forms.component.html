@@ -1,0 +1,38 @@
+<main class="container mt-5">
+  <div class="row">
+    <div class="col-12"></div>
+  </div>
+  <form action="#">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Nombre:</label>
+          <input type="text" class="form-control" #nombre />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Email:</label>
+          <input type="email" class="form-control" #email />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Edad:</label>
+          <input type="number" class="form-control" #edad />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Pais:</label>
+          <input type="text" class="form-control" #pais />
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-block btn-danger" type="button" (click)="formulario1(pais,edad,nombre,email)">
+      Registrar Datos
+    </button>
+  </form>
+</main>

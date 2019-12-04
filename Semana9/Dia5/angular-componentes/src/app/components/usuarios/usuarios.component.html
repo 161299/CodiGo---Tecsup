@@ -1,0 +1,15 @@
+<main class="container mt-5">
+    <div class="row" *ngIf="usuarioSeleccionado">
+                <div class="col-md-12">
+                    <strong> Usuario Seleccionado:  </strong>
+                    <br>
+                    {{usuarioSeleccionado.first_name}}
+                </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 mt-4" *ngFor="let usu of listaUsuarios">
+            <app-usuario  [objUsuario]="usu" (outUsuario)="recibirUsuario($event)"></app-usuario>
+        </div>
+    </div>
+
+</main>

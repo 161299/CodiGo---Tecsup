@@ -9,6 +9,7 @@ import { CanchasComponent } from './components/canchas/canchas.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 import { RoutingModule } from './app.routing';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RoutingModule } from './app.routing';
     NavbarComponent,
     HomeComponent,
     CanchasComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,

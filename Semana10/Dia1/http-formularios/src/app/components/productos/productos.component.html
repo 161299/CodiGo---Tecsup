@@ -1,0 +1,7 @@
+<main class="container mt-5">
+  <div class="row">
+    <div class="col-md-3 mt-4" *ngFor="let local of listaLocales">
+      <app-producto [objLocal]="local"></app-producto>
+    </div>
+  </div>
+</main>

@@ -10,7 +10,8 @@ import { CanchasService} from './../../services/canchas.service';
 })
 export class CanchasComponent implements OnInit, OnDestroy {
 
-  listaCanchas: Array<any> = []
+  cargado: boolean = false;
+  listaCanchas: Array<iCancha> = [];
 
   // la inyteccion por dependencia es incluir a un servicio e constructor de un componente
   constructor(public _sCanchas: CanchasService) { 
@@ -26,6 +27,7 @@ export class CanchasComponent implements OnInit, OnDestroy {
     // let canchas = this._sCanchas.getCanchas();
     this._sCanchas.getCanchas().then((canchas :any)=>{
       this.listaCanchas = canchas;
+      this.cargado = true
     });
     
     

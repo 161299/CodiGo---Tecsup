@@ -1,0 +1,113 @@
+<main class="container mt-5">
+  <div class="row">
+    <div class="col-12"></div>
+  </div>
+  <form
+    autocomplete="off"
+    #formulario="ngForm"
+    (ngSubmit)="registrar(formulario)"
+    novalidate
+  >
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Nombre:</label>
+          <input
+            type="text"
+            class="form-control"
+            [ngClass]="{
+              'is-valid': nombre.valid == true,
+              'is-invalid': nombre.valid == false && nombre.dirty == true
+            }"
+            #nombre="ngModel"
+            [ngModel]
+            name="nombre"
+            minlength="5"
+            required
+          />
+          <small
+            class="text-danger d-block"
+            *ngIf="
+              nombre.valid == false &&
+              nombre.dirty == true &&
+              nombre?.errors.required
+            "
+            >El campo <strong>Nombre</strong> es obligatorio</small
+          >
+          <small
+            class="text-danger"
+            *ngIf="
+              nombre.valid == false &&
+              nombre.dirty == true &&
+              nombre?.errors.minlength
+            "
+            >La longitud minima es 5 caracteres</small
+          >
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            [ngClass]="{
+              'is-valid': email.valid == true,
+              'is-invalid': email.valid == false && email.dirty == true
+            }"
+            #email="ngModel"
+            [ngModel]
+            name="email"
+            email="true"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Edad:</label>
+          <input
+            type="number"
+            class="form-control"
+            [ngClass]="{
+              'is-valid': edad.valid == true,
+              'is-invalid': edad.valid == false && edad.dirty == true
+            }"
+            #edad="ngModel"
+            [ngModel]
+            name="edad"
+            min="5"
+            max="90"
+            required
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Pais:</label>
+          <select
+            name="pais"
+            [ngClass]="{
+              'is-valid': email.valid == true,
+              'is-invalid': email.valid == false && email.dirty == true
+            }"
+            #pais="ngModel"
+            [ngModel]
+            class="form-control"
+          >
+            <option value="">Seleccione...</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button
+      class="btn btn-block btn-danger"
+      type="submit"
+      [disabled]="!formulario.valid"
+    >
+      Registrar Datos
+    </button>
+  </form>
+</main>
