@@ -1,7 +1,6 @@
 export interface iLocal{
-    id: number;
-    nombre: string;
-    latitud: string;
-    longitud: string;
-    direccion: string;
+    tamanio: string;
+    foto: string;
+    tipo: string;
+    local: string;
 }

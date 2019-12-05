@@ -17,6 +17,7 @@ import { TemplateFormsComponent } from './components/template-forms/template-for
 import { FormsModule } from '@angular/forms';
 import { TemplateForms3Component } from './components/template-forms3/template-forms3.component';
 import { TemplateForms4Component } from './components/template-forms4/template-forms4.component';
+import { ProductoEditarComponent } from './components/productos/producto-editar.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { TemplateForms4Component } from './components/template-forms4/template-f
     TemplateFormsComponent,
     TemplateForms2Component,
     TemplateForms3Component,
-    TemplateForms4Component
+    TemplateForms4Component,
+    ProductoEditarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { ProductosService } from './../../services/productos.service';
 import { iLocal } from './../../interfaces/iLocal';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -9,9 +10,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductoComponent implements OnInit {
 
   @Input() objLocal: iLocal;
-  constructor() { }
+  constructor(public _sProducto: ProductosService) { }
 
   ngOnInit() {
+  }
+
+  cambiarServicioAbrir(objLocal){
+    this._sProducto.abrir = true;
+    this._sProducto.objProductoEditar = objLocal;
+    console.log(objLocal);
+    
   }
 
 }

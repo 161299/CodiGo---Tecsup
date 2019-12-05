@@ -1,9 +1,15 @@
 <div class="card">
+  <img src="{{ objLocal.foto }}" alt="" class="card-img-top" />
   <div class="card-body">
-    <img src="{{ objLocal.foto }}" alt="" class="card-img-top" />
     <p><strong>Id:</strong>{{ objLocal.id }}</p>
-    <p><strong>Nombre:</strong>{{ objLocal.tipo }}</p>
+    <p><strong>Tipo:</strong>{{ objLocal.tipo }}</p>
     <!-- <p><strong>Longitud:</strong>{{ objLocal.local }}</p> -->
-    <p><strong>direccion:</strong>{{ objLocal.tamanio }}</p>
+    <p><strong>Tamaño:</strong>{{ objLocal.tamanio }}</p>
+  </div>
+  <div class="card-footer text-right">
+    <button class="btn btn-outline-warning" (click)="cambiarServicioAbrir(objLocal)">
+       <i class="fas fa-pen mr-2"> </i>
+       Editar
+    </button>
   </div>
 </div>
