@@ -1,6 +1,7 @@
 from flask_restful import Resource, reqparse
 from models.canchita import CanchitaModel
 
+
 class CanchitaController(Resource):
     def post(self):
         parser = reqparse.RequestParser()
@@ -22,6 +23,22 @@ class CanchitaController(Resource):
         else:
             return {'message': 'No se encuentra una cancha con ese id'}
 
+    def put(self,id):
+        parser = reqparse.RequestParser()
+        parser.add_argument('tamanio', type=str, required=True, help="Falta ingresar Tamanio")
+        parser.add_argument('foto', type=str, required=True, help="Falta ingresar foto")
+        parser.add_argument('local', type=int, required=True, help="Falta ingresar local")
+        parser.add_argument('tipo', type=int, required=True, help="Falta ingresar tipo")
+        data= parser.parse_args()
+        canchita = CanchitaModel(data['tamanio'],data['foto'],data['local'],data['tipo'])
+        canchita.guarda_en_la_bd()
+        print(canchita)
+
+        # falta en model la funcion actualizar()
+        resultado = CanchitaModel.query.filter_by(id = id).first()
+        return {'message' : 'Canchita  actualizada con exito'},201
+        
+
 class CanchitasControllers(Resource):
     def get(self):
         resultado = CanchitaModel.query.all()
@@ -34,6 +51,7 @@ class CanchitasControllers(Resource):
         else:
             return {'message': 'No se encontro las Canchitas'},404
         return 'Success!'
+
 
 
         

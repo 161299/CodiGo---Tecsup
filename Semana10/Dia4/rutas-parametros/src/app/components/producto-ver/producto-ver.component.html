@@ -1,0 +1,10 @@
+<main class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8" *ngIf="objCancha">
+      <img src="{{ objCancha.foto }}" alt="" />
+      <p><strong>Nombre:</strong> {{ objCancha.tamanio }}</p>
+      <p><strong>Tipo:</strong> {{ objCancha.tipo }}</p>
+      <p><strong>Local:</strong> {{ objCancha.local.nombre}}</p>
+    </div>
+  </div>
+</main>
