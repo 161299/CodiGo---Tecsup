@@ -43,7 +43,7 @@ def iniciar_bd():
     # Para reiniciar toda la base de Datos (Se va a perder toda la informacion)
     # Para iniciar la aplicacion de Sql AlCHEMY
     bd.init_app(app)
-    bd.drop_all(app=app)
+    # bd.drop_all(app=app)
     # Para crear todas las tabalas
     bd.create_all(app=app)
 

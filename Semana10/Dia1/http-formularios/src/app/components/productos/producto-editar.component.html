@@ -1,0 +1,167 @@
+<div class="fondo-oscuro" [ngClass]="{ oculto: !_sProductos.abrir }">
+  <div
+    class="modal"
+    id="modelId"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modelTitleId"
+    aria-hidden="true"
+    style="display: block;"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar un producto</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="_sProductos.abrir = false"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form
+            action=""
+            #formularioEditar="ngForm"
+            (ngSubmit)="editarProducto(formularioEditar)"
+          > 
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="tamanio">tamanio:</label>
+                  <input
+                    id="tamanio"
+                    type="text"
+                    class="form-control"
+                    placeholder="tamanio del Producto"
+                    [ngModel]="_sProductos.objProductoEditar.tamanio"
+                    #tamanio="ngModel"
+                    name="tamanio"
+                    required
+                    [ngClass]="{
+                      'is-valid': tamanio.valid,
+                      'is-invalid': !tamanio.valid && tamanio.dirty
+                    }"
+                  />
+                  <small
+                    class="text-danger"
+                    *ngIf="!tamanio.valid && tamanio.dirty"
+                    >El <strong>tamanio</strong> es obligatorio</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="tipo">Tipo:</label>
+                  <input
+                    id="tipo"
+                    type="number"
+                    class="form-control"
+                    placeholder="tipo del Producto"
+                    [ngModel]="_sProductos.objProductoEditar.tipo"
+                    #tipo="ngModel"
+                    name="tipo"
+                    required
+                    [ngClass]="{
+                      'is-valid': tipo.valid,
+                      'is-invalid': !tipo.valid && tipo.dirty
+                    }"
+                  />
+                  <small class="text-danger" *ngIf="!tipo.valid && tipo.dirty"
+                    >El <strong>tipo</strong> es obligatorio</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="local">Local:</label>
+                  <input
+                    id="local"
+                    type="number"
+                    class="form-control"
+                    placeholder="local del Producto"
+                    [ngModel]="_sProductos.objProductoEditar.local"
+                    #local="ngModel"
+                    name="local"
+                    required
+                    [ngClass]="{
+                      'is-valid': local.valid,
+                      'is-invalid': !local.valid && local.dirty
+                    }"
+                  />
+                  <small class="text-danger" *ngIf="!local.valid && local.dirty"
+                    >El <strong>local</strong> es obligatorio</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="foto">Imagen:</label>
+                  <input
+                    id="foto"
+                    type="text"
+                    class="form-control"
+                    placeholder="foto del Producto"
+                    [ngModel]="_sProductos.objProductoEditar.foto"
+                    #foto="ngModel"
+                    name="foto"
+                    required
+                    pattern="http://(.+)|https://(.+)"
+                    [ngClass]="{
+                      'is-valid': foto.valid,
+                      'is-invalid': !foto.valid && foto.dirty
+                    }"
+                  />
+                  <small
+                    class="text-danger"
+                    *ngIf="!foto.valid && foto.dirty && foto?.errors.required"
+                    >colocar <strong>imagen</strong> es obligatoria</small
+                  >
+                  <small
+                    class="text-danger"
+                    *ngIf="!foto.valid && foto.dirty && foto?.errors.pattern"
+                    >La <strong>URL</strong> debe iniciar con http:// ó
+                    https://</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-block"
+                  (click)="cancelar(formularioEditar)"
+                >
+                  Cancelar
+                </button>
+              </div>
+              <div class="col-md-6">
+                <button
+                  type="submit"
+                  class="btn btn-success btn-block"
+                  [disabled]="!formularioEditar.valid"
+                >
+                  Guardar Cambios
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
