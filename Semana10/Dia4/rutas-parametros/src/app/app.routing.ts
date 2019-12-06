@@ -1,3 +1,6 @@
+import { ProhibidoComponent } from './components/prohibido/prohibido.component';
+import { GuardianService } from './guards/guardian.service';
+import { ProtegidoComponent } from './components/protegido/protegido.component';
 import { CanchasComponent } from './components/canchas/canchas.component';
 import { ProductoVerComponent } from './components/producto-ver/producto-ver.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
@@ -15,7 +18,9 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "canchas", component: CanchasComponent },
   { path: "cancha/:cancha_id", component: ProductoVerComponent },
-  { path: "buscador/:buscador_id", component: BuscadorComponent },
+  { path: "buscador/:cancha_id", component: BuscadorComponent },
+  { path: "protegido", component: ProtegidoComponent, canActivate: [GuardianService] },
+  { path: "prohibido", component: ProhibidoComponent },
   { path: "**", component: NotFoundComponent }
 ];
 
