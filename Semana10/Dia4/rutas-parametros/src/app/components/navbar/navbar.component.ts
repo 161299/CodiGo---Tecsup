@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   }
 
   buscar(idbuscado: FormControl){
-    console.log(idbuscado.value);
-    this._sRouter.navigate(['/cancha',`${idbuscado.value}`])
+    // console.log(idbuscado.value);
+    this._sRouter.navigate(['/buscador',idbuscado.value])
   }
 }

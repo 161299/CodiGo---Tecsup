@@ -5,7 +5,7 @@ class Categoria(models.Model):
       descripcion = models.CharField(max_length=100, help_text = 'Descripcion de la categoria', unique=True)
 
       def __str__(self):
-            return '{}'.format(self.cat_descripcion)        
+            return '{}'.format(self.descripcion)        
 
       class Meta:
             db_table = "t_categoria"
@@ -22,7 +22,7 @@ class SubCategoria(models.Model):
       subcat_descripcion = models.CharField(max_length=100, help_text="Descripcion de la sub categoria")
       cat_id = models.ForeignKey(Categoria, on_delete=models.CASCADE)
       def __str__(self):
-          return '{} {}'.format(self.cat_id.cat_descripcion, self.subcat_descripcion) 
+          return '{} {}'.format(self.cat_id.descripcion, self.subcat_descripcion) 
 
       class Meta:
             db_table = "t_subcategoria"

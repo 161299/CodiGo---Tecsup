@@ -12,6 +12,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductoVerComponent } from './components/producto-ver/producto-ver.component';
 import { CanchasComponent } from './components/canchas/canchas.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
+import { ProtegidoComponent } from './components/protegido/protegido.component';
+import { ProhibidoComponent } from './components/prohibido/prohibido.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
     NotFoundComponent,
     ProductoVerComponent,
     CanchasComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    ProtegidoComponent,
+    ProhibidoComponent
   ],
   imports: [
     BrowserModule,
