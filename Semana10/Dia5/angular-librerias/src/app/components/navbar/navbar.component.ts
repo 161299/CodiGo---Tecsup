@@ -7,10 +7,10 @@ import { AuthService, SocialUser} from "angularx-social-login";
 })
 export class NavbarComponent implements OnInit {
 
-  private user: SocialUser;
-  private loggedIn: boolean;
+  public user: SocialUser;
+  public loggedIn: boolean;
 
-  constructor(private _sAuthService: AuthService) { }
+  constructor(public _sAuthService: AuthService) { }
 
   ngOnInit() {
     this._sAuthService.authState.subscribe((user) => {

@@ -15,7 +15,7 @@ export class LoginFacebookGoogleComponent implements OnInit {
   public user: SocialUser;
   public loggedIn: boolean;
 
-  constructor(private _sAuthService: AuthService) { }
+  constructor(public _sAuthService: AuthService) { }
 
   ngOnInit() {
     this._sAuthService.authState.subscribe((user)=>{
