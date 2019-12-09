@@ -1,7 +1,6 @@
 import { AuthService, SocialUser} from "angularx-social-login";
-
-
 import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-login";
+
 import { Component, OnInit } from '@angular/core';
 
 
@@ -16,25 +15,27 @@ export class LoginFacebookGoogleComponent implements OnInit {
   public user: SocialUser;
   public loggedIn: boolean;
 
-  constructor(public _authService: AuthService) { }
+  constructor(private _sAuthService: AuthService) { }
 
   ngOnInit() {
-    this._authService.authState.subscribe((user)=>{
+    this._sAuthService.authState.subscribe((user)=>{
       this.user = user;
+      console.log(this.user);
+      
       this.loggedIn = (user != null)
     })
   }
 
   signInWithGoogle(){
-    this._authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+    this._sAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
 
   signInWithFB(){
-    this._authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+    this._sAuthService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
 
   signOut(){
-    this._authService.signOut();
+    this._sAuthService.signOut();
   }
 
 }
