@@ -1,7 +1,7 @@
 {
-  "name": "pruebaexpress",
+  "name": "ejercicionodeexpress",
   "version": "1.0.0",
-  "description": "\"Ejercicio de prueba para repasar Node Express\"",
+  "description": "Se desea implementar el servicio para una veterinaria, en el cual se tiene que registar a los duenos de las amscotas y a sus mascotas, cada dueño tiene los siguietnes atributos ...",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,10 +10,8 @@
   "author": "Cristhian Laurente",
   "license": "MIT",
   "dependencies": {
-    "body": "^5.1.0",
     "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "intake": "^0.2.9"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.2"
