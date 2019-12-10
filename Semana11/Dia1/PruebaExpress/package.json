@@ -11,7 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "body": "^5.1.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "intake": "^0.2.9"
   },
   "devDependencies": {
     "@types/express": "^4.17.2"
