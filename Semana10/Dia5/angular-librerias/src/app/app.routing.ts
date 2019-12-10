@@ -9,7 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "calendario", component: CalendarioComponent },
+  { path: "calendario", component: CalendarioComponent},
   { path: "charts", component: ChartsComponent },
   { path: "login", component: LoginFacebookGoogleComponent },
   { path: "**", redirectTo: '' }
