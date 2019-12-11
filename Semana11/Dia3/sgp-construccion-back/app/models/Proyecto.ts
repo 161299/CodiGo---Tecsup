@@ -6,6 +6,7 @@ export const proyecto_model: Function = ( conexion:Sequelize ) =>{
        pro_nom: {type: DataTypes.STRING(100), allowNull: false},
        pro_fechin: {type: DataTypes.DATE, allowNull: false},
        pro_fechfin: {type: DataTypes.DATE, allowNull: false},
+       pro_pres: {type: DataTypes.DECIMAL(10,2), allowNull: false},
        pro_est: {type: DataTypes.STRING(10), allowNull: false}                
    }, {
        tableName: 't_proyecto',
