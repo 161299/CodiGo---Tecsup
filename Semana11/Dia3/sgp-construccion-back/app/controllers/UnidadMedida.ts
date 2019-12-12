@@ -3,10 +3,10 @@ import { UnidadMedida } from './../config/sequelize'
 
 export const postUnidadMedida = (req: Request, res: Response) => {
        
-       let {nombre, abreviacion} = req.body;             
+       let {nombre, abreviatura} = req.body;             
        let objUnidadMedida: Object = {
                                um_nom: nombre,
-                               um_abr: abreviacion
+                               um_abr: abreviatura
                              };
        UnidadMedida.build(objUnidadMedida).save()
        .then((unidadMedidaCreado : any )=>{
@@ -23,8 +23,14 @@ export const getUnidadMedidas = (req: Request, res: Response) => {
        
        UnidadMedida.findAll()
        .then((arregloUnidadMedida : any ) => {
-             let rpta: Object = {ok: true, content: arregloUnidadMedida};
-             res.status(201).json(rpta)              
+              if(arregloUnidadMedida){
+                 let rpta: Object = {ok: true, content: arregloUnidadMedida};
+                 res.status(201).json(rpta)                      
+              }
+              else{
+                 let fake = {ok: false, content: 'No hay ninguna Unidad de medida'};
+                 res.status(404).json(fake)    
+              }
        })
        .catch((error: any)=>{
              let fake: Object = {ok: false, content: error.errors}

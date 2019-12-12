@@ -1,3 +1,5 @@
+import { documento_router } from './../routes/Documento';
+import { gastoingreso_router } from './../routes/GastoIngreso';
 import { familia_router } from './../routes/Familia';
 import { categoria_router } from './../routes/Categoria';
 import { conexion } from './sequelize';
@@ -6,6 +8,7 @@ import express , {Request, Response}from "express";
 import { proyecto_router } from './../routes/Proyecto'
 import { unidadmedida_router } from '../routes/UnidadMedida';
 import { usuario_router } from '../routes/Usuario';
+import { proveedor_router } from '../routes/Proveedor';
 
 export class Server {
   public app: express.Application;
@@ -33,6 +36,9 @@ export class Server {
      this.app.use('', usuario_router);
      this.app.use('', categoria_router);
      this.app.use('', familia_router);
+     this.app.use('', proveedor_router);
+     this.app.use('', gastoingreso_router);
+     this.app.use('', documento_router);
   }
 
   startServer(){
