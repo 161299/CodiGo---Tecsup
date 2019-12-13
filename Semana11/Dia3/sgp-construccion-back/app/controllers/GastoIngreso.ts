@@ -71,7 +71,7 @@ export const updateGastoIngresoByPk = (req: Request, res: Response) => {
                          gasin_crit: crit,
                          usu_id: usuario,
                          doc_id: documento
-                        };
+                        }; 
                         console.log(id_gastoingreso)
      Usuario.findByPk(usuario)
     .then((usuarios: any) => {

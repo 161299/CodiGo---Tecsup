@@ -1,14 +1,16 @@
-import { eliminarImagen } from './../controllers/Imagen';
+import { eliminarImagen, getImagenById, updateImagenById } from './../controllers/Imagen';
 import { Router } from 'express';
-import { subirArchivo } from '../controllers/Imagen';
+import { subirImagen } from '../controllers/Imagen';
 
 
 export let imagen_router = Router();
 let multiParty = require('connect-multiparty'); //sube archivos a nuestra carpeta master img
 let multiPartyMiddLeware = multiParty({uploadDir: './img'})
 
-imagen_router.post('/imagen/upload', multiPartyMiddLeware ,subirArchivo);
-imagen_router.delete('/imagen/:id_img', eliminarImagen)
+imagen_router.post('/imagen/upload', multiPartyMiddLeware ,subirImagen);
+imagen_router.delete('/imagen/:id_img', eliminarImagen);
+imagen_router.get('/imagen/:id_img', getImagenById);
+imagen_router.put('/imagen/:id_img', multiPartyMiddLeware ,updateImagenById);
 
 
 //body -> form-data  /key =imagen /value -> insertamos un file 
