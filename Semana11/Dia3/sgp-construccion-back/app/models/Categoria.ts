@@ -10,4 +10,3 @@ export const categoria_model: Function = ( conexion: Sequelize ) => {
        });
        return modelo             
 }
-

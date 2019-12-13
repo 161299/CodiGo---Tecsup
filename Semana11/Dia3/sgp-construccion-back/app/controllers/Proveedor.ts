@@ -8,17 +8,32 @@ export const postProveedor = (req: Request, res: Response) => {
                            prov_rz: razonSocial,
                            prov_ruc: ruc
                           };
-       Proveedor.build(objProveedor).save()
-       .then((createProveedor : any)=>{
-            if(createProveedor){
-               let rpta = {ok: true, content: createProveedor};
-               res.status(201).json(rpta)                 
-            }             
+       Proveedor.findAll({where: {prov_ruc: ruc}})
+       .then((ruc: any )=>{
+           if(ruc.length != 0){
+               let fake = {ok: false, content: 'Ya hay ese provedor registrado con ese RUC'};
+               return res.status(500).json(fake)
+           }
+           else{
+            Proveedor.build(objProveedor).save()
+            .then((createProveedor : any)=>{
+                 if(createProveedor){
+                    let rpta = {ok: true, content: createProveedor};
+                    res.status(201).json(rpta)                 
+                 }             
+            })
+            .catch((error: any)=>{
+                  let fake = {ok: false, content: error.errors};
+                  res.status(500).json(fake)              
+            })                
+           }
        })
        .catch((error: any)=>{
-             let fake = {ok: false, content: error.errors};
-             res.status(500).json(fake)              
-       })                                
+            let fake = {ok: false, content: error.errors};
+            res.status(500).json(fake)              
+        }) 
+ 
+                               
 } 
 
 export const getProveedorById = (req: Request, res: Response) => {
@@ -60,18 +75,20 @@ export const getProveedores = (req: Request, res: Response) => {
 
 export const updateProveedor = (req: Request, res: Response) => {
        let {id_proveedor} = req.params;
-       let {razonSocial, ruc} = req.body;        
+       let {razonSocial} = req.body;        
        let objProveedor = {
-                           prov_rz: razonSocial,
-                           prov_ruc: ruc                 
+                           prov_rz: razonSocial,                
                           };
-       Proveedor.update(objProveedor, {where: {prov_id : id_proveedor}})
-       .then((proveedorUpdate: any)=>{
+
+        Proveedor.update(objProveedor, {where: {prov_id : id_proveedor}})
+        .then((proveedorUpdate: any)=>{
             let rpta = {ok: true, content: proveedorUpdate};
             res.status(201).json(rpta)               
-       }) 
-       .catch((error: any)=>{
+        })
+        .catch((error: any)=>{
             let fake = {ok: false, content: error.errors};
             res.status(500).json(fake)              
-       })                        
+        })  
+            
+                       
 }

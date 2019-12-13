@@ -9,6 +9,7 @@ import { proyecto_router } from './../routes/Proyecto'
 import { unidadmedida_router } from '../routes/UnidadMedida';
 import { usuario_router } from '../routes/Usuario';
 import { proveedor_router } from '../routes/Proveedor';
+import { imagen_router } from '../routes/Imagen';
 
 export class Server {
   public app: express.Application;
@@ -39,6 +40,7 @@ export class Server {
      this.app.use('', proveedor_router);
      this.app.use('', gastoingreso_router);
      this.app.use('', documento_router);
+     this.app.use('', imagen_router);
   }
 
   startServer(){
