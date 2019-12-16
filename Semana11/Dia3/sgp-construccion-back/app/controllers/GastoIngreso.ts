@@ -4,11 +4,11 @@ import { Request, Response } from "express";
 export const postGastoIngreso = (req: Request, res: Response) => {
   let { fecha, crit, usuario, documento } = req.body;
   let objGastoIngreso = {
-    gasin_fech: fecha,
-    gasin_crit: crit,
-    usu_id: usuario,
-    doc_id: documento
-  };
+                          gasin_fech: fecha,
+                          gasin_crit: crit,
+                          usu_id: usuario,
+                          doc_id: documento
+                        };
   //        GastoIngreso.build(objGastoIngreso)
   Usuario.findByPk(usuario)
     .then((usuarios: any) => {
