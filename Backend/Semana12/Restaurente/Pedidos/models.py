@@ -5,12 +5,15 @@ class Usuario(models.Model):
    usu_nom = models.CharField(max_length=45, blank= False, help_text='Aqui va el nombre completo del usuario')  
    usu_hash = models.TextField()
    usu_salt = models.TextField() 
-   usu_tipo = models.IntegerField(max_length=1)
-   usu_email = models.CharField(max_length=45, unique= True)
+   usu_tipo = models.IntegerField()
+   usu_email = models.EmailField(max_length=45, unique= True)
    usu_fono = models.CharField(max_length=20)  
 
    createdAt = models.DateTimeField(auto_now_add=True)
    updatedAt = models.DateTimeField(auto_now=True)
+   
+   def json(self):
+      return {'id' : self.usu_id, 'nombre' : self.usu_nom, 'fono': self.usu_fono, 'correo': self.usu_email}
    class Meta:
       db_table = "t_usuario"
       verbose_name_plural = "Usuarios" 
@@ -97,10 +100,30 @@ class Producto(models.Model):
       verbose_name_plural = "Productos" 
 
 class Precio(models.Model):
-   prec_id = models.AutoField(primary_key = True)
-   pass
+   precio_id = models.AutoField(primary_key = True)
+   precio_inicio = models.DateTimeField()
+   precio_fin = models.DateTimeField()
+   precio_monto = models.DecimalField(decimal_places=2, max_digits=5)
+   prod_id = models.ForeignKey(Producto, on_delete = models.CASCADE)
+
+   createdAt = models.DateTimeField(auto_now_add=True)
+   updatedAt = models.DateTimeField(auto_now=True)
+   class Meta:
+      db_table = "t_precio"
+      verbose_name_plural = "Precios" 
 
 
 class Detalle_Documento(models.Model):
-   pass
+   dd_id = models.AutoField(primary_key= True)
+   dd_cant = models.IntegerField()
+   dd_total = models.DecimalField(decimal_places=2, max_digits=5)
+   precio_id = models.ForeignKey(Precio, on_delete= models.CASCADE)
+   cd_id = models.ForeignKey(Cabecera_Documento, on_delete= models.CASCADE)
+   mesa_id = models.ForeignKey(Mesa, on_delete= models.CASCADE)
+
+   createdAt = models.DateTimeField(auto_now_add=True)
+   updatedAt = models.DateTimeField(auto_now=True)
+   class Meta:
+      db_table = "t_detalleDocumento"
+      verbose_name_plural = "Detalle de Documentos" 
 
