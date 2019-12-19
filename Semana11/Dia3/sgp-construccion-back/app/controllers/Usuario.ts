@@ -27,11 +27,12 @@ export const login = (req: Request, res: Response) => {
            if(objUsuario){
              let validacion = objUsuario.validarPassword(password);
              if (validacion){
-                let rpta = {ok: true, content: 'Usuario correctamente logeado'};
+                let token = objUsuario.generarJWT();
+                let rpta = {ok: true, token: token, content: 'Usuario correctamente logeado'};
                 res.status(200).json(rpta)                 
              }
              else{
-                let fake = {ok: false, content: 'Usuario o contraseña incorrectos'};
+                let fake = {ok: false ,content: 'Usuario o contraseña incorrectos'};
                 res.status(404).json(fake)                 
              }                  
            }

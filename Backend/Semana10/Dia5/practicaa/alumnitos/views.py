@@ -10,7 +10,7 @@ class AsistenciaController(APIView):
             # try:
                 asistencia = Asistencia.objects.get(pk = pk)
                 if asistencia:
-                    # print(asistencia.alumnocurso_set.all()[0].alumno_set.all()[1])
+                    # print(asistencia.alumnocurso_set.all().alumno_set.all())
                     # print(asistencia.alumno.all()[0])
                     return Response({
                       'message': 'OK',

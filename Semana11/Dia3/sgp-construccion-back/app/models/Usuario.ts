@@ -1,4 +1,5 @@
 import { Sequelize, DataTypes } from 'sequelize';
+const jwt = require('jsonwebtoken')
 const crypto = require('crypto')
 
 export const usuario_model: Function = ( conexion: Sequelize) => {
@@ -26,7 +27,16 @@ export const usuario_model: Function = ( conexion: Sequelize) => {
              else{
                return false                  
              }             
-       }
+       };//generando jsonwebtoken config
+       modelo.prototype.generarJWT = function(){
+          let payload = {
+                         usu_id: this.usu_id,
+                         usu_nom: `${this.usu_nom} ${this.usu_ape}`
+                        }
+          let token = jwt.sign(payload, 'sapeee', {expiresIn: 30},{algorithm: 'RS256'});
+          return token
+       };
+
        return modelo           
 }
 

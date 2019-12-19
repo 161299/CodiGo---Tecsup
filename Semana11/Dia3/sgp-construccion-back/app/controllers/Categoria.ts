@@ -1,4 +1,4 @@
-import { Categoria, Familia } from './../config/sequelize';
+import { Categoria, Familia, Recurso } from './../config/sequelize';
 import {  Request , Response } from 'express';
 
 
@@ -30,4 +30,23 @@ export const postCategoria = (req: Request, res: Response) =>{
               res.status(500).json(fake)                            
        }) 
 
+}
+
+export const getCategorias = ( req: Request, res: Response ) => {
+       Categoria.findAll(
+                         {include:[{model: Familia},
+                                   //{model: Recurso, include[model:PresupuestoProyecto]} -> para sacar info de las tablas relacionadas
+                                   {model: Recurso}
+                                  ]}
+                         )
+       .then((arregloCategorias: any)=>{
+            if(arregloCategorias){
+               let rpta = {ok: true, content: arregloCategorias};
+               res.status(200).json(rpta)               
+            }
+            else{
+               let fake = {ok: false, content: 'No se encontro ninguna Categoria'};
+               res.status(404).json(fake)
+            }
+       });
 }
