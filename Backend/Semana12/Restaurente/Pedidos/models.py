@@ -12,6 +12,9 @@ class Usuario(models.Model):
    createdAt = models.DateTimeField(auto_now_add=True)
    updatedAt = models.DateTimeField(auto_now=True)
    
+   def __str__(self):
+        return 'correo: {}'.format(self.usu_email)
+
    def json(self):
       return {'id' : self.usu_id, 'nombre' : self.usu_nom, 'fono': self.usu_fono, 'correo': self.usu_email}
    class Meta:
