@@ -148,8 +148,8 @@ class MesasView(ViewSet):
    def create(self, request):
       serializador = MesaSerializer(data = request.data)
       if serializador.is_valid():
-         serializador.save()
-         return Response(serializador.validated_data)
+         mesa = serializador.save()
+         return Response(mesa.retornar_json(), status=201)
       else:
          return Response(serializador.errors, status=500)
    
@@ -174,7 +174,8 @@ class MesasView(ViewSet):
 
    def destroy(self, request, pk):
       mesa = get_object_or_404(Mesa, pk = pk)
-      Mesa.objects.filter(mesa_id = pk).delete()
+      mesa.mesa_est = False
+      mesa.save()
       return Response({'message': 'OK', 'content': 'Se elimino con exito'}, status = 200)
 
 
