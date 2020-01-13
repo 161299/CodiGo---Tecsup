@@ -1,0 +1,64 @@
+npm i create-react-app -g
+create-react-app nombredelarchivo
+DIA 1 SEMANA13  -> REACT
+React tiene dos tipos de Componentes
+Functional (stateless) -> y los que no tienen estados ||||| rfc |||||
+	°| -> La vista está en la sentencia "return" de la función
+Class(state) -> los que tienen estados 		|||| rcc |||   ->
+	°| -> Tiene un LifeCycle (ciclo de vida)
+	°| -> La vista está en la sentencia "return" de la función "render()"	
+	°| -> para modificar el "state", se usa la función "this.setstate"
+
+
+extensiones para google -> """React Developer Tools"""
+extensiones para visual code -> {
+	reactjs code snippets
+	ES7 react/Redux/GraphQl
+	js jsx Snippets		
+}
+
+Augury -> para angular una extension chida
+
+//===========================
+Configuracion de visual studio code 
+file -> preferences -> settings -> edit in settings.json {
+    "emmet.syntaxProfiles":{
+        "javascript" : "jsx"
+    },
+    "emmet.includeLanguages": {
+        "javascript" : "javascriptreact"
+    },
+}
+
+DEFINCIONES Y EJEMPLOS
+// props -> es un objeto
+	Un componente con una render prop toma una función que devuelve un elemento de React y lo llama en lugar 
+	de implementar su propia lógica de representación. Algunas bibliotecas que utilizan render props son React 
+	Router, Downshift y Formik.
+// ¿Que sucede cuando el STATE se actualiza?
+	La función render(), se ejecuta nuevamente
+	Si el state anterior es igual al state nuevo no se ejecuta Render()
+//Aclaraciones
+	La unica vez que se ejecuta la función componentDidMount() es cuando se ejecuta una primera véz la función
+	render() después ya no.
+
+
+
+CICLO DE VIDA EN REACT
+App.js
+componentDidMount(){
+	//Esta funcion del ciclo de vida, nos sirve para hacer una primera carga de datos luego del
+	// primer render
+}
+
+componentDidUpdate(){
+	//Funcion que se ejecuta toda vez que el state se actualice
+	// no se ejecuta la primera vez
+}
+setState => opcionalmente recibe un callback que hace la misma función que el componentDidUpdate()
+this.setState({
+	prueba: [...this.state.prueba, {...}]
+}, () => {} )
+
+
+aprendiendo enrutamiento :v

@@ -1,10 +1,11 @@
 from django.urls import path, include
-from .views import Registrar, Logear, TipoProducto, MesasView
+from .views import Registrar, Logear, TipoProducto, MesasView, ProductoView
 from rest_framework.routers import DefaultRouter
 # ViewSets
 router = DefaultRouter()
 router.register('tipoProducto', TipoProducto, basename='Tipo Producto')
 router.register('mesa', MesasView, basename= 'Mesas')
+router.register('producto', ProductoView, basename='Productos')
 
 # APIViews
 urlpatterns = [

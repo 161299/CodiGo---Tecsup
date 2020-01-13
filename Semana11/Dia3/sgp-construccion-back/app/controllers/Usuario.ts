@@ -13,8 +13,15 @@ export const RegistrarUsuario = ( req: Request, res: Response) => {
                objUsuario.setSaltAndHash(req.body.password);
                objUsuario.save()
                .then((usuarioCreado: any)=>{
-                    let rpta: Object = {ok: true, content: `Usuario ${usuarioCreado.usu_email} creado con exito`};
+                    let token = objUsuario.generarJWT();
+                    let rpta: Object = {ok: true ,content: `Usuario ${usuarioCreado.usu_email} creado con exito`, token: token};
                     res.status(201).json(rpta)  
+               })
+               .catch((error : any)=>{
+                 res.status(500).json({
+                   ok: false,
+                   error: error
+                 })
                })                                
             }               
        })             
