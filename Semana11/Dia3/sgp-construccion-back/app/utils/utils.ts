@@ -12,7 +12,7 @@ export const verificarToken = ( token : any ) => {
 
 export const wachiman = (req: Request, res: Response, next: NextFunction) => {
        if(req.headers.authorization){
-            let token = req.headers.authorization.split(' ')[2];
+            let token = req.headers.authorization.split(' ')[1];
             console.log(token);
             
             let rpta = verificarToken(token);

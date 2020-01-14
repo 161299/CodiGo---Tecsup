@@ -54,6 +54,7 @@ componentDidMount(){
 componentDidUpdate(){
 	//Funcion que se ejecuta toda vez que el state se actualice
 	// no se ejecuta la primera vez
+	//la función componentDidUpdate() recibe tres parametros(propiedades) (prevProps, prevState)
 }
 setState => opcionalmente recibe un callback que hace la misma función que el componentDidUpdate()
 this.setState({

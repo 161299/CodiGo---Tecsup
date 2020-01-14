@@ -33,7 +33,7 @@ export const usuario_model: Function = ( conexion: Sequelize) => {
                          usu_id: this.usu_id,
                          usu_nom: `${this.usu_nom} ${this.usu_ape}`
                         }
-          let token = jwt.sign(payload, 'sapeee', {expiresIn: 60},{algorithm: 'RS256'});
+          let token = jwt.sign(payload, 'sapeee', {expiresIn: '1h'},{algorithm: 'RS256'});
           return token
        };
 
