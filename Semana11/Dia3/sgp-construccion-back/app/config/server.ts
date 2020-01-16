@@ -1,3 +1,4 @@
+import { recurso_router } from './../routes/Recurso';
 import { documento_router } from './../routes/Documento';
 import { gastoingreso_router } from './../routes/GastoIngreso';
 import { familia_router } from './../routes/Familia';
@@ -55,6 +56,7 @@ export class Server {
      this.app.use('', gastoingreso_router);
      this.app.use('', documento_router);
      this.app.use('', imagen_router);
+     this.app.use('', recurso_router);
      this.app.use('/apidocs', swaggerUi.serve, swaggerUi.setup(json));
 
   }
