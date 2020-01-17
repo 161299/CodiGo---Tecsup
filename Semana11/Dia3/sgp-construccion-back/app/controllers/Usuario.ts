@@ -50,3 +50,20 @@ export const login = (req: Request, res: Response) => {
        })
 }
 
+
+export const getUsuarios = (req: Request, res: Response)=>{
+      Usuario.findAll()
+      .then((arrayUsuarios: any)=>{
+        res.status(200).json({
+          ok: true,
+          content: arrayUsuarios
+        })
+      })
+      .catch((error: any)=>{
+        res.status(500).json({
+          ok: false,
+          content: error
+        })
+      })
+}
+

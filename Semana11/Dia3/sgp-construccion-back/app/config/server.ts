@@ -14,6 +14,7 @@ import bodyParser from "body-parser";
 import express , {Request, Response}from "express";
 import swaggerUi from 'swagger-ui-express';
 import json from './../docs/apidocs.json';
+import { presupuestoproyecto_router } from '../routes/PresupuestoProyecto';
 
 export class Server {
   public app: express.Application;
@@ -57,6 +58,7 @@ export class Server {
      this.app.use('', documento_router);
      this.app.use('', imagen_router);
      this.app.use('', recurso_router);
+     this.app.use('', presupuestoproyecto_router );
      this.app.use('/apidocs', swaggerUi.serve, swaggerUi.setup(json));
 
   }
