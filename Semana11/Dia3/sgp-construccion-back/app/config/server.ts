@@ -20,12 +20,25 @@ export class Server {
   constructor() {
     this.app = express();
     this.configuarBodyParser();
+    this.configurarCORS();
     this.configurarRutas();
   }
 
   configuarBodyParser() {
     this.app.use(bodyParser.json());
   }
+
+  configurarCORS(){
+    this.app.use((req, res, next) => {
+      res.header('Access-Control-Allow-Origin', '*');
+      res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+      res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+      res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+      next();
+  });
+  
+  }
+
 
   configurarRutas(){
      this.app.get('/', (req: Request, res: Response)=>{

@@ -12,7 +12,7 @@ import { proveedor_model } from './../models/Proveedor';
 import { usuario_model } from './../models/Usuario'
 import { Sequelize } from 'sequelize';
 
-export const conexion: Sequelize = new Sequelize('proyectos', 'root', 'root', 
+export const conexion: Sequelize = new Sequelize('proyectos', 'root', 'dkcxzwrk/root', 
        {host: 'localhost',dialect: 'mysql', logging: console.log, 
        dialectOptions:{useUTC: false, dateStrings: true, typeCast: true}, timezone: '-05:00'});
 
