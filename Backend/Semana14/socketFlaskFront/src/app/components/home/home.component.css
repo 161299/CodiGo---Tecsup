@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.user-form input{
+  padding: 1em;
+}
+
+.user-button{
+  width: 10em;
+}

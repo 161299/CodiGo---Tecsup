@@ -1,3 +1,4 @@
+import { recurso_router } from './../routes/Recurso';
 import { documento_router } from './../routes/Documento';
 import { gastoingreso_router } from './../routes/GastoIngreso';
 import { familia_router } from './../routes/Familia';
@@ -13,15 +14,27 @@ import bodyParser from "body-parser";
 import express , {Request, Response}from "express";
 import swaggerUi from 'swagger-ui-express';
 import json from './../docs/apidocs.json';
+import { presupuestoproyecto_router } from '../routes/PresupuestoProyecto';
 
 export class Server {
   public app: express.Application;
   public port: any =  process.env.PORT || 3000 ;
   constructor() {
     this.app = express();
+    this.habilitarCORS()
     this.configuarBodyParser();
     this.configurarCORS();
     this.configurarRutas();
+  }
+
+  habilitarCORS(){
+    this.app.use((req, res, next) => {
+      res.header('Access-Control-Allow-Origin', '*');
+      res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+      res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+      res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+      next();
+  });
   }
 
   configuarBodyParser() {
@@ -57,6 +70,8 @@ export class Server {
      this.app.use('', gastoingreso_router);
      this.app.use('', documento_router);
      this.app.use('', imagen_router);
+     this.app.use('', recurso_router);
+     this.app.use('', presupuestoproyecto_router );
      this.app.use('/apidocs', swaggerUi.serve, swaggerUi.setup(json));
 
   }

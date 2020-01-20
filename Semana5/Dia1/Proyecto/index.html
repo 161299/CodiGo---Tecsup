@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,4 +94,115 @@
     <script src="./03-eventos.js"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./03-eventos-tema1.css" id="estilos">
+    <link rel="stylesheet" href="./css/01-proyecto.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="./solucion.js"></script>
+    <title>Document</title>
+    <style>
+        /* funciones de reset */
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            background-image: linear-gradient(to bottom, #0f2d71, #143278, #19377f, #1d3d87, #21428e, #274c9a, #2d56a5, #3360b1, #3d72c4, #4884d6, #5397e9, #5faafb);
+        }
+
+        /* posicionamiento */
+        header {
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        main {
+            display: flex;
+            height: 90%;
+        }
+
+        aside {
+            flex: 1;
+            display: flex;
+            /* flex-direction: column; */
+        }
+
+        section {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>LISTA - PROYECTO 1</h1>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <button id="btnAgregarElemento">
+                Agregar
+            </button>
+            <button id="btnGuardarElemento">
+                Guardar
+            </button>
+        </aside>
+        <section>
+            <button id="btnTema">Cambiar de Tema</button>
+            <hr>
+            <table >
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Cantidad</th>
+                        <th>Descripcion</th>
+                        <th>P. Unitario</th>
+                        <th>P. Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla">
+                    <tr>
+                        <td id="num">1</td>
+                        <td>
+                            <input type="number" id="inputCantidad">
+                        </td>
+                        <td>
+                            <input type="text" id="inputDescripcion">
+                        </td>
+                        <td>
+                            <input type="number" id="inputPUnitario">
+                        </td>
+                        <td>
+                            <input type="number" disabled id="inputTotal">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="./03-eventos.js"></script>
+</body>
+
+>>>>>>> a23e061f0b65aa9346468a57dd5f20613d891a60
 </html>

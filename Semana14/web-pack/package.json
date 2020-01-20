@@ -1,0 +1,15 @@
+{
+  "name": "web-pack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristhian Laurente",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "4.41.5",
+    "webpack-cli": "3.3.10"
+  }
+}

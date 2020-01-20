@@ -65,4 +65,7 @@ DocumentoDetalle.belongsTo(Documento, {foreignKey: 'doc_id'});
 PresupuestoProyecto.hasMany(DocumentoDetalle, {foreignKey: 'pp_id'});
 DocumentoDetalle.belongsTo(PresupuestoProyecto, {foreignKey: 'pp_id'});
 
+Proyecto.hasMany(GastoIngreso, {foreignKey: 'pro_id'});
+GastoIngreso.belongsTo(Proyecto, {foreignKey: 'pro_id'});
+
 

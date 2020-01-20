@@ -5,9 +5,9 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
-from .models import Usuario, Tipo, Mesa
+from .models import Usuario, Tipo, Mesa, Producto
 
-from .serializers import Registro, Login, TipoProductoSerializer, MesaSerializer
+from .serializers import Registro, Login, TipoProductoSerializer, MesaSerializer, ProductoSerializer
 
 
 class Registrar(APIView):
@@ -178,5 +178,56 @@ class MesasView(ViewSet):
       mesa.save()
       return Response({'message': 'OK', 'content': 'Se elimino con exito'}, status = 200)
 
+class ProductoView(ViewSet):
+   def list(self, request):
+      productos_disponibles = Producto.objects.filter(prod_disp=True)
+      if productos_disponibles:
+         resultado_productos= []
+         for producto in productos_disponibles:
+            objProdTmp={
+               'nombre': producto.prod_nom,
+               'descripcion': producto.prod_desc,
+               'tipo': producto.tipo_id.tipo_desc
+            }
+            resultado_productos.append(objProdTmp)
+         return Response( resultado_productos, status = status.HTTP_200_OK)
+      return Response({
+         'message': 'No se encontraron productos, vuelva a buscar'
+      }, status = status.HTTP_404_NOT_FOUND)
+
+   def create(self, request):
+      serializador = ProductoSerializer(data = request.data)
+      if serializador.is_valid():
+         nuevo_producto = serializador.save()
+         return Response({
+            'message': 'se agrego exitosamente el producto',
+            'producto': nuevo_producto.tipo_id.tipo_desc
+         })
+      return Response(serializador.errors, status= status.HTTP_500_INTERNAL_SERVER_ERROR)
+   
+   def update(self, request, pk):
+      data = ProductoSerializer(data = request.data)
+      if data.is_valid():
+         producto = Producto.objects.filter(prod_id = pk).update(
+            prod_nom = data.validated_data.get('prod_nom'),
+            prod_desc = data.validated_data.get('prod_desc'),
+            prod_img= data.validated_data.get('prod_img'),
+            prod_disp = data.validated_data.get('prod_disp'),
+            tipo_id = data.validated_data.get('tipo_id'),
+         )
+         producto_actualizado = get_object_or_404(Producto, pk = pk)
+         return Response({
+            'message': 'Se actualizo exitosamente el producto',
+            'producto': producto_actualizado.prod_nom
+         }, status = status.HTTP_200_OK)
+      return Response(data.errors, status= status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+   def destroy(self, request, pk):
+      producto = get_object_or_404(Producto, pk = pk)
+      producto.prod_disp = False
+      producto.save()
+      return Response({
+         'message': 'Se inhabilito el producto'+producto.prod_nom
+      }, status = status.HTTP_200_OK)
 
             

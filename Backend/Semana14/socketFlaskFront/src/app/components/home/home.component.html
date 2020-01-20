@@ -1,0 +1,24 @@
+<div class="container">
+  <form class="form"  #formulario="ngForm" (ngSubmit)="guardarUsername(username)" >
+      <div class="form-group">
+           <input type="text"  placeholder="ingresar username" #username  class="form-control" >                
+           <button class="btn btn-success" type="submit">
+                 Ingresar a la Sala de Chat        
+           </button>             
+      </div>                
+</form>                  
+</div>
+
+<hr>
+
+<div class="conatiner">
+   <div class="row">
+       <div class="col-md-6">
+            <form action="" #formulario2="ngForm" (ngSubmit)="crearUsername(msn)">
+                 <div class="form-group">
+                      <input type="text" class="form-control" #msn>               
+                 </div>               
+            </form>               
+       </div>                
+   </div>
+</div>
