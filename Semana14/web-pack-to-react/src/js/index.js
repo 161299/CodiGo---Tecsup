@@ -1,5 +1,7 @@
-import './../css/styles.css'
+import './../css/styles.css';
 
-let caja = document.createElement('div')
-// caja.innerHTML = '<p>holiwi</p>';
-document.body.innerHTML= '<p>Holiwi</p>'
+import React from 'react';
+import {render} from 'react-dom';
+import App from './components/App';
+
+render(<App />, document.getElementById('container'));

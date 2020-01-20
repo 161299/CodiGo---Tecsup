@@ -24,12 +24,18 @@ module.exports = {
          {
             test:/\.css$/,
             use: ['style-loader', 'css-loader']           
+         },
+         {
+            test:/\.js$/,
+            use: ['babel-loader'],
+            exclude: /node_modules/           
          }
    ]                
    },
    plugins: [
       new HtmlWebpackPlugin({
-         title: 'Mi App'
+         title: 'Mi App',
+         template: path.resolve(__dirname, 'src/index.html' )
       }),
       new webpack.HotModuleReplacementPlugin()
    ]
