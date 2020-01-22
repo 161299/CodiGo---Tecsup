@@ -9,7 +9,8 @@ const PokedexStackNavigator = createStackNavigator(
     PokeInfoScreem: {screen: PokeInfo  }                  
   } ,
   {
-    initialRouteName: 'PokeHomeScreem'                  
+    initialRouteName: 'PokeHomeScreem',
+    headerMode: 'none'                  
   }                 
 );
 export default createAppContainer(PokedexStackNavigator);

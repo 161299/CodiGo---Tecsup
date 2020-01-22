@@ -1,10 +1,16 @@
 import React,{useState, useEffect} from "react";
-import { View, Text,Dimensions, StyleSheet , Image, ImageBackground } from "react-native";
+import { View, Text,Dimensions, StyleSheet , ImageBackground, TouchableOpacity, ActivityIndicator, Image  } from "react-native";
 import fondocards from './../../assets/fondocards.png'
 import * as Font from 'expo-font';
 import axios from 'axios';
+import {withNavigation} from 'react-navigation'
 
-const PokeCard = ({pokemon: {name, url}}) => {
+
+const PokeCard = (props) => {
+
+   let  {name, url} = props.pokemon
+   // console.log(props.navigation.actions.popToTop());
+   
 
    const [fuenteCargada, setFuenteCargada] = useState(false);
    const [info, setInfo] = useState('')                  
@@ -16,7 +22,7 @@ const PokeCard = ({pokemon: {name, url}}) => {
      }
      const getInfo = async () => {
          let infoTmp = await axios(url);
-         setInfo(infoTmp.data.sprites);
+         setInfo(infoTmp.data);
          
      }
      
@@ -24,13 +30,18 @@ const PokeCard = ({pokemon: {name, url}}) => {
      getInfo()            
   }, []);                  
 
+  const goInfo = () => {
+     props.navigation.navigate('PokeInfoScreem', {pokemon: {...info}});   
+  }
 
 
 
   return (
+
+   <TouchableOpacity   onPress={goInfo}  >
+
     <View  style={misEstilos.card} >
-        <ImageBackground  source={fondocards}  style={{flex: 1, backgroundColor: '#fff'}} > 
-                             
+        <ImageBackground  source={fondocards}  style={{flex: 1, backgroundColor: '#fff'}} >                         
          <View  style={misEstilos.viewNombre}  >
              {
                fuenteCargada ? 
@@ -39,8 +50,13 @@ const PokeCard = ({pokemon: {name, url}}) => {
              }                
          </View>               
          <View  style={misEstilos.viewInfo}  >
-               <Image  source={ {uri : info.front_default}} 
-                  style={{ width: 120, height: 120}}  />                                                   
+               {
+                  info.sprites ?
+                  <Image  source={ {uri : info.sprites.front_default}} 
+                        style={{ width: 120, height: 120}}        
+                          /> 
+                  : null
+               }                                                  
          </View>     
          <View  style={{justifyContent: 'center', flexDirection: 'row'}} >
               <Text  style={{backgroundColor: 'rgba(0,0,0,0.8)', borderRadius: 20, color: '#fff', padding: 4}} >Leyenda</Text>                                      
@@ -48,10 +64,12 @@ const PokeCard = ({pokemon: {name, url}}) => {
          </ImageBackground>              
 
     </View>
+   </TouchableOpacity >   
+   
   );
 };
 
-export default PokeCard;
+export default withNavigation(PokeCard);
 
 const misEstilos = StyleSheet.create({
    card: {               

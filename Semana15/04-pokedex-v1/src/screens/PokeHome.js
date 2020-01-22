@@ -13,8 +13,8 @@ const PokeHome = (props) => {
      const getPokemones = async () => {
        //en caso de que sea el metodo get  tan solo colocamos axios(rutadelaAPI)
        let endpoint = "https://pokeapi.co/api/v2/pokemon";      
-       let pokemones = await axios(endpoint);      
-       setPokemones(pokemones.data.results)
+       let listaPokemones = await axios(endpoint);      
+       setPokemones(listaPokemones.data.results)
      }
      getPokemones();
    }, [])                 
@@ -24,14 +24,6 @@ const PokeHome = (props) => {
     <View style={misEstilos.contenedor}  >
         <View style={misEstilos.titulo}  >
              <Text  style={{fontSize: 50, color: '#fff', fontWeight: 'bold'}} >Pókedex</Text> 
-             <Button  buttonStyle={{width: Dimensions.get('window').width / 2,
-                                    backgroundColor: 'rgba(0,0,0,0.7)',
-                                    marginBottom: 15                             }} 
-                       title={'Navegar Aqui'}
-                       type = 'solid'
-                       onPress={()=>{
-                             props.navigation.navigate('PokeInfoScreem')              
-                       }} />             
         </View>  
         <ScrollView  style={misEstilos.cardsContainerScroll}  >
              <View style={misEstilos.cardsContainer}  >
@@ -60,7 +52,7 @@ const misEstilos = StyleSheet.create({
         flex: 0.2,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#344E86'
+        backgroundColor: '#000'
      },
      cardsContainer: {
 //          flex: 5,
