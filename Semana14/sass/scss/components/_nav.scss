@@ -1,0 +1,22 @@
+#mainNav {
+  padding: 1rem 0px 2rem 0px;
+  font-family: $fuente-cabecera;
+  font-weight: $weight-cabecera;
+  background-color: $primary;
+  .navbar-brand {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-bottom: #fff solid 2px;
+  }
+  .navbar-nav {
+    li.nav-item {
+      a.nav-link {
+        color: #fff;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}

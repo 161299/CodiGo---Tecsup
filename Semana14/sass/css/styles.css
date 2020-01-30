@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.head {
+  padding-top: calc(5rem + 60px);
+  padding-bottom: 5rem;
+  background-color: #1792da;
+  color: #fff;
+}
+.head .head-titulo {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-family: "Alata", sans-serif;
+}
+.head .head-subtitulo {
+  padding: 10px;
+  font-size: 1.25rem;
+}
+.head .head-avatar {
+  width: 20rem;
+  border-radius: 50%;
+  border: #26da86 solid 7px;
+}
+
+#mainNav {
+  padding: 1rem 0px 2rem 0px;
+  font-family: "Alata", sans-serif;
+  font-weight: 700;
+  background-color: #26da86;
+}
+#mainNav .navbar-brand {
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-bottom: #fff solid 2px;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link {
+  color: #fff;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: #1792da;
+}
+
+.portafolio .portafolio-item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  margin-bottom: 2.4rem;
+}
+.portafolio .portafolio-item .item-border {
+  padding: 3rem;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  transition: 300ms;
+}
+.portafolio .portafolio-item .item-border:hover {
+  box-shadow: #000 1px 3px 6px;
+  background-color: #eee;
+}
+
+.page-section .page-section-heading, .page-section-about .page-section-heading {
+  padding: 8rem 0px 5rem 0px;
+  font-size: 4rem;
+  line-height: 1.85rem;
+  font-family: "Alata", sans-serif;
+}
+
+.page-section-about .texto {
+  color: rgba(23, 146, 218, 0.8);
+  padding-bottom: 3rem;
+}
+
+.footer {
+  padding: 5rem 0px;
+  background-color: #1792da;
+  color: #fff;
+}

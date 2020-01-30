@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import { View, Text, StyleSheet , Image, StatusBar, ImageBackground, InteractionManager} from "react-native";
-import circle from './../../assets/icon-02.png'
 import {Icon} from 'react-native-elements'
 import PokeTabNavigator from "../navigations/PokeTabNavigator";
 import { GLobal } from "../services/Global";

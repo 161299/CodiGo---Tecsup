@@ -1,0 +1,19 @@
+.portafolio {
+  .portafolio-item {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    max-width: 25rem;
+    margin-bottom: 2.4rem;
+    .item-border {
+      padding: 3rem;
+      background-color: #f1f1f1;
+      border-radius: 20px;
+      transition: 300ms;
+      &:hover {
+        box-shadow: #000 1px 3px 6px;
+        background-color: #eee;
+      }
+    }
+  }
+}

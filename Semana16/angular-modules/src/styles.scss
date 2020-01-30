@@ -1,0 +1,13 @@
+.card-hover{
+  cursor: pointer; 
+  transition: 500ms;                 
+};
+
+.card-hover:hover{
+    transform: scale(1.1);                
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+}

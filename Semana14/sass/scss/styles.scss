@@ -1,0 +1,16 @@
+
+@import 'components/head';
+@import 'components/nav';
+@import 'components/portafolio';
+@import 'components/section';
+@import 'components/footer';
+@import 'components/global';
+
+
+
+@for $i  from 1 through 20 {
+     .columnas -#{$i * 5}{
+       width: $i * 5%;                  
+     }
+}
+

@@ -1,0 +1,1 @@
+export let url_backend = 'https://sgpfinal.herokuapp.com/'

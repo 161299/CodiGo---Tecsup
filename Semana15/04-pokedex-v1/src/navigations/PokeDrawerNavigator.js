@@ -5,6 +5,7 @@ import PokedexStackNavigator from './PokedexStackNavigator';
 import CustomDrawer from '../components/CustomDrawer';
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import React from 'react';
+import PokeLogout from '../screens/PokeLogout';
 
 const PokeDrawerNavigator = createDrawerNavigator(
    {
@@ -29,7 +30,18 @@ const PokeDrawerNavigator = createDrawerNavigator(
              }                  
            })                 
         }                 
-     }  
+     },
+     PokeLogoutScreen: {
+        screen: PokeLogout,
+        navigationOptions: ()=>{
+           return ({
+              drawerLabel: 'Cerrar Sesión',
+              drawerIcon: ()=>{
+                 return (<Icon name={'sign-out-alt'} /> )
+              }
+           })
+        }
+     }   
   },
   {
      initialRouteName: 'PokedexScreen',

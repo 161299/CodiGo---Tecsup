@@ -12,8 +12,8 @@ import { proveedor_model } from './../models/Proveedor';
 import { usuario_model } from './../models/Usuario'
 import { Sequelize } from 'sequelize';
 
-export const conexion: Sequelize = new Sequelize('proyectos', 'root', 'root', 
-       {host: 'localhost',dialect: 'mysql', logging: console.log, 
+export const conexion: Sequelize = new Sequelize('xbw4bbQ5ex', 'xbw4bbQ5ex', 'BqqR2H3piV', 
+       {host: 'remotemysql.com',dialect: 'mysql', logging: console.log, 
        dialectOptions:{useUTC: false, dateStrings: true, typeCast: true}, timezone: '-05:00'});
 
 // inicilizando tablas       

@@ -1,0 +1,20 @@
+
+.fondo{
+                    background-color: #000; 
+                    display: flex;
+                    justify-content: center; 
+                    align-items: center; 
+
+                    .cardmaster{
+                       height: 20rem;
+                       margin: 2rem;                 
+                       display: flex;
+                       justify-content: center;
+                       .cardhijo{
+                          display: flex;
+                          justify-content: center;
+                          align-items: center; 
+                          flex-direction: column;                
+                       }              
+                    }              
+                 }

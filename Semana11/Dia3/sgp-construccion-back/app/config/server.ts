@@ -79,7 +79,7 @@ export class Server {
   startServer(){
       this.app.listen(this.port, ()=>{
         console.log(`Server Start ${this.port}`);
-        conexion.sync({ force: false })
+        conexion.sync({ force: false, alter: true })
         .then(()=>{console.log("== BD creada con Exito ==");})
         .catch((error:any)=>{console.log("== ERROR al crear la BD ==");
                              console.log(error);
